@@ -37,5 +37,11 @@
   },
   "module-2-step-into-the-game-experience-like-a-student/welcome-to-the-court.qmd": {
     "welcome-to-the-court.html": "f0c239fe"
+  },
+  "notebooks/data-from-internal.qmd": {
+    "data-from-internal.html": "bce6fe13"
+  },
+  "notebooks/notebooks.qmd": {
+    "notebooks.html": "334f282b"
   }
 }

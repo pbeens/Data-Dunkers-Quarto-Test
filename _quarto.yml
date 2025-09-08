@@ -33,6 +33,8 @@ website:
             text: "TO: Understanding the Instructional Approach"
       - href: slides/intro.qmd
         text: Slideshow
+      - href: notebooks/notebooks.qmd 
+        text: Notebooks
 
 format:
   html:

@@ -1,0 +1,7 @@
+---
+title: "Notebooks"
+---
+
+Here are the available notebooks:
+
+- [Data from Internal](data-from-internal.qmd)

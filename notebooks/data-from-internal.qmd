@@ -1,0 +1,43 @@
+---
+title: "Getting Data from Within the Jupyter Notebook or .py File"
+format: html
+---
+
+Open this notebook in [Callysto](https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/pbeens/Data-Dunkers&branch=main&subPath=Demos/data-from-internal.ipynb&depth=1) | [Colab](https://githubtocolab.com/pbeens/Data-Dunkers/blob/main/Demos/data-from-internal.ipynb).
+
+## Lesson Objectives
+
+By the end of this lesson, students will be able to:
+- Learn how to define and manipulate data directly within a program. *(Example: Define lists of X and Y values directly in a Jupyter Notebook and use them to create a plot.)*
+- Understand the basic flow of data through a program using the IPO model. *(Example: Use the IPO (Input, Process, Output) model to structure a program that plots X and Y values.)*
+- Create and enhance visual representations of data within a notebook. *(Example: Use the Plotly Express library to create a line plot of X and Y values and add a title to the plot.)*
+
+## Introduction
+
+There are many ways we can import data, but the most common are from the program itself, a CSV (comma separated values) file, from an Excel spreadsheet, from a Google Sheet, or from a webpage. 
+
+In this demo, we will demonstrate how to get data from within the Jupyter Notebook itself.
+
+## Program Setup
+
+This first code block may have to be run if the plotly.express library hasn't already been installed. Once this has been done once, it will never have to be done again. You can skip it for now, but if you get an error message related to plotly.express not being installed, go ahead and run it.
+
+```python
+# only if necessary
+%pip install plotly.express -q
+```
+
+## Setup
+
+We always start any Python program by importing any libraries we might need. For our first example, we only need the `plotly.express` library.
+
+Importing libraries is performed by using the `import` command, like this:
+
+```python
+# import support libraries
+import plotly.express as px
+print('Libraries imported')
+```
+
+The line above the import command that starts with `#` is a comment and is ignored by the program. We add comments to make our program easier to understand. 
+
