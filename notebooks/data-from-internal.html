@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The FUNdamentals Game Plan – Data Dunkers Quarto Test</title>
+<title>Getting Data from Within the Jupyter Notebook or .py File – Data Dunkers Quarto Test</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -165,15 +200,24 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lesson-objectives" id="toc-lesson-objectives" class="nav-link active" data-scroll-target="#lesson-objectives">Lesson Objectives</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#program-setup" id="toc-program-setup" class="nav-link" data-scroll-target="#program-setup">Program Setup</a></li>
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The FUNdamentals Game Plan</h1>
+<h1 class="title">Getting Data from Within the Jupyter Notebook or .py File</h1>
 </div>
 
 
@@ -190,10 +234,33 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Let’s take a look at the game plan for the FUNdamentals program. This is the core starting point for many Data Dunkers experiences — a focused, high-energy introduction to data science through the excitement of sports. You’ll see how the activities build skills step-by-step, keep students engaged, and connect learning to real-world applications. Watch the video below to see how it all comes together in action.</p>
-<p>==NEED VIDEO EMBED INFO==</p>
+<p>Open this notebook in <a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/pbeens/Data-Dunkers&amp;branch=main&amp;subPath=Demos/data-from-internal.ipynb&amp;depth=1">Callysto</a> | <a href="https://githubtocolab.com/pbeens/Data-Dunkers/blob/main/Demos/data-from-internal.ipynb">Colab</a>.</p>
+<section id="lesson-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-objectives">Lesson Objectives</h2>
+<p>By the end of this lesson, students will be able to: - Learn how to define and manipulate data directly within a program. <em>(Example: Define lists of X and Y values directly in a Jupyter Notebook and use them to create a plot.)</em> - Understand the basic flow of data through a program using the IPO model. <em>(Example: Use the IPO (Input, Process, Output) model to structure a program that plots X and Y values.)</em> - Create and enhance visual representations of data within a notebook. <em>(Example: Use the Plotly Express library to create a line plot of X and Y values and add a title to the plot.)</em></p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>There are many ways we can import data, but the most common are from the program itself, a CSV (comma separated values) file, from an Excel spreadsheet, from a Google Sheet, or from a webpage.</p>
+<p>In this demo, we will demonstrate how to get data from within the Jupyter Notebook itself.</p>
+</section>
+<section id="program-setup" class="level2">
+<h2 class="anchored" data-anchor-id="program-setup">Program Setup</h2>
+<p>This first code block may have to be run if the plotly.express library hasn’t already been installed. Once this has been done once, it will never have to be done again. You can skip it for now, but if you get an error message related to plotly.express not being installed, go ahead and run it.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># only if necessary</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install plotly.express <span class="op">-</span>q</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
+<p>We always start any Python program by importing any libraries we might need. For our first example, we only need the <code>plotly.express</code> library.</p>
+<p>Importing libraries is performed by using the <code>import</code> command, like this:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import support libraries</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Libraries imported'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The line above the import command that starts with <code>#</code> is a comment and is ignored by the program. We add comments to make our program easier to understand.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

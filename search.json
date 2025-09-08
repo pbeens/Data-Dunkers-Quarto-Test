@@ -105,6 +105,48 @@
     "text": "About this site"
   },
   {
+    "objectID": "notebooks/notebooks.html",
+    "href": "notebooks/notebooks.html",
+    "title": "Notebooks",
+    "section": "",
+    "text": "Here are the available notebooks:\n\nData from Internal"
+  },
+  {
+    "objectID": "notebooks/data-from-internal.html",
+    "href": "notebooks/data-from-internal.html",
+    "title": "Getting Data from Within the Jupyter Notebook or .py File",
+    "section": "",
+    "text": "Open this notebook in Callysto | Colab."
+  },
+  {
+    "objectID": "notebooks/data-from-internal.html#lesson-objectives",
+    "href": "notebooks/data-from-internal.html#lesson-objectives",
+    "title": "Getting Data from Within the Jupyter Notebook or .py File",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\nBy the end of this lesson, students will be able to: - Learn how to define and manipulate data directly within a program. (Example: Define lists of X and Y values directly in a Jupyter Notebook and use them to create a plot.) - Understand the basic flow of data through a program using the IPO model. (Example: Use the IPO (Input, Process, Output) model to structure a program that plots X and Y values.) - Create and enhance visual representations of data within a notebook. (Example: Use the Plotly Express library to create a line plot of X and Y values and add a title to the plot.)"
+  },
+  {
+    "objectID": "notebooks/data-from-internal.html#introduction",
+    "href": "notebooks/data-from-internal.html#introduction",
+    "title": "Getting Data from Within the Jupyter Notebook or .py File",
+    "section": "Introduction",
+    "text": "Introduction\nThere are many ways we can import data, but the most common are from the program itself, a CSV (comma separated values) file, from an Excel spreadsheet, from a Google Sheet, or from a webpage.\nIn this demo, we will demonstrate how to get data from within the Jupyter Notebook itself."
+  },
+  {
+    "objectID": "notebooks/data-from-internal.html#program-setup",
+    "href": "notebooks/data-from-internal.html#program-setup",
+    "title": "Getting Data from Within the Jupyter Notebook or .py File",
+    "section": "Program Setup",
+    "text": "Program Setup\nThis first code block may have to be run if the plotly.express library hasn’t already been installed. Once this has been done once, it will never have to be done again. You can skip it for now, but if you get an error message related to plotly.express not being installed, go ahead and run it.\n# only if necessary\n%pip install plotly.express -q"
+  },
+  {
+    "objectID": "notebooks/data-from-internal.html#setup",
+    "href": "notebooks/data-from-internal.html#setup",
+    "title": "Getting Data from Within the Jupyter Notebook or .py File",
+    "section": "Setup",
+    "text": "Setup\nWe always start any Python program by importing any libraries we might need. For our first example, we only need the plotly.express library.\nImporting libraries is performed by using the import command, like this:\n# import support libraries\nimport plotly.express as px\nprint('Libraries imported')\nThe line above the import command that starts with # is a comment and is ignored by the program. We add comments to make our program easier to understand."
+  },
+  {
     "objectID": "module-2-step-into-the-game-experience-like-a-student/labyrinth-activity.html",
     "href": "module-2-step-into-the-game-experience-like-a-student/labyrinth-activity.html",
     "title": "Labyrinth Activity",
