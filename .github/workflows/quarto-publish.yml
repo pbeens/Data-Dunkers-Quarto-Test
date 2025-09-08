@@ -3,6 +3,7 @@ name: Quarto Publish
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:     # allows you to run it manually
 
 jobs:
   build-deploy:
