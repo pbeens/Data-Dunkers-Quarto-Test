@@ -1,0 +1,149 @@
+[
+  {
+    "objectID": "slides/intro.html#install-python",
+    "href": "slides/intro.html#install-python",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Install Python",
+    "text": "Install Python\n\nDownload from python.org\nCheck “Add Python to PATH” during setup\nVerify:\npython --version\npip --version\nOptional: uninstall or remove older versions (e.g., Python 3.11)"
+  },
+  {
+    "objectID": "slides/intro.html#install-quarto-cli",
+    "href": "slides/intro.html#install-quarto-cli",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Install Quarto CLI",
+    "text": "Install Quarto CLI\n\nDownload from quarto.org/get-started\nRun installer (MSI for Windows)\nVerify installation:\nquarto --version\nquarto check\nIf needed, add Quarto bin folder to PATH"
+  },
+  {
+    "objectID": "slides/intro.html#install-extra-python-packages",
+    "href": "slides/intro.html#install-extra-python-packages",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Install Extra Python Packages",
+    "text": "Install Extra Python Packages\n\nIn terminal, run:\npip install jupyter pyyaml\nWhy install?\n\njupyter: enables running notebooks/code cells in Quarto\npyyaml: fixes YAML parsing error in Quarto checks\n\nVerify:\nquarto check"
+  },
+  {
+    "objectID": "slides/intro.html#create-your-first-quarto-project",
+    "href": "slides/intro.html#create-your-first-quarto-project",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Create Your First Quarto Project",
+    "text": "Create Your First Quarto Project\n\nIn terminal, run:\nquarto create-project \"Data Dunkers Quarto Test\" --type website\ncd \"Data Dunkers Quarto Test\"\nquarto preview"
+  },
+  {
+    "objectID": "slides/intro.html#project-files",
+    "href": "slides/intro.html#project-files",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Project files",
+    "text": "Project files\n\n_quarto.yml → site configuration\nindex.qmd → homepage\nabout.qmd → starter page"
+  },
+  {
+    "objectID": "slides/intro.html#open-in-vs-code",
+    "href": "slides/intro.html#open-in-vs-code",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Open in VS Code",
+    "text": "Open in VS Code\n\nOpen folder in VS Code: File → Open Folder…\nInstall Quarto extension (already installed ✅)\nEdit .qmd files with syntax highlighting\nTBD\nPreview in browser or integrated panel"
+  },
+  {
+    "objectID": "slides/intro.html#add-a-slideshow",
+    "href": "slides/intro.html#add-a-slideshow",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Add a Slideshow",
+    "text": "Add a Slideshow\n\nCreate folder slides/\nAdd intro.qmd with front matter:\n---\ntitle: \"Data Dunkers Demo Slides\"\nformat: revealjs\n---\nEach --- in file makes a new slide\nLink slideshow in _quarto.yml navbar"
+  },
+  {
+    "objectID": "slides/intro.html#publish-the-site",
+    "href": "slides/intro.html#publish-the-site",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Publish the Site",
+    "text": "Publish the Site\n\nOption A: GitHub Pages\n\nCommit & push to GitHub\nAdd GitHub Action workflow for Quarto\nSite URL: https://pbeens.github.io/data-dunkers-quarto-test/\n\nOption B: Netlify\n\nConnect repo at netlify.com\nAuto-builds on push\nSite URL: https://data-dunkers-quarto-test.netlify.app/"
+  },
+  {
+    "objectID": "slides/intro.html#summary",
+    "href": "slides/intro.html#summary",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Summary",
+    "text": "Summary\n\n✅ Installed Python\n✅ Installed Quarto CLI\n✅ Installed Jupyter + PyYAML\n✅ Created and previewed Quarto project\n✅ Opened in VS Code\n✅ Added slideshow alongside website\n✅ Ready to publish demo site"
+  },
+  {
+    "objectID": "module-1-welcome-to-data-dunkers/what-is-data-dunkers.html",
+    "href": "module-1-welcome-to-data-dunkers/what-is-data-dunkers.html",
+    "title": "What Is Data Dunkers?",
+    "section": "",
+    "text": "Data isn’t just for scientists or statisticians — it’s becoming a core skill for success in almost every career. Whether in sports, healthcare, engineering, or creative industries, the ability to understand and use data is a game-changer for students’ futures.\nThe World Economic Forum lists data analysis and data science among the most in-demand skills in their Future of Jobs report, with demand only expected to grow in the years ahead. You can explore the report here: World Economic Forum – Future of Jobs Report\nWhy it matters for us as educators: Data science isn’t just about numbers — it’s about curiosity, problem-solving, and storytelling. In Data Dunkers, we use the excitement of sports to spark student interest, then connect those skills to real-world applications that prepare them for jobs and challenges we can’t even imagine yet.\nWatch the video below for Dell Technologies’ and PS43 Foundations overview on the Data Dunkers program.\n==NEED VIDEO EMBED INFO=="
+  },
+  {
+    "objectID": "module-1-welcome-to-data-dunkers/welcome.html",
+    "href": "module-1-welcome-to-data-dunkers/welcome.html",
+    "title": "Welcome to Data Dunkers!",
+    "section": "",
+    "text": "We’re excited to have you join the Data Dunkers Support Course — a space designed to help you bring the energy of sports and the power of data into your classroom. Here, you’ll explore flexible activities, ready-to-use tools, and real-world examples that make data science approachable and engaging for your students.\nBefore we dive in, listen in to Pascal Siakam’s welcome to students, showing his passion for this program. Pascal is not only an NBA Champion and 2025 Eastern Conference Finals MVP but most importantly, he deeply cares about our students’ future."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Dunkers",
+    "section": "",
+    "text": "NEED AN INTRO"
+  },
+  {
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/quick-timeout-look-at-jupyter-notebook.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/quick-timeout-look-at-jupyter-notebook.html",
+    "title": "Quick Timeout: Look at Jupyter Notebook",
+    "section": "",
+    "text": "Before we get into our first BIG activity, we’re going to step out of the student role for a moment and give you, as a teacher, a quick look at one of the tools we’ll be using.\nWe usually embed this learning into the experience with the students, but we wanted to provide you with a greater explanation up front.\nWatch this short video explaining how Jupyter Notebooks work. We’ll use these for the next two activities, so this quick overview will help you understand how they’re set up and how you and your students can interact with them.\nWe’ve also included a link to a sample notebook to an external site. that contains some of the information we’ll discuss in the video — so you can actually try out the notebook environment for yourself.\n==NEED VIDEO EMBED INFO=="
+  },
+  {
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/welcome-to-the-court.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/welcome-to-the-court.html",
+    "title": "Welcome to the Court",
+    "section": "",
+    "text": "The best way to understand how you might use Data Dunkers in your classroom is to first experience it like a student. In this section, you’ll step into their shoes — exploring activities, solving challenges, and seeing how data comes alive through sports.\nTo guide you through this part of the course, you’ll have a Virtual Coach. This coach will help you navigate the activities, offer prompts and tips, and keep you moving forward.\n==NEED VIDEO EMBED INFO=="
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/labyrinth-activity.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/labyrinth-activity.html",
+    "title": "Labyrinth Activity",
+    "section": "",
+    "text": "Next up — the Basketball Labyrinth! This activity is designed to get you into both looking at the data and doing some basic coding. Think of it as a virtual escape room: you’ll solve puzzles, uncover clues, and make your way through the data to reach the end.\nWe have another teacher who will walk you through the activity, but we recommend you also open the Basketball Labyrinth yourself to an external site. so you can explore and experience it firsthand.\n==NEED VIDEO EMBED INFO=="
+  },
+  {
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/to-understanding-the-instructional-approach.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/to-understanding-the-instructional-approach.html",
+    "title": "TO: Understanding the Instructional Approach",
+    "section": "",
+    "text": "Before we move on, let’s take a quick time out to look at the instructional approach behind the Data Dunkers program. This short video will walk you through the thinking that shapes how we design activities, guide student learning, and connect data skills to real-world relevance.\nUnderstanding this approach will help you see how each part of the program builds both engagement and skill — and how you can adapt these strategies for your own students.\n==NEED VIDEO EMBED INFO=="
+  },
+  {
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/data-is-everywhere.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/data-is-everywhere.html",
+    "title": "Data is Everywhere!",
+    "section": "",
+    "text": "To kick things off, we’ll look at how data drives decisions in basketball — and why that matters far beyond the court. Start by watching this video about a data scientist working in basketball.\n==NEED VIDEO EMBED INFO== (x2)"
+  },
+  {
+    "objectID": "module-1-welcome-to-data-dunkers/flavors-of-the-program.html",
+    "href": "module-1-welcome-to-data-dunkers/flavors-of-the-program.html",
+    "title": "Flavors of the Program",
+    "section": "",
+    "text": "There’s more than one way to bring the Data Dunkers vision to life. Just like players can join a game in different roles, you can step in at the point that makes the most sense for you and your students. Throughout this course, we’ll explore practical ways to embed the program — whether you run it as a special event, stretch it into a unit, or weave pieces into your lessons over time.\n\n\n\nAlt text\n\n\n\nFUNdamentals – 2 half-days – A focused introduction to the core activities and concepts.\nUnit using FUNdamentals – Spread the activities across multiple class periods over several weeks.\nHack-a-thon – A high-energy, one-day or multi-day event where students tackle data challenges.\nEmbedded lessons – Integrate Data Dunkers activities into your regular curriculum throughout the year.\nProject – Launch a stand-alone project that connects data skills to real-world issues or student interests.\n\nFor the start of this course, we are going to use the entry point of the FUNdamentals — which you can run as a special event or embed the pieces of it into your class as a unit."
+  },
+  {
+    "objectID": "module-1-welcome-to-data-dunkers/creating-your-playbook.html",
+    "href": "module-1-welcome-to-data-dunkers/creating-your-playbook.html",
+    "title": "Creating your Playbook",
+    "section": "",
+    "text": "In basketball — and in data science — good decisions start with good information. This page is your chance to think through the best way to navigate the course, based on your needs and interests.\nWe’ve set up a Playlab chat bot to guide you. It will ask a few simple questions to help you decide where to jump in and what path might make the most sense for you. You only need to share as much information as you’re comfortable with — or you can skip it entirely and move on.\nThink of it as building your personal Data Dunkers Implementation Playbook, so you can get the most out of your time here.\n==ADD PLAYLAB CHAT BOT HERE OR MERELY HAVE THEM LOOK AT THE COURSE.=="
+  },
+  {
+    "objectID": "module-1-welcome-to-data-dunkers/the-fundamentals-game-plan.html",
+    "href": "module-1-welcome-to-data-dunkers/the-fundamentals-game-plan.html",
+    "title": "The FUNdamentals Game Plan",
+    "section": "",
+    "text": "Let’s take a look at the game plan for the FUNdamentals program. This is the core starting point for many Data Dunkers experiences — a focused, high-energy introduction to data science through the excitement of sports. You’ll see how the activities build skills step-by-step, keep students engaged, and connect learning to real-world applications. Watch the video below to see how it all comes together in action.\n==NEED VIDEO EMBED INFO=="
+  }
+]
