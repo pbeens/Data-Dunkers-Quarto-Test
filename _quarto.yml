@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Data Dunkers Quarto Test"
+  title: "Data Dunkers Quarto Demo"
   navbar:
     left:
       - href: index.qmd
@@ -31,12 +31,17 @@ website:
             text: "Labyrinth Activity"
           - href: module-2-step-into-the-game-experience-like-a-student/to-understanding-the-instructional-approach.qmd
             text: "TO: Understanding the Instructional Approach"
-      - href: slides/intro.qmd
-        text: Slideshow
+    right:
       - href: notebooks/notebooks.qmd 
         text: Notebooks
-      - href: slides/tcdsb.qmd 
-        text: TCDSB Slideshow
+      - text: "Slideshows"
+        menu:
+          - href: slides/intro.qmd
+            text: "Quarto Intro Slideshow"
+          - href: slides/tcdsb.qmd 
+            text: "TCDSB Slideshow"      
+
+
 
 format:
   html:
