@@ -43,5 +43,8 @@
   },
   "notebooks/notebooks.qmd": {
     "notebooks.html": "334f282b"
+  },
+  "slides/tcdsb.qmd": {
+    "tcdsb.html": "1624854c"
   }
 }

@@ -35,6 +35,8 @@ website:
         text: Slideshow
       - href: notebooks/notebooks.qmd 
         text: Notebooks
+      - href: slides/tcdsb.qmd 
+        text: TCDSB Slideshow
 
 format:
   html:
