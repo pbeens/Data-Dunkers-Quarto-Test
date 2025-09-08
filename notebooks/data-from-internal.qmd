@@ -1,6 +1,5 @@
 ---
 title: "Getting Data from Within the Jupyter Notebook or .py File"
-format: html
 ---
 
 Open this notebook in [Callysto](https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/pbeens/Data-Dunkers&branch=main&subPath=Demos/data-from-internal.ipynb&depth=1) | [Colab](https://githubtocolab.com/pbeens/Data-Dunkers/blob/main/Demos/data-from-internal.ipynb).
@@ -22,9 +21,9 @@ In this demo, we will demonstrate how to get data from within the Jupyter Notebo
 
 This first code block may have to be run if the plotly.express library hasn't already been installed. Once this has been done once, it will never have to be done again. You can skip it for now, but if you get an error message related to plotly.express not being installed, go ahead and run it.
 
-```python
+```{python}
 # only if necessary
-%pip install plotly.express -q
+%pip install plotly -q
 ```
 
 ## Setup
@@ -33,7 +32,7 @@ We always start any Python program by importing any libraries we might need. For
 
 Importing libraries is performed by using the `import` command, like this:
 
-```python
+```{python}
 # import support libraries
 import plotly.express as px
 print('Libraries imported')

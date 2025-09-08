@@ -1,5 +1,8 @@
 ---
 title: "Notebooks"
+listing:
+  contents: notebooks
+  sort: name
 ---
 
 Here are the available notebooks:

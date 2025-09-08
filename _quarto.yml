@@ -40,4 +40,12 @@ format:
   html:
     theme: cosmo
     toc: true
+    code-tools: false     # shows copy/download/run buttons
+    code-fold: show       # true/false/show
+execute:
+  echo: true             # show code
+  output: true           # show output
+
+
+jupyter: python3            
 
