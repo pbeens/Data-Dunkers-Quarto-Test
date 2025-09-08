@@ -1,0 +1,101 @@
+---
+title: "Data Dunkers Demo Slides"
+format:
+  revealjs:
+    footer: "[🏠 Home](../index.qmd)"
+    code-line-numbers: false
+---
+
+## Install Python
+
+- Download from [python.org](https://www.python.org/downloads/)
+- Check “Add Python to PATH” during setup
+- Verify:
+
+  ```text
+  python --version
+  pip --version
+  ```
+- Optional: uninstall or remove older versions (e.g., Python 3.11)
+
+
+## Install Quarto CLI
+
+- Download from [quarto.org/get-started](https://quarto.org/docs/get-started/)
+- Run installer (MSI for Windows)
+- Verify installation:
+  ```text
+  quarto --version
+  quarto check
+  ```
+- If needed, add Quarto `bin` folder to PATH
+
+## Install Extra Python Packages
+
+- In terminal, run:
+  ```python
+  pip install jupyter pyyaml
+  ```
+- Why install?
+  - `jupyter`: enables running notebooks/code cells in Quarto
+  - `pyyaml`: fixes YAML parsing error in Quarto checks
+- Verify:
+  ```text
+  quarto check
+  ```
+
+## Create Your First Quarto Project
+
+- In terminal, run:
+
+  ```text
+  quarto create-project "Data Dunkers Quarto Test" --type website
+  cd "Data Dunkers Quarto Test"
+  quarto preview
+  ```
+
+## Project files
+
+- `_quarto.yml` → site configuration
+- `index.qmd` → homepage
+- `about.qmd` → starter page
+
+## Open in VS Code
+
+- Open folder in VS Code: `File → Open Folder…`
+- Install Quarto extension (already installed ✅)
+- Edit `.qmd` files with syntax highlighting
+- TBD
+- Preview in browser or integrated panel
+
+## Add a Slideshow
+
+- Create folder `slides/`
+- Add `intro.qmd` with front matter:
+  ```yaml
+  ---
+  title: "Data Dunkers Demo Slides"
+  format: revealjs
+  ---
+  ```
+- Each `---` in file makes a new slide
+- Link slideshow in `_quarto.yml` navbar
+
+## Publish the Site
+- Option A: **GitHub Pages**
+  - Commit & push to GitHub
+  - Add GitHub Action workflow for Quarto
+  - Site URL: `https://pbeens.github.io/data-dunkers-quarto-test/`
+- Option B: **Netlify**
+  - Connect repo at [netlify.com](https://www.netlify.com/)
+  - Auto-builds on push
+  - Site URL: `https://data-dunkers-quarto-test.netlify.app/`
+
+## Summary
+- ✅ Installed Python
+- ✅ Installed Quarto CLI
+- ✅ Installed Jupyter + PyYAML
+- ✅ Created and previewed Quarto project
+- ✅ Opened in VS Code
+- ✅ Added slideshow alongside website
+- ✅ Ready to publish demo site

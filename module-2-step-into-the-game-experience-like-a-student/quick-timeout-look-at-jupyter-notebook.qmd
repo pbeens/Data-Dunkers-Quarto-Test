@@ -1,0 +1,13 @@
+---
+title: "Quick Timeout: Look at Jupyter Notebook"
+---
+
+Before we get into our first **BIG** activity, we’re going to step out of the student role for a moment and give you, as a teacher, a quick look at one of the tools we’ll be using.
+
+We usually embed this learning into the experience with the students, but we wanted to provide you with a greater explanation up front.
+
+Watch this short video explaining how **Jupyter Notebooks** work. We’ll use these for the next two activities, so this quick overview will help you understand how they’re set up and how you and your students can interact with them.
+
+We’ve also included [a link to a sample notebook](https://github.com/Data-Dunkers/lessons/blob/main/jupyter-notebook-demo.ipynb) to an external site. that contains some of the information we’ll discuss in the video — so you can actually try out the notebook environment for yourself.
+
+==NEED VIDEO EMBED INFO==

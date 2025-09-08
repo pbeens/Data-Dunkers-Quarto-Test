@@ -1,0 +1,41 @@
+{
+  "about.qmd": {
+    "about.html": "d3ed2c12"
+  },
+  "index.qmd": {
+    "index.html": "5fb53ece"
+  },
+  "slides/intro.qmd": {
+    "intro.html": "90029adc"
+  },
+  "module-1-welcome-to-data-dunkers/creating-your-playbook.qmd": {
+    "creating-your-playbook.html": "3f11b238"
+  },
+  "module-1-welcome-to-data-dunkers/flavors-of-the-program.qmd": {
+    "flavors-of-the-program.html": "881c7011"
+  },
+  "module-1-welcome-to-data-dunkers/the-fundamentals-game-plan.qmd": {
+    "the-fundamentals-game-plan.html": "9c814754"
+  },
+  "module-1-welcome-to-data-dunkers/welcome.qmd": {
+    "welcome.html": "a22c4e97"
+  },
+  "module-1-welcome-to-data-dunkers/what-is-data-dunkers.qmd": {
+    "what-is-data-dunkers.html": "0a5b86eb"
+  },
+  "module-2-step-into-the-game-experience-like-a-student/data-is-everywhere.qmd": {
+    "data-is-everywhere.html": "8e70ad16"
+  },
+  "module-2-step-into-the-game-experience-like-a-student/labyrinth-activity.qmd": {
+    "labyrinth-activity.html": "d134cf78"
+  },
+  "module-2-step-into-the-game-experience-like-a-student/quick-timeout-look-at-jupyter-notebook.qmd": {
+    "quick-timeout-look-at-jupyter-notebook.html": "d803a5a1"
+  },
+  "module-2-step-into-the-game-experience-like-a-student/to-understanding-the-instructional-approach.qmd": {
+    "to-understanding-the-instructional-approach.html": "cc612a28"
+  },
+  "module-2-step-into-the-game-experience-like-a-student/welcome-to-the-court.qmd": {
+    "welcome-to-the-court.html": "f0c239fe"
+  }
+}

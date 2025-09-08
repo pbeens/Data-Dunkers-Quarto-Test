@@ -1,0 +1,11 @@
+---
+title: "Creating your Playbook"
+---
+
+In basketball — and in data science — good decisions start with good information. This page is your chance to think through the best way to navigate the course, based on your needs and interests.
+
+We’ve set up a **Playlab chat bot** to guide you. It will ask a few simple questions to help you decide where to jump in and what path might make the most sense for you. You only need to share as much information as you’re comfortable with — or you can skip it entirely and move on.
+
+Think of it as building your personal **Data Dunkers Implementation Playbook**, so you can get the most out of your time here.
+
+==ADD PLAYLAB CHAT BOT HERE OR MERELY HAVE THEM LOOK AT THE COURSE.==

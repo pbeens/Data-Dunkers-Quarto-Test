@@ -1,0 +1,8 @@
+---
+title: "Data is Everywhere!"
+---
+
+To kick things off, we’ll look at how data drives decisions in basketball — and why that matters far beyond the court. Start by watching this video about a data scientist working in basketball.
+
+==NEED VIDEO EMBED INFO== (x2)
+

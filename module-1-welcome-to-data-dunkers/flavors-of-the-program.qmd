@@ -1,0 +1,15 @@
+---
+title: "Flavors of the Program"
+---
+
+There’s more than one way to bring the Data Dunkers vision to life. Just like players can join a game in different roles, you can step in at the point that makes the most sense for you and your students. Throughout this course, we’ll explore practical ways to embed the program — whether you run it as a special event, stretch it into a unit, or weave pieces into your lessons over time.
+
+![Alt text](../assets/Data-Dunkers-Possibilities.png)
+
+- **FUNdamentals – 2 half-days** – A focused introduction to the core activities and concepts.
+- **Unit using FUNdamentals** – Spread the activities across multiple class periods over several weeks.
+- **Hack-a-thon** – A high-energy, one-day or multi-day event where students tackle data challenges.
+- **Embedded lessons** – Integrate Data Dunkers activities into your regular curriculum throughout the year.
+- **Project** – Launch a stand-alone project that connects data skills to real-world issues or student interests.
+
+For the start of this course, we are going to use the **entry point of the FUNdamentals** — which you can run as a special event or embed the pieces of it into your class as a unit.

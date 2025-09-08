@@ -1,0 +1,13 @@
+---
+title: "What Is Data Dunkers?"
+---
+
+Data isn’t just for scientists or statisticians — it’s becoming a core skill for success in almost every career. Whether in sports, healthcare, engineering, or creative industries, the ability to understand and use data is a game-changer for students’ futures.
+
+The World Economic Forum lists data analysis and data science among the most in-demand skills in their Future of Jobs report, with demand only expected to grow in the years ahead. You can explore the report here: [World Economic Forum – Future of Jobs Report](https://www.weforum.org/publications/the-future-of-jobs-report-2025/)
+
+**Why it matters for us as educators:** Data science isn’t just about numbers — it’s about curiosity, problem-solving, and storytelling. In Data Dunkers, we use the excitement of sports to spark student interest, then connect those skills to real-world applications that prepare them for jobs and challenges we can’t even imagine yet.
+
+Watch the video below for Dell Technologies’ and PS43 Foundations overview on the Data Dunkers program.
+
+==NEED VIDEO EMBED INFO==

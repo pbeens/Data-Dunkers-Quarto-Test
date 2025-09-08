@@ -1,0 +1,9 @@
+---
+title: "Labyrinth Activity"
+---
+
+Next up — the Basketball Labyrinth! This activity is designed to get you into **both** looking at the data and doing some basic coding. Think of it as a virtual escape room: you’ll solve puzzles, uncover clues, and make your way through the data to reach the end.
+
+We have another teacher who will walk you through the activity, but we recommend [you also open the Basketball Labyrinth yourself](https://github.com/Data-Dunkers/lessons/blob/main/labyrinths/mini-basketball/mini-basketball.ipynb) to an external site. so you can explore and experience it firsthand.
+
+==NEED VIDEO EMBED INFO==

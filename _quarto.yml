@@ -1,0 +1,41 @@
+project:
+  type: website
+
+website:
+  title: "Data Dunkers Quarto Test"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: "Module 1"
+        menu:
+          - href: module-1-welcome-to-data-dunkers/welcome.qmd
+            text: "Welcome"
+          - href: module-1-welcome-to-data-dunkers/what-is-data-dunkers.qmd
+            text: "What Is Data Dunkers?"
+          - href: module-1-welcome-to-data-dunkers/flavors-of-the-program.qmd
+            text: "Flavors of the Program"
+          - href: module-1-welcome-to-data-dunkers/the-fundamentals-game-plan.qmd
+            text: "The FUNdamentals Game Plan"
+          - href: module-1-welcome-to-data-dunkers/creating-your-playbook.qmd
+            text: "Creating your Playbook"
+      - text: "Module 2"
+        menu:
+          - href: module-2-step-into-the-game-experience-like-a-student/welcome-to-the-court.qmd
+            text: "Welcome to the Court"
+          - href: module-2-step-into-the-game-experience-like-a-student/data-is-everywhere.qmd
+            text: "Data is Everywhere!"
+          - href: module-2-step-into-the-game-experience-like-a-student/quick-timeout-look-at-jupyter-notebook.qmd
+            text: "Quick Timeout: Look at Jupyter Notebook"
+          - href: module-2-step-into-the-game-experience-like-a-student/labyrinth-activity.qmd
+            text: "Labyrinth Activity"
+          - href: module-2-step-into-the-game-experience-like-a-student/to-understanding-the-instructional-approach.qmd
+            text: "TO: Understanding the Instructional Approach"
+      - href: slides/intro.qmd
+        text: Slideshow
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
