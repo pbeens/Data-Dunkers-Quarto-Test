@@ -18,7 +18,7 @@ jobs:
       - name: Install Python + Jupyter
         run: |
           python3 -m pip install --upgrade pip
-          python3 -m pip install jupyter ipykernel nbformat pyyaml plotly
+          python3 -m pip install jupyter ipykernel nbformat pyyaml numpy pandas matplotlib plotly
 
       - name: Render and publish
         uses: quarto-dev/quarto-actions/publish@v2
