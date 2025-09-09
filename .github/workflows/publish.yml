@@ -12,16 +12,30 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: quarto-dev/quarto-actions/setup@v2
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - name: Install Python + Jupyter
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
         run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install jupyter ipykernel nbformat pyyaml numpy pandas matplotlib plotly
+          python -m pip install --upgrade pip
+          # Either install from requirements.txt if present, else install directly
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install jupyter ipykernel nbformat pyyaml numpy pandas matplotlib plotly jupyter-cache
+          fi
 
-      - name: Render and publish
+      - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
