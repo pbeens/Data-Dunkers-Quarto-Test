@@ -24,6 +24,9 @@ link-external-newwindow: true
 
 website:
   title: "Data Dunkers LMS"
+  search: 
+    location: navbar
+    type: overlay
   navbar:
     left:
       - href: index.qmd
