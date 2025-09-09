@@ -39,7 +39,7 @@
     "href": "slides/intro.html#open-in-vs-code",
     "title": "Data Dunkers Demo Slides",
     "section": "Open in VS Code",
-    "text": "Open in VS Code\n\nOpen folder in VS Code: File → Open Folder…\nInstall Quarto extension (already installed ✅)\nEdit .qmd files with syntax highlighting\nTBD\nPreview in browser or integrated panel"
+    "text": "Open in VS Code\n\nOpen folder in VS Code: File → Open Folder…\nInstall Quarto extension (already installed ✅)\nEdit .qmd files with syntax highlighting\nPreview in browser or integrated panel"
   },
   {
     "objectID": "slides/intro.html#add-a-slideshow",
@@ -63,46 +63,298 @@
     "text": "Summary\n\n✅ Installed Python\n✅ Installed Quarto CLI\n✅ Installed Jupyter + PyYAML\n✅ Created and previewed Quarto project\n✅ Opened in VS Code\n✅ Added slideshow alongside website\n✅ Ready to publish demo site"
   },
   {
-    "objectID": "module-1-welcome-to-data-dunkers/the-fundamentals-game-plan.html",
-    "href": "module-1-welcome-to-data-dunkers/the-fundamentals-game-plan.html",
-    "title": "The FUNdamentals Game Plan",
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/01-align-activities-to-curriculum.html",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/01-align-activities-to-curriculum.html",
+    "title": "Align Activities to Curriculum and Student Goals",
     "section": "",
-    "text": "Let’s take a look at the game plan for the FUNdamentals program. This is the core starting point for many Data Dunkers experiences — a focused, high-energy introduction to data science through the excitement of sports. You’ll see how the activities build skills step-by-step, keep students engaged, and connect learning to real-world applications. Watch the video below to see how it all comes together in action.\n==NEED VIDEO EMBED INFO=="
+    "text": "One of the most powerful ways to make Data Dunkers stick in your classroom is to connect each activity to explicit curriculum expectations. This ensures the time spent on basketball data is not just fun, but also advancing mandated learning outcomes.\nIn this section, we will:",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Align Activities to Curriculum and Student Goals"
+    ]
   },
   {
-    "objectID": "module-1-welcome-to-data-dunkers/creating-your-playbook.html",
-    "href": "module-1-welcome-to-data-dunkers/creating-your-playbook.html",
-    "title": "Creating your Playbook",
-    "section": "",
-    "text": "In basketball — and in data science — good decisions start with good information. This page is your chance to think through the best way to navigate the course, based on your needs and interests.\nWe’ve set up a Playlab chat bot to guide you. It will ask a few simple questions to help you decide where to jump in and what path might make the most sense for you. You only need to share as much information as you’re comfortable with — or you can skip it entirely and move on.\nThink of it as building your personal Data Dunkers Implementation Playbook, so you can get the most out of your time here.\n==ADD PLAYLAB CHAT BOT HERE OR MERELY HAVE THEM LOOK AT THE COURSE.=="
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/01-align-activities-to-curriculum.html#why-curriculum-alignment-matters",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/01-align-activities-to-curriculum.html#why-curriculum-alignment-matters",
+    "title": "Align Activities to Curriculum and Student Goals",
+    "section": "Why Curriculum Alignment Matters",
+    "text": "Why Curriculum Alignment Matters\nCurriculum alignment makes it clear that:\n\nData Dunkers is not an “add-on,” but a vehicle for meeting existing math goals.\n\nStudents build transferable skills — working with data, coding, and problem-solving — while engaging with basketball.\n\nYou can integrate Data Dunkers into units on data literacy, algebra, or financial literacy without rewriting your whole program.",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Align Activities to Curriculum and Student Goals"
+    ]
   },
   {
-    "objectID": "module-1-welcome-to-data-dunkers/flavors-of-the-program.html",
-    "href": "module-1-welcome-to-data-dunkers/flavors-of-the-program.html",
-    "title": "Flavors of the Program",
-    "section": "",
-    "text": "There’s more than one way to bring the Data Dunkers vision to life. Just like players can join a game in different roles, you can step in at the point that makes the most sense for you and your students. Throughout this course, we’ll explore practical ways to embed the program — whether you run it as a special event, stretch it into a unit, or weave pieces into your lessons over time.\n\n\n\nAlt text\n\n\n\nFUNdamentals – 2 half-days – A focused introduction to the core activities and concepts.\nUnit using FUNdamentals – Spread the activities across multiple class periods over several weeks.\nHack-a-thon – A high-energy, one-day or multi-day event where students tackle data challenges.\nEmbedded lessons – Integrate Data Dunkers activities into your regular curriculum throughout the year.\nProject – Launch a stand-alone project that connects data skills to real-world issues or student interests.\n\nFor the start of this course, we are going to use the entry point of the FUNdamentals — which you can run as a special event or embed the pieces of it into your class as a unit."
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/01-align-activities-to-curriculum.html#curriculum-connections-by-grade",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/01-align-activities-to-curriculum.html#curriculum-connections-by-grade",
+    "title": "Align Activities to Curriculum and Student Goals",
+    "section": "Curriculum Connections by Grade",
+    "text": "Curriculum Connections by Grade\n\nGrade 9 (2021 Curriculum)\nStrand D: Data\n\nD1.2 Represent and statistically analyse data from a real-life situation involving a single variable in various ways (e.g., quartile values, box plots).\n→ Data Dunkers: Students calculate shot success rates and visualize them using bar charts and box plots.\nD1.3 Create a scatter plot to represent the relationship between two variables and test regression models.\n→ Data Dunkers: Students compare shooting percentage to distance, fit a line of best fit, and interpret the trend.\n\nStrand C: Algebra (Coding Integration)\n\nC2.2 Create code by decomposing situations into computational steps in order to represent mathematical concepts and relationships.\n→ Data Dunkers: Students use Python notebooks to filter and sort basketball data, then generate plots automatically.\n\n\n\nGrade 10 (2005 Curriculum)\nLinear Relations Strand\n\nCollect data, graph it, determine the equation of a line of best fit, and use it to solve problems.\n→ Data Dunkers: Students use scatter plots of shot success vs. distance, then apply line of best fit to predict outcomes.\n\nData Management Strand\n\nUse data management techniques to investigate relationships and solve problems.\n→ Data Dunkers: Students summarize player stats and use averages/percentages to compare performance.\n\n\n\nGrades 11–12 (2007 Curriculum)\nMathematics of Data Management (MDM4U)\n\nOrganize data using charts, tables, and graphs.\n\nApply measures of central tendency and variability to analyze sets of data.\n→ Data Dunkers: Students create multi-variable dashboards (e.g., shooting accuracy by quarter, by player, by distance).\n\nFoundations for College Mathematics (MAP4C / MBF3C)\n\nCollect, display, and analyze data involving one or two variables.\n\nInterpret statistical measures in context.\n→ Data Dunkers: Students design and present infographics summarizing team statistics.",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Align Activities to Curriculum and Student Goals"
+    ]
   },
   {
-    "objectID": "module-2-step-into-the-game-experience-like-a-student/data-is-everywhere.html",
-    "href": "module-2-step-into-the-game-experience-like-a-student/data-is-everywhere.html",
-    "title": "Data is Everywhere!",
-    "section": "",
-    "text": "To kick things off, we’ll look at how data drives decisions in basketball — and why that matters far beyond the court. Start by watching this video about a data scientist working in basketball.\n==NEED VIDEO EMBED INFO== (x2)"
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/01-align-activities-to-curriculum.html#classroom-example",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/01-align-activities-to-curriculum.html#classroom-example",
+    "title": "Align Activities to Curriculum and Student Goals",
+    "section": "Classroom Example",
+    "text": "Classroom Example\n\nExample: A Grade 9 class collects shot data from a free-throw drill. Students record makes/misses in a spreadsheet, import it into a Jupyter notebook, and produce a bar graph of success rates.\n\nCurriculum Link: Grade 9, D1.2 (Data Representation).\n\nExtension: Fit a trend line to success vs. shot distance (Grade 9, D1.3) and compare it to the theoretical model (Grade 10 Linear Relations).",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Align Activities to Curriculum and Student Goals"
+    ]
   },
   {
-    "objectID": "module-2-step-into-the-game-experience-like-a-student/to-understanding-the-instructional-approach.html",
-    "href": "module-2-step-into-the-game-experience-like-a-student/to-understanding-the-instructional-approach.html",
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/01-align-activities-to-curriculum.html#your-turn",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/01-align-activities-to-curriculum.html#your-turn",
+    "title": "Align Activities to Curriculum and Student Goals",
+    "section": "Your Turn",
+    "text": "Your Turn\nReflect on your own teaching context:\n\nWhich Data Dunkers activities align with your grade level?\n\nWhich curriculum strands are you already required to cover that Data Dunkers could bring to life?\n\nHow might you present these connections to your students and administrators?",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Align Activities to Curriculum and Student Goals"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html",
+    "title": "Select Datasets and Sports Themes",
+    "section": "",
+    "text": "The heart of Data Dunkers is the connection between sports and data. Choosing the right dataset and theme can make or break engagement in your classroom. In this section, we’ll explore strategies for selecting datasets that are both relevant to your students and aligned with curriculum goals.",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Select Datasets and Sports Themes"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html#why-dataset-choice-matters",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html#why-dataset-choice-matters",
+    "title": "Select Datasets and Sports Themes",
+    "section": "Why Dataset Choice Matters",
+    "text": "Why Dataset Choice Matters\n\nStudents engage more deeply when the data feels personal or exciting.\n\nA well-chosen dataset highlights the math concepts you need to cover.\n\nVariety ensures you can adapt Data Dunkers to different grades, contexts, and student interests.",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Select Datasets and Sports Themes"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html#sports-as-a-gateway",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html#sports-as-a-gateway",
+    "title": "Select Datasets and Sports Themes",
+    "section": "Sports as a Gateway",
+    "text": "Sports as a Gateway\nBasketball is the primary lens for Data Dunkers — but it doesn’t have to stop there. Consider:\n- Basketball shot data → success rates, distances, player comparisons.\n- Team statistics → rebounds, assists, turnovers, and points by quarter.\n- Crossover themes → comparing basketball to other sports students follow (soccer, hockey, baseball).\n\nTip: Even within basketball, you can switch perspectives — student-collected data (free throws, 3-point shots) vs. professional datasets (NBA or WNBA box scores).",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Select Datasets and Sports Themes"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html#data-sources",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html#data-sources",
+    "title": "Select Datasets and Sports Themes",
+    "section": "Data Sources",
+    "text": "Data Sources\nHere are some dataset options you might build from:\n\nClassroom-collected data: Students shoot from 2, 4, 6, 8, and 10 feet and record results.\n\nProvided sample datasets: Pre-formatted CSVs with NBA player stats, Raptors shot logs, or historical game data.\n\nOpen data portals: Publicly available sports datasets (e.g., Basketball Reference, NBA Stats API) can add richness for older grades.",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Select Datasets and Sports Themes"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html#matching-datasets-to-math-goals",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html#matching-datasets-to-math-goals",
+    "title": "Select Datasets and Sports Themes",
+    "section": "Matching Datasets to Math Goals",
+    "text": "Matching Datasets to Math Goals\n\nElementary (Grades 6–8): Use simple tallies and percentages. Example: “What percentage of free throws were made?”\n\nGrade 9: Compare two variables with scatter plots and lines of best fit (e.g., shot distance vs. accuracy).\n\nGrade 10: Investigate linear relations or extend into non-linear trends with quadratic modeling.\n\nGrades 11–12: Explore multi-variable analysis, probabilities, and statistical distributions using full game or season data.",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Select Datasets and Sports Themes"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html#beyond-sports",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html#beyond-sports",
+    "title": "Select Datasets and Sports Themes",
+    "section": "Beyond Sports",
+    "text": "Beyond Sports\nAlthough basketball is the anchor, you can also experiment with:\n- Health datasets (student steps, heart rates, nutrition data).\n- Civic datasets (neighbourhood statistics, community surveys).\n- Social datasets (polls, social media trends).\nThe Data Dunkers model works as long as students can see themselves in the data and apply math concepts meaningfully.",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Select Datasets and Sports Themes"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html#classroom-example",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html#classroom-example",
+    "title": "Select Datasets and Sports Themes",
+    "section": "Classroom Example",
+    "text": "Classroom Example\n\nExample: A Grade 10 teacher chooses to use NBA shot charts instead of classroom-collected data. Students graph attempts by distance, calculate success rates, and compare them with their own gym data.\n- Curriculum Link: Linear Relations and Data Management.\n- Student Engagement: Tapping into Raptors fandom boosts motivation.",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Select Datasets and Sports Themes"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html#your-turn",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html#your-turn",
+    "title": "Select Datasets and Sports Themes",
+    "section": "Your Turn",
+    "text": "Your Turn\nThink about your students:\n- What sports or themes capture their interest?\n- What type of data is most practical for your class (collected in class, pre-made, or online)?\n- How might you adapt the dataset so that it connects naturally to your math goals?",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Select Datasets and Sports Themes"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/index.html",
+    "href": "module-3-implementation-in-your-context/index.html",
+    "title": "Module 3 – Implementation in Your Context",
+    "section": "",
+    "text": "This module helps you tailor Data Dunkers to your class. You’ll align activities to the Ontario curriculum, choose the right datasets and themes, map an instructional flow, and set up facilitation so students thrive. If you want to go deeper, you can branch into a Coding Lab focused on basketball data."
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/index.html#what-you-will-do-and-learn",
+    "href": "module-3-implementation-in-your-context/index.html#what-you-will-do-and-learn",
+    "title": "Module 3 – Implementation in Your Context",
+    "section": "What you will do and learn",
+    "text": "What you will do and learn\n\nAlign selected activities to curriculum expectations and student goals.\nChoose datasets and sports themes that fit your learners.\nMap an instructional flow and scaffolds for your context.\nPlan grouping and facilitation for a data-driven classroom.\n(Optional) Explore a Coding Lab path to extend technical depth."
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/index.html#how-to-use-this-module",
+    "href": "module-3-implementation-in-your-context/index.html#how-to-use-this-module",
+    "title": "Module 3 – Implementation in Your Context",
+    "section": "How to use this module",
+    "text": "How to use this module\n\nStart with the Planning Toolkit to design your implementation.\nIf desired, add the Coding Lab sub-menu for deeper technical work.\nWrap with the Implementation Checklist to finalize your launch plan."
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/index.html#planning-toolkit",
+    "href": "module-3-implementation-in-your-context/index.html#planning-toolkit",
+    "title": "Module 3 – Implementation in Your Context",
+    "section": "Planning Toolkit",
+    "text": "Planning Toolkit\n\nAlign Activities to Curriculum\nSelect Datasets and Sports Themes\nMap Instructional Flow\nGrouping & Facilitation Strategies\nImplementation Checklist"
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/index.html#optional-deep-dive-paths",
+    "href": "module-3-implementation-in-your-context/index.html#optional-deep-dive-paths",
+    "title": "Module 3 – Implementation in Your Context",
+    "section": "Optional: Deep-Dive Paths",
+    "text": "Optional: Deep-Dive Paths\n\nCoding Lab: Basketball Data\n\nImport & Prepare Data (CSV, Sheets)\n\nVisualize Shots & Trends (bar, line, scatter)\n\nStats Toolbox (percentages, mean/median)\n\nPlayer Comparisons (side-by-side views)\n\nBuild a Mini Dashboard\n\n\n(Links for Coding Lab pages will appear once those files are added to the repo.)"
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/index.html#outcomes",
+    "href": "module-3-implementation-in-your-context/index.html#outcomes",
+    "title": "Module 3 – Implementation in Your Context",
+    "section": "Outcomes",
+    "text": "Outcomes\nBy the end of Module 3, you will have: - a classroom-ready plan aligned to curriculum, - a set of datasets and activities matched to your students, - a clear flow and facilitation approach, - optional extensions for deeper coding experiences."
+  },
+  {
+    "objectID": "module-1-welcome-to-data-dunkers/02-what-is-data-dunkers.html",
+    "href": "module-1-welcome-to-data-dunkers/02-what-is-data-dunkers.html",
+    "title": "What Is Data Dunkers?",
+    "section": "",
+    "text": "Data isn’t just for scientists or statisticians — it’s becoming a core skill for success in almost every career. Whether in sports, healthcare, engineering, or creative industries, the ability to understand and use data is a game-changer for students’ futures.\nThe World Economic Forum lists data analysis and data science among the most in-demand skills in their Future of Jobs report, with demand only expected to grow in the years ahead. You can explore the report here: World Economic Forum – Future of Jobs Report\nWhy it matters for us as educators: Data science isn’t just about numbers — it’s about curiosity, problem-solving, and storytelling. In Data Dunkers, we use the excitement of sports to spark student interest, then connect those skills to real-world applications that prepare them for jobs and challenges we can’t even imagine yet.\nWatch the video below for Dell Technologies’ and PS43 Foundations overview on the Data Dunkers program.\n==NEED VIDEO EMBED INFO==",
+    "crumbs": [
+      "Home",
+      "Module 1",
+      "What Is Data Dunkers?"
+    ]
+  },
+  {
+    "objectID": "module-1-welcome-to-data-dunkers/01-welcome.html",
+    "href": "module-1-welcome-to-data-dunkers/01-welcome.html",
+    "title": "Welcome to Data Dunkers!",
+    "section": "",
+    "text": "We’re excited to have you join the Data Dunkers Support Course — a space designed to help you bring the energy of sports and the power of data into your classroom. Here, you’ll explore flexible activities, ready-to-use tools, and real-world examples that make data science approachable and engaging for your students.\nBefore we dive in, listen in to Pascal Siakam’s welcome to students, showing his passion for this program. Pascal is not only an NBA Champion and 2025 Eastern Conference Finals MVP but most importantly, he deeply cares about our students’ future.",
+    "crumbs": [
+      "Home",
+      "Module 1",
+      "Welcome to Data Dunkers!"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Dunkers LMS",
+    "section": "",
+    "text": "This course focuses on how you can implement data science learning in your school setting in ways that fit your schedule, curriculum, and students by implementing Data Dunkers curriculum and support. We’ll start by exploring the core FUNdamentals approach—how it works, how it engages students through sports-themed data activities, and how to adapt it for different grade levels and classroom contexts.\nFrom there, participants will look at multiple ways to extend and deepen the experience, including:\nBy the end, participants will leave with a clear, adaptable game plan for bringing Data Dunkers to life—whether you run a short, focused experience or build toward more advanced, student-driven work."
+  },
+  {
+    "objectID": "index.html#course-objectives",
+    "href": "index.html#course-objectives",
+    "title": "Data Dunkers LMS",
+    "section": "Course Objectives",
+    "text": "Course Objectives\nBy the end of this course, participants will be able to:\n\nUnderstand the Data Dunkers FUNdamentals model – Explain its structure, learning goals, and how it engages students in data science through sports contexts.\nIdentify implementation options – Select one or more ways to bring FUNdamentals into their school or program (e.g., short-term workshop, embedded lessons, after-school model).\nAdapt activities for context – Modify lesson plans, pacing, and resources to meet student needs, grade levels, and available time.\nExtend beyond the basics (optional) – Explore opportunities to integrate careers, advanced coding, AI tools, diverse data sets, or long-term projects.\nPlan for launch – Develop a clear, personalized implementation plan, including timeline, support needs, and expected student outcomes."
+  },
+  {
+    "objectID": "index.html#success-criteria-for-participants",
+    "href": "index.html#success-criteria-for-participants",
+    "title": "Data Dunkers LMS",
+    "section": "Success Criteria for Participants",
+    "text": "Success Criteria for Participants\nParticipants will have successfully completed the course when they can:\n\nDescribe the key elements and purpose of the FUNdamentals program.\nSelect and justify an implementation pathway that fits their setting.\nDemonstrate readiness by adapting at least one FUNdamentals lesson or activity for their classroom.\nIdentify at least one possible extension (career connection, advanced coding, AI, diverse data set, or project-based work) that aligns with their teaching context.\nProduce a documented game plan that outlines:\n\nChosen model(s) for implementation.\nTimeline and pacing considerations.\nRequired supports and resources.\nExpected student learning outcomes.\n\n\n\n\n(Quarto Demo Site)"
+  },
+  {
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/05-to-understanding-the-instructional-approach.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/05-to-understanding-the-instructional-approach.html",
     "title": "TO: Understanding the Instructional Approach",
     "section": "",
-    "text": "Before we move on, let’s take a quick time out to look at the instructional approach behind the Data Dunkers program. This short video will walk you through the thinking that shapes how we design activities, guide student learning, and connect data skills to real-world relevance.\nUnderstanding this approach will help you see how each part of the program builds both engagement and skill — and how you can adapt these strategies for your own students.\n==NEED VIDEO EMBED INFO=="
+    "text": "Before we move on, let’s take a quick time out to look at the instructional approach behind the Data Dunkers program. This short video will walk you through the thinking that shapes how we design activities, guide student learning, and connect data skills to real-world relevance.\nUnderstanding this approach will help you see how each part of the program builds both engagement and skill — and how you can adapt these strategies for your own students.\n==NEED VIDEO EMBED INFO==",
+    "crumbs": [
+      "Home",
+      "Module 2",
+      "TO: Understanding the Instructional Approach"
+    ]
   },
   {
-    "objectID": "module-2-step-into-the-game-experience-like-a-student/labyrinth-activity.html",
-    "href": "module-2-step-into-the-game-experience-like-a-student/labyrinth-activity.html",
-    "title": "Labyrinth Activity",
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/03-quick-timeout-look-at-jupyter-notebook.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/03-quick-timeout-look-at-jupyter-notebook.html",
+    "title": "Quick Timeout: Look at Jupyter Notebook",
     "section": "",
-    "text": "Next up — the Basketball Labyrinth! This activity is designed to get you into both looking at the data and doing some basic coding. Think of it as a virtual escape room: you’ll solve puzzles, uncover clues, and make your way through the data to reach the end.\nWe have another teacher who will walk you through the activity, but we recommend you also open the Basketball Labyrinth yourself to an external site. so you can explore and experience it firsthand.\n==NEED VIDEO EMBED INFO=="
+    "text": "Before we get into our first BIG activity, we’re going to step out of the student role for a moment and give you, as a teacher, a quick look at one of the tools we’ll be using.\nWe usually embed this learning into the experience with the students, but we wanted to provide you with a greater explanation up front.\nWatch this short video explaining how Jupyter Notebooks work. We’ll use these for the next two activities, so this quick overview will help you understand how they’re set up and how you and your students can interact with them.\nWe’ve also included a link to a sample notebook to an external site. that contains some of the information we’ll discuss in the video — so you can actually try out the notebook environment for yourself.\n==NEED VIDEO EMBED INFO==",
+    "crumbs": [
+      "Home",
+      "Module 2",
+      "Quick Timeout: Look at Jupyter Notebook"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "notebooks/notebooks.html",
+    "href": "notebooks/notebooks.html",
+    "title": "Notebooks",
+    "section": "",
+    "text": "Here are the available notebooks:\n\nData from Internal"
   },
   {
     "objectID": "notebooks/data-from-internal.html",
@@ -140,52 +392,127 @@
     "text": "Setup\nWe always start any Python program by importing any libraries we might need. For our first example, we only need the plotly.express library.\nImporting libraries is performed by using the import command, like this:\n\n\nCode\n# import support libraries\nimport plotly.express as px\nprint('Libraries imported')\n\n\nLibraries imported\n\n\nThe line above the import command that starts with # is a comment and is ignored by the program. We add comments to make our program easier to understand."
   },
   {
-    "objectID": "notebooks/notebooks.html",
-    "href": "notebooks/notebooks.html",
-    "title": "Notebooks",
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/02-data-is-everywhere.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/02-data-is-everywhere.html",
+    "title": "Data is Everywhere!",
     "section": "",
-    "text": "Here are the available notebooks:\n\nData from Internal\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "To kick things off, we’ll look at how data drives decisions in basketball — and why that matters far beyond the court. Start by watching this video about a data scientist working in basketball.\n==NEED VIDEO EMBED INFO== (x2)",
+    "crumbs": [
+      "Home",
+      "Module 2",
+      "Data is Everywhere!"
+    ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/04-labyrinth-activity.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/04-labyrinth-activity.html",
+    "title": "Labyrinth Activity",
     "section": "",
-    "text": "About this site"
+    "text": "Next up — the Basketball Labyrinth! This activity is designed to get you into both looking at the data and doing some basic coding. Think of it as a virtual escape room: you’ll solve puzzles, uncover clues, and make your way through the data to reach the end.\nWe have another teacher who will walk you through the activity, but we recommend you also open the Basketball Labyrinth yourself to an external site. so you can explore and experience it firsthand.\n==NEED VIDEO EMBED INFO==",
+    "crumbs": [
+      "Home",
+      "Module 2",
+      "Labyrinth Activity"
+    ]
   },
   {
-    "objectID": "module-2-step-into-the-game-experience-like-a-student/welcome-to-the-court.html",
-    "href": "module-2-step-into-the-game-experience-like-a-student/welcome-to-the-court.html",
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/01-welcome-to-the-court.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/01-welcome-to-the-court.html",
     "title": "Welcome to the Court",
     "section": "",
-    "text": "The best way to understand how you might use Data Dunkers in your classroom is to first experience it like a student. In this section, you’ll step into their shoes — exploring activities, solving challenges, and seeing how data comes alive through sports.\nTo guide you through this part of the course, you’ll have a Virtual Coach. This coach will help you navigate the activities, offer prompts and tips, and keep you moving forward.\n==NEED VIDEO EMBED INFO=="
+    "text": "The best way to understand how you might use Data Dunkers in your classroom is to first experience it like a student. In this section, you’ll step into their shoes — exploring activities, solving challenges, and seeing how data comes alive through sports.\nTo guide you through this part of the course, you’ll have a Virtual Coach. This coach will help you navigate the activities, offer prompts and tips, and keep you moving forward.\n==NEED VIDEO EMBED INFO==",
+    "crumbs": [
+      "Home",
+      "Module 2",
+      "Welcome to the Court"
+    ]
   },
   {
-    "objectID": "module-2-step-into-the-game-experience-like-a-student/quick-timeout-look-at-jupyter-notebook.html",
-    "href": "module-2-step-into-the-game-experience-like-a-student/quick-timeout-look-at-jupyter-notebook.html",
-    "title": "Quick Timeout: Look at Jupyter Notebook",
+    "objectID": "module-1-welcome-to-data-dunkers/05-creating-your-playbook.html",
+    "href": "module-1-welcome-to-data-dunkers/05-creating-your-playbook.html",
+    "title": "Creating your Playbook",
     "section": "",
-    "text": "Before we get into our first BIG activity, we’re going to step out of the student role for a moment and give you, as a teacher, a quick look at one of the tools we’ll be using.\nWe usually embed this learning into the experience with the students, but we wanted to provide you with a greater explanation up front.\nWatch this short video explaining how Jupyter Notebooks work. We’ll use these for the next two activities, so this quick overview will help you understand how they’re set up and how you and your students can interact with them.\nWe’ve also included a link to a sample notebook to an external site. that contains some of the information we’ll discuss in the video — so you can actually try out the notebook environment for yourself.\n==NEED VIDEO EMBED INFO=="
+    "text": "In basketball — and in data science — good decisions start with good information. This page is your chance to think through the best way to navigate the course, based on your needs and interests.\nWe’ve set up a Playlab chat bot to guide you. It will ask a few simple questions to help you decide where to jump in and what path might make the most sense for you. You only need to share as much information as you’re comfortable with — or you can skip it entirely and move on.\nThink of it as building your personal Data Dunkers Implementation Playbook, so you can get the most out of your time here.\n==ADD PLAYLAB CHAT BOT HERE OR MERELY HAVE THEM LOOK AT THE COURSE.==",
+    "crumbs": [
+      "Home",
+      "Module 1",
+      "Creating your Playbook"
+    ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Data Dunkers",
+    "objectID": "module-1-welcome-to-data-dunkers/03-flavors-of-the-program.html",
+    "href": "module-1-welcome-to-data-dunkers/03-flavors-of-the-program.html",
+    "title": "Flavors of the Program",
     "section": "",
-    "text": "NEED AN INTRO!"
+    "text": "There’s more than one way to bring the Data Dunkers vision to life. Just like players can join a game in different roles, you can step in at the point that makes the most sense for you and your students. Throughout this course, we’ll explore practical ways to embed the program — whether you run it as a special event, stretch it into a unit, or weave pieces into your lessons over time.\n\n\n\nAlt text\n\n\n\nFUNdamentals – 2 half-days – A focused introduction to the core activities and concepts.\nUnit using FUNdamentals – Spread the activities across multiple class periods over several weeks.\nHack-a-thon – A high-energy, one-day or multi-day event where students tackle data challenges.\nEmbedded lessons – Integrate Data Dunkers activities into your regular curriculum throughout the year.\nProject – Launch a stand-alone project that connects data skills to real-world issues or student interests.\n\nFor the start of this course, we are going to use the entry point of the FUNdamentals — which you can run as a special event or embed the pieces of it into your class as a unit.",
+    "crumbs": [
+      "Home",
+      "Module 1",
+      "Flavors of the Program"
+    ]
   },
   {
-    "objectID": "module-1-welcome-to-data-dunkers/welcome.html",
-    "href": "module-1-welcome-to-data-dunkers/welcome.html",
-    "title": "Welcome to Data Dunkers!",
+    "objectID": "module-1-welcome-to-data-dunkers/04-the-fundamentals-game-plan.html",
+    "href": "module-1-welcome-to-data-dunkers/04-the-fundamentals-game-plan.html",
+    "title": "The FUNdamentals Game Plan",
     "section": "",
-    "text": "We’re excited to have you join the Data Dunkers Support Course — a space designed to help you bring the energy of sports and the power of data into your classroom. Here, you’ll explore flexible activities, ready-to-use tools, and real-world examples that make data science approachable and engaging for your students.\nBefore we dive in, listen in to Pascal Siakam’s welcome to students, showing his passion for this program. Pascal is not only an NBA Champion and 2025 Eastern Conference Finals MVP but most importantly, he deeply cares about our students’ future."
+    "text": "Let’s take a look at the game plan for the FUNdamentals program. This is the core starting point for many Data Dunkers experiences — a focused, high-energy introduction to data science through the excitement of sports. You’ll see how the activities build skills step-by-step, keep students engaged, and connect learning to real-world applications. Watch the video below to see how it all comes together in action.\n==NEED VIDEO EMBED INFO==",
+    "crumbs": [
+      "Home",
+      "Module 1",
+      "The FUNdamentals Game Plan"
+    ]
   },
   {
-    "objectID": "module-1-welcome-to-data-dunkers/what-is-data-dunkers.html",
-    "href": "module-1-welcome-to-data-dunkers/what-is-data-dunkers.html",
-    "title": "What Is Data Dunkers?",
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html",
+    "title": "Map Instructional Flow",
     "section": "",
-    "text": "Data isn’t just for scientists or statisticians — it’s becoming a core skill for success in almost every career. Whether in sports, healthcare, engineering, or creative industries, the ability to understand and use data is a game-changer for students’ futures.\nThe World Economic Forum lists data analysis and data science among the most in-demand skills in their Future of Jobs report, with demand only expected to grow in the years ahead. You can explore the report here: World Economic Forum – Future of Jobs Report\nWhy it matters for us as educators: Data science isn’t just about numbers — it’s about curiosity, problem-solving, and storytelling. In Data Dunkers, we use the excitement of sports to spark student interest, then connect those skills to real-world applications that prepare them for jobs and challenges we can’t even imagine yet.\nWatch the video below for Dell Technologies’ and PS43 Foundations overview on the Data Dunkers program.\n==NEED VIDEO EMBED INFO=="
+    "text": "Here’s the same previous format, with your updated times applied.",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Map Instructional Flow"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#prerequisites-at-a-glance",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#prerequisites-at-a-glance",
+    "title": "Map Instructional Flow",
+    "section": "Prerequisites at a Glance",
+    "text": "Prerequisites at a Glance\n\nFirst timer: Jupyter Notebook Demo → one Input lesson → one Output lesson\nAny Process lesson expects at least one Input lesson first\nScatter/line usually benefits from Statistics (to talk about trend/center/variation)",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Map Instructional Flow"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#quick-start-flow-recipes",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#quick-start-flow-recipes",
+    "title": "Map Instructional Flow",
+    "section": "Quick-Start Flow Recipes",
+    "text": "Quick-Start Flow Recipes\n\nA) “First Run” (≈60 min)\n\nGoal: get everyone from raw data to one clear chart with a takeaway\nFlow:\n\nJupyter Notebook Demo (10 min, teacher-led)\nData from a CSV File (15 min)\nColumns (15 min)\nBar Graphs or Scatter Plots (15 min)\n1–2 sentence insight + share-out (≈5 min)\n\n\n\nNeed a true 45 min option? Skip either Columns or swap CSV → Within the Notebook to trim setup time.\n\n\n\nB) 2×45 “Explore → Explain”\n\nPeriod 1 (Explore): Notebook Demo (10) → Google Sheet (10–15) → Columns (15) → Bar Graphs (15)\nPeriod 2 (Explain): Filtering (15) → Statistics (10–15) → Scatter (15) → Quick gallery walk (5)\n\n\n\nC) 3×45 “Collect → Analyze → Tell the Story”\n\nPeriod 1: Class data collection → Data from a CSV (import class file, 15)\nPeriod 2: Columns (15) → Filtering (15) → Statistics (10–15)\nPeriod 3: Scatter (15) or Bar (15) → Draft captions → 1-slide share-out\n\n\n\nD) Half-Day FUNdamentals (≈2.5–3 hrs)\n\nBlock 1 (60–70): Demo (10) → CSV (15) → Columns (15) → Bar/Scatter (15)\nBlock 2 (60–70): Filtering (15) → Statistics (10–15) → Second chart (Bar/Scatter 15) or Histograms (10–15)\nBlock 3 (30–40): Synthesis poster (chart + insight) → 1-minute standups",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Map Instructional Flow"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#menu-builder-with-time-estimates",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#menu-builder-with-time-estimates",
+    "title": "Map Instructional Flow",
+    "section": "Menu Builder with Time Estimates",
+    "text": "Menu Builder with Time Estimates\n\n\n\n\n\n\n\n\n\nStep\nLesson\nTypical Time\nNotes\n\n\n\n\n0\nJupyter Notebook Demo\n10 min\nTeacher-led walkthrough\n\n\n1\nData from a CSV File\n15 min\nFastest on-ramp for local files\n\n\n1\nData from a Google Sheet\n10–15 min\nGreat for shared class data\n\n\n1\nData from a Webpage\n15–20 min\nMay require light cleaning\n\n\n1\nData from an Excel File\n10–15 min\nUseful if .xlsx is on hand\n\n\n1\nData from Within the Notebook\n8–10 min\nRemoves file friction\n\n\n2\nColumns (explore/select)\n15 min\nUpdated per your call\n\n\n2\nFiltering Our Data\n15 min\nUpdated per your call\n\n\n2\nSorting Our Data\n6–8 min\nOften quick once columns are known\n\n\n2\nAdding New Columns\n10–15 min\nRatios/percents or simple formulas\n\n\n2\nStatistics\n10–15 min\nMean/median/min/max, describe()\n\n\n3\nBar Graphs\n15 min\nUpdated per your call\n\n\n3\nScatter Plots\n15 min\nUpdated per your call\n\n\n3\nLine Graphs\n12–18 min\nConsider time for axis choices\n\n\n3\nPie Charts\n10–12 min\nKeep categories small\n\n\n3\nHistograms\n10–15 min\nBin-choice discussion adds time",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Map Instructional Flow"
+    ]
   }
 ]

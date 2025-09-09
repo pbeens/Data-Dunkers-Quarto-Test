@@ -2,66 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/slides/intro.html</loc>
-    <lastmod>2025-09-08T11:46:20.471Z</lastmod>
+    <lastmod>2025-09-09T11:29:13.152Z</lastmod>
   </url>
   <url>
-    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-1-welcome-to-data-dunkers/the-fundamentals-game-plan.html</loc>
-    <lastmod>2025-09-08T11:46:20.471Z</lastmod>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-3-implementation-in-your-context/1-planning-toolkit/01-align-activities-to-curriculum.html</loc>
+    <lastmod>2025-09-09T11:29:13.151Z</lastmod>
   </url>
   <url>
-    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-1-welcome-to-data-dunkers/creating-your-playbook.html</loc>
-    <lastmod>2025-09-08T11:46:20.470Z</lastmod>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.html</loc>
+    <lastmod>2025-09-09T11:29:13.151Z</lastmod>
   </url>
   <url>
-    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-1-welcome-to-data-dunkers/flavors-of-the-program.html</loc>
-    <lastmod>2025-09-08T11:46:20.470Z</lastmod>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-3-implementation-in-your-context/index.html</loc>
+    <lastmod>2025-09-09T11:29:13.152Z</lastmod>
   </url>
   <url>
-    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-2-step-into-the-game-experience-like-a-student/data-is-everywhere.html</loc>
-    <lastmod>2025-09-08T11:46:20.471Z</lastmod>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-1-welcome-to-data-dunkers/02-what-is-data-dunkers.html</loc>
+    <lastmod>2025-09-09T11:29:13.151Z</lastmod>
   </url>
   <url>
-    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-2-step-into-the-game-experience-like-a-student/to-understanding-the-instructional-approach.html</loc>
-    <lastmod>2025-09-08T11:46:20.471Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-2-step-into-the-game-experience-like-a-student/labyrinth-activity.html</loc>
-    <lastmod>2025-09-08T11:46:20.471Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/notebooks/data-from-internal.html</loc>
-    <lastmod>2025-09-08T11:46:20.471Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/notebooks/notebooks.html</loc>
-    <lastmod>2025-09-08T11:46:20.471Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/about.html</loc>
-    <lastmod>2025-09-08T11:46:20.470Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-2-step-into-the-game-experience-like-a-student/welcome-to-the-court.html</loc>
-    <lastmod>2025-09-08T11:46:20.471Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-2-step-into-the-game-experience-like-a-student/quick-timeout-look-at-jupyter-notebook.html</loc>
-    <lastmod>2025-09-08T11:46:20.471Z</lastmod>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-1-welcome-to-data-dunkers/01-welcome.html</loc>
+    <lastmod>2025-09-09T11:29:13.151Z</lastmod>
   </url>
   <url>
     <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/index.html</loc>
-    <lastmod>2025-09-08T11:46:20.470Z</lastmod>
+    <lastmod>2025-09-09T11:29:13.151Z</lastmod>
   </url>
   <url>
-    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-1-welcome-to-data-dunkers/welcome.html</loc>
-    <lastmod>2025-09-08T11:46:20.471Z</lastmod>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-2-step-into-the-game-experience-like-a-student/05-to-understanding-the-instructional-approach.html</loc>
+    <lastmod>2025-09-09T11:29:13.151Z</lastmod>
   </url>
   <url>
-    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-1-welcome-to-data-dunkers/what-is-data-dunkers.html</loc>
-    <lastmod>2025-09-08T11:46:20.471Z</lastmod>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-2-step-into-the-game-experience-like-a-student/03-quick-timeout-look-at-jupyter-notebook.html</loc>
+    <lastmod>2025-09-09T11:29:13.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/about.html</loc>
+    <lastmod>2025-09-09T11:29:13.149Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/notebooks/notebooks.html</loc>
+    <lastmod>2025-09-09T11:29:13.152Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/notebooks/data-from-internal.html</loc>
+    <lastmod>2025-09-09T11:29:13.152Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-2-step-into-the-game-experience-like-a-student/02-data-is-everywhere.html</loc>
+    <lastmod>2025-09-09T11:29:13.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-2-step-into-the-game-experience-like-a-student/04-labyrinth-activity.html</loc>
+    <lastmod>2025-09-09T11:29:13.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-2-step-into-the-game-experience-like-a-student/01-welcome-to-the-court.html</loc>
+    <lastmod>2025-09-09T11:29:13.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-1-welcome-to-data-dunkers/05-creating-your-playbook.html</loc>
+    <lastmod>2025-09-09T11:29:13.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-1-welcome-to-data-dunkers/03-flavors-of-the-program.html</loc>
+    <lastmod>2025-09-09T11:29:13.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-1-welcome-to-data-dunkers/04-the-fundamentals-game-plan.html</loc>
+    <lastmod>2025-09-09T11:29:13.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html</loc>
+    <lastmod>2025-09-09T11:29:13.151Z</lastmod>
   </url>
   <url>
     <loc>https://pbeens.github.io/Data-Dunkers-Quarto-Test/slides/tcdsb.html</loc>
-    <lastmod>2025-09-08T11:46:20.471Z</lastmod>
+    <lastmod>2025-09-09T11:29:13.152Z</lastmod>
   </url>
 </urlset>

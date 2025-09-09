@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.34">
 
-  <title>Data Dunkers Quarto Demo – Data Dunkers Demo Slides</title>
+  <title>Data Dunkers LMS – Data Dunkers Demo Slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -257,7 +257,6 @@ quarto preview</code></pre></li>
 <li>Open folder in VS Code: <code>File → Open Folder…</code></li>
 <li>Install Quarto extension (already installed ✅)</li>
 <li>Edit <code>.qmd</code> files with syntax highlighting</li>
-<li>TBD</li>
 <li>Preview in browser or integrated panel</li>
 </ul>
 </section>
@@ -603,6 +602,11 @@ quarto preview</code></pre></li>
               if (link.dataset.originalHref !== undefined) {
                 link.href = link.dataset.originalHref;
               }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
             }
           }
         function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
