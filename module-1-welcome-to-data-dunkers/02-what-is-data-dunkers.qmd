@@ -1,5 +1,6 @@
 ---
 title: "What Is Data Dunkers?"
+format: html
 ---
 
 Data isn’t just for scientists or statisticians — it’s becoming a core skill for success in almost every career. Whether in sports, healthcare, engineering, or creative industries, the ability to understand and use data is a game-changer for students’ futures.

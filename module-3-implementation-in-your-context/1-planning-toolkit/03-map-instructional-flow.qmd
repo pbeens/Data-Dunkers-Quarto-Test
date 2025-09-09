@@ -1,0 +1,93 @@
+---
+title: "Map Instructional Flow"
+format: html
+draft: false
+---
+
+Here’s the same **previous format**, with your updated times applied.
+
+# Building Blocks (Pick & Mix)
+
+**Input (get data)**
+
+* Jupyter Notebook Demo
+* Data from Within the Notebook
+* Data from a CSV File
+* Data from an Excel File
+* Data from a Webpage
+* Data from a Google Sheet
+
+**Process (work with tables)**
+
+* Columns (explore/select)
+* Filtering Our Data
+* Sorting Our Data
+* Adding New Columns
+* Statistics (min/max/mean/median, describe)
+
+**Output (visualize)**
+
+* Bar Graphs
+* Line Graphs
+* Scatter Plots
+* Pie Charts
+* Histograms
+
+## Prerequisites at a Glance
+
+* First timer: Jupyter Notebook Demo → one **Input** lesson → one **Output** lesson
+* Any **Process** lesson expects at least one **Input** lesson first
+* Scatter/line usually benefits from **Statistics** (to talk about trend/center/variation)
+
+## Quick-Start Flow Recipes
+
+### A) “First Run” (≈60 min)
+
+* Goal: get everyone from raw data to one clear chart with a takeaway
+* Flow:
+
+  1. Jupyter Notebook Demo (**10 min**, teacher-led)
+  2. Data from a CSV File (**15 min**)
+  3. Columns (**15 min**)
+  4. Bar Graphs **or** Scatter Plots (**15 min**)
+  5. 1–2 sentence insight + share-out (≈5 min)
+
+> Need a true **45 min** option? Skip either **Columns** *or* swap CSV → Within the Notebook to trim setup time.
+
+### B) 2×45 “Explore → Explain”
+
+* Period 1 (Explore): Notebook Demo (**10**) → Google Sheet (10–15) → Columns (**15**) → Bar Graphs (**15**)
+* Period 2 (Explain): Filtering (**15**) → Statistics (10–15) → Scatter (**15**) → Quick gallery walk (5)
+
+### C) 3×45 “Collect → Analyze → Tell the Story”
+
+* Period 1: Class data collection → Data from a CSV (import class file, **15**)
+* Period 2: Columns (**15**) → Filtering (**15**) → Statistics (10–15)
+* Period 3: Scatter (**15**) or Bar (**15**) → Draft captions → 1-slide share-out
+
+### D) Half-Day FUNdamentals (≈2.5–3 hrs)
+
+* Block 1 (60–70): Demo (**10**) → CSV (**15**) → Columns (**15**) → Bar/Scatter (**15**)
+* Block 2 (60–70): Filtering (**15**) → Statistics (10–15) → Second chart (Bar/Scatter **15**) or Histograms (10–15)
+* Block 3 (30–40): Synthesis poster (chart + insight) → 1-minute standups
+
+## Menu Builder with Time Estimates
+
+| Step | Lesson                        | Typical Time | Notes                              |
+| ---- | ----------------------------- | ------------ | ---------------------------------- |
+| 0    | Jupyter Notebook Demo         | **10 min**   | Teacher-led walkthrough            |
+| 1    | Data from a CSV File          | **15 min**   | Fastest on-ramp for local files    |
+| 1    | Data from a Google Sheet      | 10–15 min    | Great for shared class data        |
+| 1    | Data from a Webpage           | 15–20 min    | May require light cleaning         |
+| 1    | Data from an Excel File       | 10–15 min    | Useful if .xlsx is on hand         |
+| 1    | Data from Within the Notebook | 8–10 min     | Removes file friction              |
+| 2    | Columns (explore/select)      | **15 min**   | Updated per your call              |
+| 2    | Filtering Our Data            | **15 min**   | Updated per your call              |
+| 2    | Sorting Our Data              | 6–8 min      | Often quick once columns are known |
+| 2    | Adding New Columns            | 10–15 min    | Ratios/percents or simple formulas |
+| 2    | Statistics                    | 10–15 min    | Mean/median/min/max, describe()    |
+| 3    | Bar Graphs                    | **15 min**   | Updated per your call              |
+| 3    | Scatter Plots                 | **15 min**   | Updated per your call              |
+| 3    | Line Graphs                   | 12–18 min    | Consider time for axis choices     |
+| 3    | Pie Charts                    | 10–12 min    | Keep categories small              |
+| 3    | Histograms                    | 10–15 min    | Bin-choice discussion adds time    |

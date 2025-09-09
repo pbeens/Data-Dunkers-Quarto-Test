@@ -1,6 +1,7 @@
 # Quarto build output
 _site/
 *.html
+.quarto/
 
 # OS junk
 .DS_Store
@@ -10,3 +11,7 @@ Thumbs.db
 .vscode/
 /.quarto/
 **/*.quarto_ipynb
+_quarto - Copy.yml
+
+# Other
+*.zip

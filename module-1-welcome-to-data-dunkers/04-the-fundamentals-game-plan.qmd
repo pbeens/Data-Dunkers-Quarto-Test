@@ -1,5 +1,6 @@
 ---
 title: "The FUNdamentals Game Plan"
+format: html
 ---
 
 Let’s take a look at the game plan for the FUNdamentals program. This is the core starting point for many Data Dunkers experiences — a focused, high-energy introduction to data science through the excitement of sports. You’ll see how the activities build skills step-by-step, keep students engaged, and connect learning to real-world applications. Watch the video below to see how it all comes together in action.

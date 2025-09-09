@@ -65,7 +65,6 @@ format:
 - Open folder in VS Code: `File → Open Folder…`
 - Install Quarto extension (already installed ✅)
 - Edit `.qmd` files with syntax highlighting
-- TBD
 - Preview in browser or integrated panel
 
 ## Add a Slideshow

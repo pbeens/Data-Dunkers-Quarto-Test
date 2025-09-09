@@ -1,5 +1,6 @@
 ---
 title: "Flavors of the Program"
+format: html
 ---
 
 There’s more than one way to bring the Data Dunkers vision to life. Just like players can join a game in different roles, you can step in at the point that makes the most sense for you and your students. Throughout this course, we’ll explore practical ways to embed the program — whether you run it as a special event, stretch it into a unit, or weave pieces into your lessons over time.

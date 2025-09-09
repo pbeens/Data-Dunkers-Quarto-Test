@@ -1,5 +1,6 @@
 ---
 title: "Creating your Playbook"
+format: html
 ---
 
 In basketball — and in data science — good decisions start with good information. This page is your chance to think through the best way to navigate the course, based on your needs and interests.

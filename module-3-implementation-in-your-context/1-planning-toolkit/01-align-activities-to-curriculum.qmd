@@ -1,0 +1,80 @@
+---
+title: "Align Activities to Curriculum and Student Goals"
+format: html
+---
+
+One of the most powerful ways to make Data Dunkers stick in your classroom is to connect each activity to **explicit curriculum expectations**. This ensures the time spent on basketball data is not just fun, but also advancing mandated learning outcomes.
+
+In this section, we will:
+
+- Identify links between Data Dunkers activities and the **Ontario Mathematics Curriculum**.  
+- Show how the same activity can align differently depending on grade level.  
+- Provide concrete examples so you can confidently justify your choices.  
+
+## Why Curriculum Alignment Matters
+
+Curriculum alignment makes it clear that:
+
+- Data Dunkers is not an “add-on,” but a **vehicle for meeting existing math goals**.  
+- Students build transferable skills — working with data, coding, and problem-solving — while engaging with basketball.  
+- You can integrate Data Dunkers into units on **data literacy, algebra, or financial literacy** without rewriting your whole program.  
+
+## Curriculum Connections by Grade
+
+### Grade 9 (2021 Curriculum)
+
+**Strand D: Data**  
+
+- *D1.2* Represent and statistically analyse data from a real-life situation involving a single variable in various ways (e.g., quartile values, box plots).  
+  → Data Dunkers: Students calculate shot success rates and visualize them using bar charts and box plots.  
+
+- *D1.3* Create a scatter plot to represent the relationship between two variables and test regression models.  
+  → Data Dunkers: Students compare shooting percentage to distance, fit a line of best fit, and interpret the trend.  
+
+**Strand C: Algebra (Coding Integration)**  
+
+- *C2.2* Create code by decomposing situations into computational steps in order to represent mathematical concepts and relationships.  
+  → Data Dunkers: Students use Python notebooks to filter and sort basketball data, then generate plots automatically.  
+
+### Grade 10 (2005 Curriculum)
+
+**Linear Relations Strand**  
+
+- Collect data, graph it, determine the equation of a line of best fit, and use it to solve problems.  
+  → Data Dunkers: Students use scatter plots of shot success vs. distance, then apply line of best fit to predict outcomes.  
+
+**Data Management Strand**  
+
+- Use data management techniques to investigate relationships and solve problems.  
+  → Data Dunkers: Students summarize player stats and use averages/percentages to compare performance.  
+
+### Grades 11–12 (2007 Curriculum)
+
+**Mathematics of Data Management (MDM4U)**  
+
+- Organize data using charts, tables, and graphs.  
+- Apply measures of central tendency and variability to analyze sets of data.  
+  → Data Dunkers: Students create multi-variable dashboards (e.g., shooting accuracy by quarter, by player, by distance).  
+
+**Foundations for College Mathematics (MAP4C / MBF3C)**  
+
+- Collect, display, and analyze data involving one or two variables.  
+- Interpret statistical measures in context.  
+  → Data Dunkers: Students design and present infographics summarizing team statistics.  
+
+## Classroom Example
+
+> *Example*: A Grade 9 class collects shot data from a free-throw drill. Students record makes/misses in a spreadsheet, import it into a Jupyter notebook, and produce a bar graph of success rates.  
+>
+> - Curriculum Link: **Grade 9, D1.2 (Data Representation)**.  
+> - Extension: Fit a trend line to success vs. shot distance (**Grade 9, D1.3**) and compare it to the theoretical model (**Grade 10 Linear Relations**).  
+
+## Your Turn
+
+Reflect on your own teaching context:  
+
+- Which Data Dunkers activities align with **your grade level**?  
+- Which curriculum strands are you already required to cover that Data Dunkers could bring to life?  
+- How might you present these connections to your students and administrators?  
+
+

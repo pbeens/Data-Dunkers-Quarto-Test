@@ -1,5 +1,6 @@
 ---
 title: "TO: Understanding the Instructional Approach"
+format: html
 ---
 
 Before we move on, let’s take a quick **time out** to look at the instructional approach behind the Data Dunkers program. This short video will walk you through the thinking that shapes how we design activities, guide student learning, and connect data skills to real-world relevance.

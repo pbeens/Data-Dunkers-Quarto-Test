@@ -1,5 +1,6 @@
 ---
 title: "Labyrinth Activity"
+format: html
 ---
 
 Next up — the Basketball Labyrinth! This activity is designed to get you into **both** looking at the data and doing some basic coding. Think of it as a virtual escape room: you’ll solve puzzles, uncover clues, and make your way through the data to reach the end.

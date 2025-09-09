@@ -1,0 +1,58 @@
+---
+title: "Select Datasets and Sports Themes"
+format: html
+---
+
+The heart of Data Dunkers is the connection between **sports and data**. Choosing the right dataset and theme can make or break engagement in your classroom. In this section, we’ll explore strategies for selecting datasets that are both **relevant to your students** and **aligned with curriculum goals**.
+
+## Why Dataset Choice Matters
+
+- Students engage more deeply when the data feels **personal or exciting**.  
+- A well-chosen dataset highlights the **math concepts** you need to cover.  
+- Variety ensures you can adapt Data Dunkers to different grades, contexts, and student interests.  
+
+## Sports as a Gateway
+
+Basketball is the primary lens for Data Dunkers — but it doesn’t have to stop there. Consider:  
+- **Basketball shot data** → success rates, distances, player comparisons.  
+- **Team statistics** → rebounds, assists, turnovers, and points by quarter.  
+- **Crossover themes** → comparing basketball to other sports students follow (soccer, hockey, baseball).  
+
+> *Tip*: Even within basketball, you can switch perspectives — student-collected data (free throws, 3-point shots) vs. professional datasets (NBA or WNBA box scores).
+
+## Data Sources
+
+Here are some dataset options you might build from:
+
+- **Classroom-collected data**: Students shoot from 2, 4, 6, 8, and 10 feet and record results.  
+- **Provided sample datasets**: Pre-formatted CSVs with NBA player stats, Raptors shot logs, or historical game data.  
+- **Open data portals**: Publicly available sports datasets (e.g., Basketball Reference, NBA Stats API) can add richness for older grades.  
+
+## Matching Datasets to Math Goals
+
+- **Elementary (Grades 6–8)**: Use simple tallies and percentages. Example: “What percentage of free throws were made?”  
+- **Grade 9**: Compare two variables with scatter plots and lines of best fit (e.g., shot distance vs. accuracy).  
+- **Grade 10**: Investigate linear relations or extend into non-linear trends with quadratic modeling.  
+- **Grades 11–12**: Explore multi-variable analysis, probabilities, and statistical distributions using full game or season data.  
+
+## Beyond Sports
+
+Although basketball is the anchor, you can also experiment with:  
+- **Health datasets** (student steps, heart rates, nutrition data).  
+- **Civic datasets** (neighbourhood statistics, community surveys).  
+- **Social datasets** (polls, social media trends).  
+
+The Data Dunkers model works as long as students can **see themselves in the data** and apply math concepts meaningfully.  
+
+## Classroom Example
+
+> *Example*: A Grade 10 teacher chooses to use **NBA shot charts** instead of classroom-collected data. Students graph attempts by distance, calculate success rates, and compare them with their own gym data.  
+> - Curriculum Link: **Linear Relations and Data Management**.  
+> - Student Engagement: Tapping into Raptors fandom boosts motivation.  
+
+## Your Turn
+
+Think about your students:  
+- What sports or themes capture their interest?  
+- What type of data is most practical for your class (collected in class, pre-made, or online)?  
+- How might you adapt the dataset so that it connects naturally to your math goals?  

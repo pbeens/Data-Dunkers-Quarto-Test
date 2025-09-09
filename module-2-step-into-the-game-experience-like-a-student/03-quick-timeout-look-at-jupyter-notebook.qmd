@@ -1,5 +1,6 @@
 ---
 title: "Quick Timeout: Look at Jupyter Notebook"
+format: html
 ---
 
 Before we get into our first **BIG** activity, we’re going to step out of the student role for a moment and give you, as a teacher, a quick look at one of the tools we’ll be using.

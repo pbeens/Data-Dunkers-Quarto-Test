@@ -1,58 +1,70 @@
 project:
   type: website
 
+format:
+  html:
+    theme: default        # (or default, darkly, etc.)
+    toc: true             # page-level table of contents
+    toc-depth: 2          # how deep headers go in TOC
+    code-tools: false     # hide copy/download/run buttons
+    code-fold: show       # collapsible code chunks
+    code-overflow: wrap   # wrap long code lines
+    smooth-scroll: true
+
+jupyter: python3
+
+execute:
+  echo: true
+  output: true
+  warning: false
+  error: false
+  cache: true
+
+link-external-newwindow: true
+
 website:
-  title: "Data Dunkers Quarto Demo"
+  title: "Data Dunkers LMS"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - text: "Module 1"
-        menu:
-          - href: module-1-welcome-to-data-dunkers/welcome.qmd
-            text: "Welcome"
-          - href: module-1-welcome-to-data-dunkers/what-is-data-dunkers.qmd
-            text: "What Is Data Dunkers?"
-          - href: module-1-welcome-to-data-dunkers/flavors-of-the-program.qmd
-            text: "Flavors of the Program"
-          - href: module-1-welcome-to-data-dunkers/the-fundamentals-game-plan.qmd
-            text: "The FUNdamentals Game Plan"
-          - href: module-1-welcome-to-data-dunkers/creating-your-playbook.qmd
-            text: "Creating your Playbook"
-      - text: "Module 2"
-        menu:
-          - href: module-2-step-into-the-game-experience-like-a-student/welcome-to-the-court.qmd
-            text: "Welcome to the Court"
-          - href: module-2-step-into-the-game-experience-like-a-student/data-is-everywhere.qmd
-            text: "Data is Everywhere!"
-          - href: module-2-step-into-the-game-experience-like-a-student/quick-timeout-look-at-jupyter-notebook.qmd
-            text: "Quick Timeout: Look at Jupyter Notebook"
-          - href: module-2-step-into-the-game-experience-like-a-student/labyrinth-activity.qmd
-            text: "Labyrinth Activity"
-          - href: module-2-step-into-the-game-experience-like-a-student/to-understanding-the-instructional-approach.qmd
-            text: "TO: Understanding the Instructional Approach"
     right:
-      - href: notebooks/notebooks.qmd 
+      - href: notebooks/notebooks.qmd
         text: Notebooks
       - text: "Slideshows"
         menu:
           - href: slides/intro.qmd
-            text: "Quarto Intro Slideshow"
-          - href: slides/tcdsb.qmd 
-            text: "TCDSB Slideshow"      
-
-
-
-format:
-  html:
-    theme: cosmo
-    toc: true
-    code-tools: false     # shows copy/download/run buttons
-    code-fold: show       # true/false/show
-execute:
-  echo: true             # show code
-  output: true           # show output
-
-
-jupyter: python3            
-
+            text: "Quarto Process"
+          - href: slides/tcdsb.qmd
+            text: "TCDSB Slideshow (from Google Slides)"
+  sidebar:
+    style: docked
+    contents:
+      # - href: index.qmd
+      #   text: "Home"
+      - section: "Module 1"
+        contents: 
+          - module-1-welcome-to-data-dunkers/01-welcome.qmd
+          - module-1-welcome-to-data-dunkers/02-what-is-data-dunkers.qmd
+          - module-1-welcome-to-data-dunkers/03-flavors-of-the-program.qmd
+          - module-1-welcome-to-data-dunkers/04-the-fundamentals-game-plan.qmd
+          - module-1-welcome-to-data-dunkers/05-creating-your-playbook.qmd
+      - section: "Module 2"
+        contents: 
+          - module-2-step-into-the-game-experience-like-a-student/01-welcome-to-the-court.qmd
+          - module-2-step-into-the-game-experience-like-a-student/02-data-is-everywhere.qmd
+          - module-2-step-into-the-game-experience-like-a-student/03-quick-timeout-look-at-jupyter-notebook.qmd
+          - module-2-step-into-the-game-experience-like-a-student/04-labyrinth-activity.qmd
+          - module-2-step-into-the-game-experience-like-a-student/05-to-understanding-the-instructional-approach.qmd
+      - section: "Module 3"
+        contents: 
+          - section: "Planning Toolkit"
+            contents:
+              - module-3-implementation-in-your-context/1-planning-toolkit/01-align-activities-to-curriculum.qmd
+              # - module-3-implementation-in-your-context/1-planning-toolkit/02-implementation-checklist.qmd
+              - module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.qmd
+              - module-3-implementation-in-your-context/1-planning-toolkit/04-select-datasets-and-themes.qmd
+              # - module-3-implementation-in-your-context/1-planning-toolkit/05-strategies-for-grouping-and-facilitation.qmd
+          - section: "Coding Lab: Basketball Data"
+            contents:
+              - module-3-implementation-in-your-context/2-coding-lab-basketball-data/import-and-prepare-data.qmd

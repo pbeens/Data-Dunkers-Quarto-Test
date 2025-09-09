@@ -1,0 +1,47 @@
+ ---
+title: "Module 3 – Implementation in Your Context"
+format: html
+---
+
+This module helps you tailor Data Dunkers to your class. You’ll align activities to the Ontario curriculum, choose the right datasets and themes, map an instructional flow, and set up facilitation so students thrive. If you want to go deeper, you can branch into a Coding Lab focused on basketball data.
+
+## What you will do and learn
+
+- Align selected activities to curriculum expectations and student goals.
+- Choose datasets and sports themes that fit your learners.
+- Map an instructional flow and scaffolds for your context.
+- Plan grouping and facilitation for a data-driven classroom.
+- (Optional) Explore a Coding Lab path to extend technical depth.
+
+## How to use this module
+
+1) Start with the Planning Toolkit to design your implementation.
+2) If desired, add the Coding Lab sub-menu for deeper technical work.
+3) Wrap with the Implementation Checklist to finalize your launch plan.
+
+## Planning Toolkit
+
+- [Align Activities to Curriculum](align-activities-to-curriculum.qmd)
+- [Select Datasets and Sports Themes](select-datasets-and-themes.qmd)
+- [Map Instructional Flow](map-instructional-flow.qmd)
+- [Grouping & Facilitation Strategies](strategies-for-grouping-and-facilitation.qmd)
+- [Implementation Checklist](implementation-checklist.qmd)
+
+## Optional: Deep-Dive Paths
+
+- Coding Lab: Basketball Data  
+  - Import & Prepare Data (CSV, Sheets)  
+  - Visualize Shots & Trends (bar, line, scatter)  
+  - Stats Toolbox (percentages, mean/median)  
+  - Player Comparisons (side-by-side views)  
+  - Build a Mini Dashboard
+
+*(Links for Coding Lab pages will appear once those files are added to the repo.)*
+
+## Outcomes
+
+By the end of Module 3, you will have:
+- a classroom-ready plan aligned to curriculum,
+- a set of datasets and activities matched to your students,
+- a clear flow and facilitation approach,
+- optional extensions for deeper coding experiences.

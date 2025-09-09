@@ -1,5 +1,41 @@
 ---
-title: "Data Dunkers"
+title: "Data Dunkers LMS"
 ---
 
- NEED AN INTRO! 
+This course focuses on how you can implement data science learning in your school setting in ways that fit your schedule, curriculum, and students by implementing Data Dunkers curriculum and support. We’ll start by exploring the core FUNdamentals approach—how it works, how it engages students through sports-themed data activities, and how to adapt it for different grade levels and classroom contexts.
+
+From there, participants will look at multiple ways to extend and deepen the experience, including:
+
+- Connecting lessons to careers in sports, STEM, and data science.
+- Exploring more advanced coding and data analysis tools.
+- Integrating AI to support inquiry and visualization.
+- Using diverse data sets to broaden relevance.
+- Guiding students through extended projects and personalized investigations.
+
+By the end, participants will leave with a clear, adaptable game plan for bringing Data Dunkers to life—whether you run a short, focused experience or build toward more advanced, student-driven work.
+
+## Course Objectives
+
+By the end of this course, participants will be able to:
+
+1. Understand the Data Dunkers FUNdamentals model – Explain its structure, learning goals, and how it engages students in data science through sports contexts.
+2. Identify implementation options – Select one or more ways to bring FUNdamentals into their school or program (e.g., short-term workshop, embedded lessons, after-school model).
+3. Adapt activities for context – Modify lesson plans, pacing, and resources to meet student needs, grade levels, and available time.
+4. Extend beyond the basics (optional) – Explore opportunities to integrate careers, advanced coding, AI tools, diverse data sets, or long-term projects.
+5. Plan for launch – Develop a clear, personalized implementation plan, including timeline, support needs, and expected student outcomes.
+
+## Success Criteria for Participants
+
+Participants will have successfully completed the course when they can:
+
+- Describe the key elements and purpose of the FUNdamentals program.
+- Select and justify an implementation pathway that fits their setting.
+- Demonstrate readiness by adapting at least one FUNdamentals lesson or activity for their classroom.
+- Identify at least one possible extension (career connection, advanced coding, AI, diverse data set, or project-based work) that aligns with their teaching context.
+- Produce a documented game plan that outlines:
+   - Chosen model(s) for implementation.
+   - Timeline and pacing considerations.
+   - Required supports and resources.
+   - Expected student learning outcomes.
+
+

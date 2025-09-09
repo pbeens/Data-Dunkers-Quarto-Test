@@ -1,5 +1,6 @@
 ---
 title: "Welcome to the Court"
+format: html
 ---
 
 The best way to understand how you might use Data Dunkers in your classroom is to first experience it like a student. In this section, you’ll step into their shoes — exploring activities, solving challenges, and seeing how data comes alive through sports.
