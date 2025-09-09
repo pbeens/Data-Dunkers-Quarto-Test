@@ -38,4 +38,8 @@ Participants will have successfully completed the course when they can:
    - Required supports and resources.
    - Expected student learning outcomes.
 
+---
 
+<p align="center">
+([Quarto Demo Site](https://pbeens.github.io/Data-Dunkers-Quarto-Test/index.html))
+</p>
