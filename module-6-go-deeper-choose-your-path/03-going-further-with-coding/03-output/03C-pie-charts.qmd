@@ -1,0 +1,13 @@
+---
+title: "Creating Pie Charts"
+format: html
+---
+
+Display proportions of a whole (used sparingly) to highlight simple “share of total” stories.  
+
+*Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/graphing-pie-charts.ipynb>. 
+
+
+---
+
+**Lesson coming soon!**

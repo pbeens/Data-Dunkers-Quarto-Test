@@ -1,0 +1,13 @@
+---
+title: "Sorting the Data"
+format: html
+---
+
+Surface patterns by ordering rows with `df.sort_values(...)`: sort by one column, then by **multiple keys** (e.g., `["Player","Distance"]`), and control ascending/descending for consistent, reproducible tables. 
+
+Corresponds with the lesson at: [https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb). 
+
+
+---
+
+**Lesson coming soon!**

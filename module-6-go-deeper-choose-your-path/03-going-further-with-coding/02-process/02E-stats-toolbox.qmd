@@ -1,0 +1,13 @@
+---
+title: "Summarizing with Statistics"
+format: html
+---
+
+Get a quick read on the data: compute **min/max/mean/median**, use `.describe()` for a fast profile, and apply **`groupby(...).agg(...)`** to compare players or distance buckets. 
+
+Corresponds with the lesson at: [https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb).
+
+
+---
+
+**Lesson coming soon!**

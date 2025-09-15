@@ -1,0 +1,13 @@
+---
+title: "Data from Excel Files"
+format: html
+---
+
+Bring in **Excel** data with `pd.read_excel(...)`; choose a sheet if needed and preview a few rows—handy when teachers share XLSX templates.  
+
+Corresponds with the lesson at: [https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb). 
+
+
+---
+
+**Lesson coming soon!**

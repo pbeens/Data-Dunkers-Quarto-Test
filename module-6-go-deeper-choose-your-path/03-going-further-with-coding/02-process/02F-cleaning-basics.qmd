@@ -1,0 +1,21 @@
+---
+title: "Cleaning the Data (Basics)"
+format: html
+---
+
+A **light scrub after** core table skills: standardize column names/case, coerce numeric columns used in sorts/percentages, and drop empty rows so charts and stats don’t break. Informed by the table/analysis lessons here:
+
+- [https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb)
+    
+- [https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb)
+    
+- [https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb)
+    
+- [https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb)
+    
+- [https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb) ([GitHub](https://github.com/Data-Dunkers/lessons "GitHub - Data-Dunkers/lessons: Data Dunkers Lessons"))
+
+
+---
+
+**Lesson coming soon!**

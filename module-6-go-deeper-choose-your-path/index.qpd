@@ -1,0 +1,12 @@
+---
+title: "Overview"
+format: html
+---
+
+In this section, we move past “what data is” toward *what you can do* with data: how to code, explore, and visualize it so students can ask better questions and tell clearer stories. We follow the IPO (Input → Process → Output) workflow:
+
+* Input: bring data into your notebook or program (internal data, CSV, Excel, Google Sheets, webpage tables)  
+* Process: clean, shape, filter, and add new columns so that data is ready for analysis  
+* Output: build simple visualizations to reveal relationships and patterns
+
+You’ll learn by doing: each lesson offers a minimal example (just enough code \+ values) that demonstrates one part of the workflow. As you progress, your skills will build so you can move from seeing data to manipulating it to visualizing it — all with consistent tools (Pandas \+ Plotly Express).

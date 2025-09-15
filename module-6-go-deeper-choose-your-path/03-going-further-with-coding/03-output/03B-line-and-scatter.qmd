@@ -1,0 +1,13 @@
+---
+title: "Creating Line and Scatter Plots"
+format: html
+---
+
+Show change or relationships: lines for trends over an ordered axis; scatter to explore how two variables move together.  
+
+*Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/graphing-scatter-plots.ipynb>. 
+
+
+---
+
+**Lesson coming soon!**

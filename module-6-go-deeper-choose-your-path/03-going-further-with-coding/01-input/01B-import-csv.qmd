@@ -1,0 +1,13 @@
+---
+title: "Data from CSV Files"
+format: html
+---
+
+Load a shared or local **CSV** using `pd.read_csv(...)`, then take a quick look at shape, column names, and a few rows to confirm what came in before moving on.  
+
+Corresponds with the lesson at: [https://github.com/Data-Dunkers/lessons/blob/main/data-from-csv.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-from-csv.ipynb). 
+
+
+---
+
+**Lesson coming soon!**

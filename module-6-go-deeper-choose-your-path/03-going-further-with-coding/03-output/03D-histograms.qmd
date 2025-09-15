@@ -1,0 +1,13 @@
+---
+title: "Creating Histograms"
+format: html
+---
+
+Reveal the distribution of a numeric variable (e.g., shot distance or points per game) to see clustering, spread, and outliers.  
+
+*Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/graphing-histograms.ipynb>.
+
+
+---
+
+**Lesson coming soon!**

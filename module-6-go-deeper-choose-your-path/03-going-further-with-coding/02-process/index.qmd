@@ -1,0 +1,43 @@
+---
+title: "Overview"
+format: html
+---
+
+Work with your table step by step—start by picking columns, then filter and sort to focus your view, add calculated fields, and use quick statistics to take the pulse of the data. Finish with a minimal clean-up pass so visuals and summaries are solid.
+
+## [Columns](02A-columns.qmd)
+
+Select and re-order the fields you need; explore `df.columns` (and a tiny for-loop) to understand your table’s structure.  
+
+*Corresponds with the lesson found at: <https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb>*
+
+## [Filtering](02B-filtering.qmd)
+
+Focus the table using boolean masks and simple AND/OR combinations, then carry the filtered result into later steps.  
+
+*Corresponds with the lesson found at: <https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb>)
+
+## [Sorting](02C-sorting.qmd)
+
+Order rows by one or multiple keys (ascending/descending) to reveal patterns and make comparisons clearer.  
+
+*Corresponds with the lesson found at: <https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb>*
+
+## [New Columns](02D-new-columns.qmd)
+
+Add calculated metrics (like shooting % or buckets) with concise, vectorized code to power meaningful analysis. 
+
+*Corresponds with the lesson found at: <https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb>
+
+## [Stats Toolbox](02E-stats-toolbox.qmd)
+
+Use `.describe()`, quick aggregates, and `groupby(...).agg(...)` to compare players or distance buckets before you plot.  
+
+*Corresponds with the lesson fo
+nd at: <https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb>
+
+## [Cleaning Basics](02F-cleaning-basics.qmd)
+
+Do a minimal clean-up (headers/case, numeric coercion, drop empty rows) once you know what your analysis needs.  
+
+*Informed by the table/analysis lessons above.* 

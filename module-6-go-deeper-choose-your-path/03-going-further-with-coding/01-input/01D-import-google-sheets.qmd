@@ -1,0 +1,13 @@
+---
+title: "Data from Google Sheets"
+format: html
+---
+
+Use a Google Sheet’s share/export link (CSV export is simplest) so pandas can read it like a regular CSV; verify headers and sample rows.  
+
+Corresponds with the lesson at: [https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb). 
+
+
+---
+
+**Lesson coming soon!**

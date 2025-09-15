@@ -1,0 +1,36 @@
+---
+title: "Overview"
+format: html
+---
+
+Choose how students will bring data into a pandas DataFrame. Pick the on-ramp that matches your setup (self-contained internal data, CSV, Excel, Google Sheets, or a simple table from the web).
+
+## [Using Internal Data](01A-internal-data.qmd)
+
+This lesson is for classes that want self-contained data **inside the notebook** or Python program—create small tables from lists or dictionaries with `pandas.DataFrame`, name the columns, and preview with `head()`.  
+
+*Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/data-from-internal.ipynb>. 
+
+## [Data from CSV Files](01B-import-csv.qmd)
+
+Load a shared or local **CSV** using `pd.read_csv(...)`, then take a quick look at shape, column names, and a few rows to confirm what came in before moving on. 
+
+*Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/data-from-csv.ipynb>. 
+
+## [Data from Excel Files](01C-import-excel.qmd)
+
+Bring in **Excel** data with `pd.read_excel(...)`; choose a sheet if needed and preview a few rows—handy when teachers share XLSX templates.  
+
+*Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb>. 
+
+## [Data from Google Sheets](01D-import-google-sheets.qmd)
+
+Use a Google Sheet’s share/export link (CSV export is simplest) so pandas can read it like a regular CSV; verify headers and sample rows.  
+
+*Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb>. 
+
+## [Data from Webpages](01E-import-webpage.qmd)
+
+Use `pd.read_html(...)` to fetch a **simple HTML table** from a webpage into a DataFrame; if multiple tables are found, pick the right one and preview a few rows.  
+
+*Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/data-from-webpage.ipynb>.

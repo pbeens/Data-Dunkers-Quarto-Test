@@ -1,0 +1,13 @@
+---
+title: "Data from Webpages"
+format: html
+---
+
+Use `pd.read_html(...)` to fetch a **simple HTML table** from a webpage into a DataFrame; if multiple tables are found, pick the right one and preview a few rows.  
+
+Corresponds with the lesson at: [https://github.com/Data-Dunkers/lessons/blob/main/data-from-webpage.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-from-webpage.ipynb). 
+
+
+---
+
+**Lesson coming soon!**

@@ -1,0 +1,30 @@
+---
+title: "Overview"
+format: html
+---
+
+Turn your processed tables into clear visuals students can read and explain. Each page below focuses on a core chart type you’ll re-use across activities.
+
+## [Creating Bar Graphs](03A-bar-graphs.qmd)
+
+Compare values across categories (e.g., attempts by distance or makes by player) with simple, labeled bars for fast pattern-spotting.  
+
+*Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/graphing-bar-graphs.ipynb>. 
+
+## [Creating Line and Scatter Plots](03B-line-and-scatter.qmd)
+
+Show change or relationships: lines for trends over an ordered axis; scatter to explore how two variables move together.  
+
+*Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/graphing-scatter-plots.ipynb>. 
+
+## [Creating Pie Charts](03C-pie-charts.qmd)
+
+Display proportions of a whole (used sparingly) to highlight simple “share of total” stories.  
+
+*Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/graphing-pie-charts.ipynb>. 
+
+## [Creating Histograms](03D-histograms.qmd)
+
+Reveal the distribution of a numeric variable (e.g., shot distance or points per game) to see clustering, spread, and outliers.  
+
+*Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/graphing-histograms.ipynb>.

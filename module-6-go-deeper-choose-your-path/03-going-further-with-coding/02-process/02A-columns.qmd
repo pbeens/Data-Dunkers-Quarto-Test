@@ -1,0 +1,13 @@
+---
+title: "Selecting Columns for Analysis"
+format: html
+---
+
+Students **load a real NBA player CSV** into a DataFrame, explore what each column represents, and practice **selecting specific fields** for analysis. They also use a short `for` loop to iterate through `df.columns`, building familiarity with the dataset’s structure so they can target the right variables later. 
+
+Corresponds with the lesson at: [https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb). 
+
+
+---
+
+**Lesson coming soon!**

@@ -1,0 +1,14 @@
+---
+title: "Creating Bar Graphs"
+format: html
+---
+
+Compare values across categories (e.g., attempts by distance or makes by player) with simple, labeled bars for fast pattern-spotting.  
+
+*Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/graphing-bar-graphs.ipynb>. 
+
+
+---
+
+**Lesson coming soon!**
+

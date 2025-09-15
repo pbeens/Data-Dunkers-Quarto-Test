@@ -1,0 +1,13 @@
+---
+title: "Filtering the Data"
+format: html
+---
+
+Keep only the rows that matter using **boolean masks** and readable conditions (e.g., `df["Distance"] >= 6`, `df["Player"].isin([...])`). Emphasis is on clear, chainable filters students will reuse in later charts and comparisons. 
+
+Corresponds with the lesson at: [https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb). 
+
+
+---
+
+**Lesson coming soon!**

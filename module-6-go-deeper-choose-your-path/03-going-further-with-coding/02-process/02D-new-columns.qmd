@@ -1,0 +1,13 @@
+---
+title: "Creating New Columns"
+format: html
+---
+
+Create **derived fields** with vectorized formulas and simple conditions—e.g., shooting **percentage** from Makes/Attempts, and **distance buckets** (Short/Medium/Long). These metrics power richer comparisons and will feed directly into visualizations. 
+
+Corresponds with the lesson at: [https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb). 
+
+
+---
+
+**Lesson coming soon!**
