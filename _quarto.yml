@@ -71,3 +71,33 @@ website:
           - section: "Coding Lab: Basketball Data"
             contents:
               - module-3-implementation-in-your-context/2-coding-lab-basketball-data/import-and-prepare-data.qmd
+      - section: "Module 6"
+        contents: 
+          - section: "Going Further with Coding"
+            contents:
+              # - module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.qmd
+              - section: "Input Data"
+                contents:
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01B-import-csv.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01C-import-excel.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01D-import-google-sheets.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01E-import-webpage.qmd
+              - section: "Process Data"
+                contents:
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02B-filtering.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02C-sorting.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02E-stats-toolbox.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.qmd
+              - section: "Output"
+                contents:
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03A-bar-graphs.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03B-line-and-scatter.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03C-pie-charts.qmd
+                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03D-histograms.qmd
+
