@@ -1,6 +1,9 @@
 project:
   type: website
-
+  render:
+    - "*.qmd"
+    - "!module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/000-TEMPLATE.qmd"
+    - "!module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/000-PROMPT.md"
 format:
   html:
     theme: default        # (or default, darkly, etc.)
@@ -43,8 +46,6 @@ website:
   sidebar:
     style: docked
     contents:
-      # - href: index.qmd
-      #   text: "Home"
       - section: "Module 1"
         contents: 
           - module-1-welcome-to-data-dunkers/01-welcome.qmd
@@ -74,8 +75,8 @@ website:
       - section: "Module 6"
         contents: 
           - section: "Going Further with Coding"
+            href: module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.qmd
             contents:
-              # - module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.qmd
               - section: "Input Data"
                 contents:
                   - module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.qmd
