@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Going Further with Coding</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Module 6</a></li><li class="breadcrumb-item"><a href="../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Going Further with Coding</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -287,13 +287,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+            <a href="../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Going Further with Coding</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
@@ -318,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01B-import-csv.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data from CSV Files</span></a>
+ <span class="menu-text">Importing Data From a CSV File</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -444,13 +444,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#input-methods" id="toc-input-methods" class="nav-link active" data-scroll-target="#input-methods">Input Methods</a></li>
+  <li><a href="#process-data" id="toc-process-data" class="nav-link" data-scroll-target="#process-data">Process Data</a></li>
+  <li><a href="#output-visualizations" id="toc-output-visualizations" class="nav-link" data-scroll-target="#output-visualizations">Output Visualizations</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Module 6</a></li><li class="breadcrumb-item"><a href="../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Going Further with Coding</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Going Further with Coding</h1>
 </div>
@@ -469,8 +477,36 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>This path builds on what you’ve already learned: you’ll bring in data in different ways, work with it (filter, sort, compute), and then turn it into clear visuals that help you notice patterns and stories.</p>
+<p>In thinking about this work, one helpful model is <strong>Input → Process → Output</strong>. It reminds us that any data task involves three stages:</p>
+<ul>
+<li><strong>Input</strong>: how data gets into your program or tool<br>
+</li>
+<li><strong>Process</strong>: how you clean, transform, or filter that data<br>
+</li>
+<li><strong>Output</strong>: how you visualize or present what you’ve learned</li>
+</ul>
+<p>Use this model to guide your learning in this section — it helps you see why each step matters before moving on.</p>
+<section id="input-methods" class="level2">
+<h2 class="anchored" data-anchor-id="input-methods"><a href="../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html">Input Methods</a></h2>
+<p>Explore different ways to <strong>bring data into your coding environment</strong>: using internal data structures, CSV, Excel, Google Sheets, or pulling tables from web pages.</p>
+<p><em>Corresponds with the following lessons:</em><br>
+Data‑from‑internal • data‑from‑csv • data‑from‑excel • data‑from‑google‑sheet • data‑from‑webpage (in the Data‑Dunkers lessons repo)</p>
+</section>
+<section id="process-data" class="level2">
+<h2 class="anchored" data-anchor-id="process-data"><a href="../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html">Process Data</a></h2>
+<p>Learn how to <strong>shape your data</strong>: choose columns, apply filters, sort rows, add new computed columns, and use quick summary statistics so you understand your data before graphing.</p>
+<p><em>Corresponds with the following lessons:</em><br>
+data‑columns • data‑filtering • data‑sorting • data‑new‑columns • data‑statistics</p>
+</section>
+<section id="output-visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="output-visualizations"><a href="../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html">Output Visualizations</a></h2>
+<p>Convert cleaned data into visuals that highlight insights and comparisons: bar graphs, line and scatter plots, pie charts, histograms, etc.</p>
+<p><em>Corresponds with the following lessons:</em><br>
+graphing‑bar‑graphs • graphing‑scatter‑plots • graphing‑pie‑charts • graphing‑histograms</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

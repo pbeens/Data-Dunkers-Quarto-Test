@@ -1,66 +1,446 @@
 [
   {
-    "objectID": "slides/intro.html#install-python",
-    "href": "slides/intro.html#install-python",
-    "title": "Data Dunkers Demo Slides",
-    "section": "Install Python",
-    "text": "Install Python\n\nDownload from python.org\nCheck “Add Python to PATH” during setup\nVerify:\npython --version\npip --version\nOptional: uninstall or remove older versions (e.g., Python 3.11)"
+    "objectID": "notebooks/notebooks.html",
+    "href": "notebooks/notebooks.html",
+    "title": "Notebooks",
+    "section": "",
+    "text": "Here are the available notebooks:\n\nData from Internal"
   },
   {
-    "objectID": "slides/intro.html#install-quarto-cli",
-    "href": "slides/intro.html#install-quarto-cli",
-    "title": "Data Dunkers Demo Slides",
-    "section": "Install Quarto CLI",
-    "text": "Install Quarto CLI\n\nDownload from quarto.org/get-started\nRun installer (MSI for Windows)\nVerify installation:\nquarto --version\nquarto check\nIf needed, add Quarto bin folder to PATH"
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html",
+    "title": "Going Further with Coding",
+    "section": "",
+    "text": "This path builds on what you’ve already learned: you’ll bring in data in different ways, work with it (filter, sort, compute), and then turn it into clear visuals that help you notice patterns and stories.\nIn thinking about this work, one helpful model is Input → Process → Output. It reminds us that any data task involves three stages:\nUse this model to guide your learning in this section — it helps you see why each step matters before moving on.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding"
+    ]
   },
   {
-    "objectID": "slides/intro.html#install-extra-python-packages",
-    "href": "slides/intro.html#install-extra-python-packages",
-    "title": "Data Dunkers Demo Slides",
-    "section": "Install Extra Python Packages",
-    "text": "Install Extra Python Packages\n\nIn terminal, run:\npip install jupyter pyyaml\nWhy install?\n\njupyter: enables running notebooks/code cells in Quarto\npyyaml: fixes YAML parsing error in Quarto checks\n\nVerify:\nquarto check"
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html#input-methods",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html#input-methods",
+    "title": "Going Further with Coding",
+    "section": "Input Methods",
+    "text": "Input Methods\nExplore different ways to bring data into your coding environment: using internal data structures, CSV, Excel, Google Sheets, or pulling tables from web pages.\nCorresponds with the following lessons:\nData‑from‑internal • data‑from‑csv • data‑from‑excel • data‑from‑google‑sheet • data‑from‑webpage (in the Data‑Dunkers lessons repo)",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding"
+    ]
   },
   {
-    "objectID": "slides/intro.html#create-your-first-quarto-project",
-    "href": "slides/intro.html#create-your-first-quarto-project",
-    "title": "Data Dunkers Demo Slides",
-    "section": "Create Your First Quarto Project",
-    "text": "Create Your First Quarto Project\n\nIn terminal, run:\nquarto create-project \"Data Dunkers Quarto Test\" --type website\ncd \"Data Dunkers Quarto Test\"\nquarto preview"
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html#process-data",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html#process-data",
+    "title": "Going Further with Coding",
+    "section": "Process Data",
+    "text": "Process Data\nLearn how to shape your data: choose columns, apply filters, sort rows, add new computed columns, and use quick summary statistics so you understand your data before graphing.\nCorresponds with the following lessons:\ndata‑columns • data‑filtering • data‑sorting • data‑new‑columns • data‑statistics",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding"
+    ]
   },
   {
-    "objectID": "slides/intro.html#project-files",
-    "href": "slides/intro.html#project-files",
-    "title": "Data Dunkers Demo Slides",
-    "section": "Project files",
-    "text": "Project files\n\n_quarto.yml → site configuration\nindex.qmd → homepage\nabout.qmd → starter page"
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html#output-visualizations",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html#output-visualizations",
+    "title": "Going Further with Coding",
+    "section": "Output Visualizations",
+    "text": "Output Visualizations\nConvert cleaned data into visuals that highlight insights and comparisons: bar graphs, line and scatter plots, pie charts, histograms, etc.\nCorresponds with the following lessons:\ngraphing‑bar‑graphs • graphing‑scatter‑plots • graphing‑pie‑charts • graphing‑histograms",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding"
+    ]
   },
   {
-    "objectID": "slides/intro.html#open-in-vs-code",
-    "href": "slides/intro.html#open-in-vs-code",
-    "title": "Data Dunkers Demo Slides",
-    "section": "Open in VS Code",
-    "text": "Open in VS Code\n\nOpen folder in VS Code: File → Open Folder…\nInstall Quarto extension (already installed ✅)\nEdit .qmd files with syntax highlighting\nPreview in browser or integrated panel"
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Turn your processed tables into clear visuals students can read and explain. Each page below focuses on a core chart type you’ll re-use across activities.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Overview"
+    ]
   },
   {
-    "objectID": "slides/intro.html#add-a-slideshow",
-    "href": "slides/intro.html#add-a-slideshow",
-    "title": "Data Dunkers Demo Slides",
-    "section": "Add a Slideshow",
-    "text": "Add a Slideshow\n\nCreate folder slides/\nAdd intro.qmd with front matter:\n---\ntitle: \"Data Dunkers Demo Slides\"\nformat: revealjs\n---\nEach --- in file makes a new slide\nLink slideshow in _quarto.yml navbar"
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-bar-graphs",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-bar-graphs",
+    "title": "Overview",
+    "section": "Creating Bar Graphs",
+    "text": "Creating Bar Graphs\nCompare values across categories (e.g., attempts by distance or makes by player) with simple, labeled bars for fast pattern-spotting.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-bar-graphs.ipynb.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Overview"
+    ]
   },
   {
-    "objectID": "slides/intro.html#publish-the-site",
-    "href": "slides/intro.html#publish-the-site",
-    "title": "Data Dunkers Demo Slides",
-    "section": "Publish the Site",
-    "text": "Publish the Site\n\nOption A: GitHub Pages\n\nCommit & push to GitHub\nAdd GitHub Action workflow for Quarto\nSite URL: https://pbeens.github.io/data-dunkers-quarto-test/\n\nOption B: Netlify\n\nConnect repo at netlify.com\nAuto-builds on push\nSite URL: https://data-dunkers-quarto-test.netlify.app/"
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-line-and-scatter-plots",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-line-and-scatter-plots",
+    "title": "Overview",
+    "section": "Creating Line and Scatter Plots",
+    "text": "Creating Line and Scatter Plots\nShow change or relationships: lines for trends over an ordered axis; scatter to explore how two variables move together.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-scatter-plots.ipynb.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Overview"
+    ]
   },
   {
-    "objectID": "slides/intro.html#summary",
-    "href": "slides/intro.html#summary",
-    "title": "Data Dunkers Demo Slides",
-    "section": "Summary",
-    "text": "Summary\n\n✅ Installed Python\n✅ Installed Quarto CLI\n✅ Installed Jupyter + PyYAML\n✅ Created and previewed Quarto project\n✅ Opened in VS Code\n✅ Added slideshow alongside website\n✅ Ready to publish demo site"
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-pie-charts",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-pie-charts",
+    "title": "Overview",
+    "section": "Creating Pie Charts",
+    "text": "Creating Pie Charts\nDisplay proportions of a whole (used sparingly) to highlight simple “share of total” stories.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-pie-charts.ipynb.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-histograms",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-histograms",
+    "title": "Overview",
+    "section": "Creating Histograms",
+    "text": "Creating Histograms\nReveal the distribution of a numeric variable (e.g., shot distance or points per game) to see clustering, spread, and outliers.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-histograms.ipynb.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03C-pie-charts.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03C-pie-charts.html",
+    "title": "Creating Pie Charts",
+    "section": "",
+    "text": "Display proportions of a whole (used sparingly) to highlight simple “share of total” stories.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-pie-charts.ipynb.\n\nLesson coming soon!",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Creating Pie Charts"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03A-bar-graphs.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03A-bar-graphs.html",
+    "title": "Creating Bar Graphs",
+    "section": "",
+    "text": "Compare values across categories (e.g., attempts by distance or makes by player) with simple, labeled bars for fast pattern-spotting.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-bar-graphs.ipynb.\n\nLesson coming soon!",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Creating Bar Graphs"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html",
+    "title": "Cleaning the Data (Basics)",
+    "section": "",
+    "text": "A light scrub after core table skills: standardize column names/case, coerce numeric columns used in sorts/percentages, and drop empty rows so charts and stats don’t break. Informed by the table/analysis lessons here:\n\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb (GitHub)\n\n\nLesson coming soon!",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Cleaning the Data (Basics)"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.html",
+    "title": "Creating New Columns",
+    "section": "",
+    "text": "Create derived fields with vectorized formulas and simple conditions—e.g., shooting percentage from Makes/Attempts, and distance buckets (Short/Medium/Long). These metrics power richer comparisons and will feed directly into visualizations.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb.\n\nLesson coming soon!",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Creating New Columns"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02B-filtering.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02B-filtering.html",
+    "title": "Filtering the Data",
+    "section": "",
+    "text": "Keep only the rows that matter using boolean masks and readable conditions (e.g., df[\"Distance\"] &gt;= 6, df[\"Player\"].isin([...])). Emphasis is on clear, chainable filters students will reuse in later charts and comparisons.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb.\n\nLesson coming soon!",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Filtering the Data"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Choose how students will bring data into a pandas DataFrame. Pick the on-ramp that matches your setup (self-contained internal data, CSV, Excel, Google Sheets, or a simple table from the web).",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#using-internal-data",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#using-internal-data",
+    "title": "Overview",
+    "section": "Using Internal Data",
+    "text": "Using Internal Data\nThis lesson is for classes that want self-contained data inside the notebook or Python program—create small tables from lists or dictionaries with pandas.DataFrame, name the columns, and preview with head().\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-internal.ipynb.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-csv-files",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-csv-files",
+    "title": "Overview",
+    "section": "Data from CSV Files",
+    "text": "Data from CSV Files\nLoad a shared or local CSV using pd.read_csv(...), then take a quick look at shape, column names, and a few rows to confirm what came in before moving on.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-csv.ipynb.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-excel-files",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-excel-files",
+    "title": "Overview",
+    "section": "Data from Excel Files",
+    "text": "Data from Excel Files\nBring in Excel data with pd.read_excel(...); choose a sheet if needed and preview a few rows—handy when teachers share XLSX templates.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-google-sheets",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-google-sheets",
+    "title": "Overview",
+    "section": "Data from Google Sheets",
+    "text": "Data from Google Sheets\nUse a Google Sheet’s share/export link (CSV export is simplest) so pandas can read it like a regular CSV; verify headers and sample rows.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-webpages",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-webpages",
+    "title": "Overview",
+    "section": "Data from Webpages",
+    "text": "Data from Webpages\nUse pd.read_html(...) to fetch a simple HTML table from a webpage into a DataFrame; if multiple tables are found, pick the right one and preview a few rows.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-webpage.ipynb.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01D-import-google-sheets.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01D-import-google-sheets.html",
+    "title": "Data from Google Sheets",
+    "section": "",
+    "text": "Use a Google Sheet’s share/export link (CSV export is simplest) so pandas can read it like a regular CSV; verify headers and sample rows.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb.\n\nLesson coming soon!",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Data from Google Sheets"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01B-import-csv.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01B-import-csv.html",
+    "title": "Importing Data From a CSV File",
+    "section": "",
+    "text": "In this lesson, we’ll learn how to import and work with a CSV (Comma Separated Values) file — a simple text format where data is stored in rows, with each value separated by a comma. They are one of the most common formats for datasets, and knowing how to handle them is an essential skill for data analysis.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Importing Data From a CSV File"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01B-import-csv.html#when-to-use-a-csv-file",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01B-import-csv.html#when-to-use-a-csv-file",
+    "title": "Importing Data From a CSV File",
+    "section": "When to Use a CSV File",
+    "text": "When to Use a CSV File\nCSV files are lightweight, widely supported, and easy to share across different programs, which makes them ideal for bringing external data into Python. They’re also one of the most common formats used by open data websites, such as Open Government Canada and the U.S. Data.gov portal.\n\nStep 1 — Import Libraries and Load CSV Data\nIn this step, we bring in the tools we need (pandas for working with tables, plotly.express for charts) and load a dataset directly from a CSV file.\n\n\nCode\n# Setup\nimport plotly.express as px\nimport pandas as pd\n\n# Input: Read the CSV file into a DataFrame named df\nurl = \"https://raw.githubusercontent.com/pbeens/Data-Dunkers/main/Data/x-y-data.csv\"\ndf = pd.read_csv(url)\n\n\nWe now have our data stored in a Pandas DataFrame, which gives us labeled columns and rows we can easily manipulate.\n\n\nStep 2 — Preview the Data\nBefore analyzing or plotting, it’s important to confirm the data looks as expected. Pandas provides quick functions like head() and tail() to peek at the data.\n\n\nCode\n# Preview the first few rows\ndf.head()\n\n\n\n\n\n\n\n\n\nX\nY\n\n\n\n\n0\n0\n0\n\n\n1\n1\n1\n\n\n2\n2\n4\n\n\n3\n3\n9\n\n\n4\n4\n16\n\n\n\n\n\n\n\n\n\nCode\n# Preview the last 2 rows\ndf.tail(2)\n\n\n\n\n\n\n\n\n\nX\nY\n\n\n\n\n4\n4\n16\n\n\n5\n5\n25\n\n\n\n\n\n\n\nYou’ll see that Pandas has also inserted an index column on the left. We won’t use it here, but it’s helpful for keeping track of rows.\nWe can also check which columns are available:\n\n\nCode\n# Display the column names\ndf.columns\n\n\nIndex(['X', 'Y'], dtype='object')\n\n\nAlways pay attention to capitalization, since Python is case-sensitive and treats X and x as different names.\n\n\nStep 3 — Plot the Data\nWith the data loaded and verified, we can now create a plot. This is almost identical to how we plotted internal data earlier, but now we must specify which DataFrame the columns come from.\n\n\nCode\n# Create a line plot directly\npx.line(df, x=\"X\", y=\"Y\", title=\"Data from a CSV File\")\n\n\n                            \n                                            \n\n\nAnother option is to save the chart to a variable and then show it:\n\n\nCode\nfig = px.line(df, x=\"X\", y=\"Y\", title=\"Data from a CSV File\")\nfig.show()\n\n\n                            \n                                            \n\n\n\n\nStep 4 — Put It All Together\nHere’s the full program, showing the setup, input, process, and output in one block:\n\n\nCode\n# Setup\nimport plotly.express as px\nimport pandas as pd\n\n# Input\nurl = \"https://raw.githubusercontent.com/pbeens/Data-Dunkers/main/Data/x-y-data.csv\"\ndf = pd.read_csv(url)\n\n# Process\nfig = px.line(data_frame=df, x=\"X\", y=\"Y\", title=\"Data from a CSV File\")\n\n# Output\nfig.show()",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Importing Data From a CSV File"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01B-import-csv.html#talk-about-it",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01B-import-csv.html#talk-about-it",
+    "title": "Importing Data From a CSV File",
+    "section": "Talk About It",
+    "text": "Talk About It\n\nWhat advantages do CSV files have compared to embedding data directly in code?\nWhy is it important to preview your data before plotting?\nHow might renaming columns improve the readability of your code and charts?",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Importing Data From a CSV File"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01B-import-csv.html#lesson-notebook",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01B-import-csv.html#lesson-notebook",
+    "title": "Importing Data From a CSV File",
+    "section": "Lesson Notebook",
+    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes an exercise where you’ll load real basketball data from a CSV file and create your own plots.\nOpen the lesson here.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Importing Data From a CSV File"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/index.html",
+    "href": "module-3-implementation-in-your-context/index.html",
+    "title": "Module 3 – Implementation in Your Context",
+    "section": "",
+    "text": "This module helps you tailor Data Dunkers to your class. You’ll align activities to the Ontario curriculum, choose the right datasets and themes, map an instructional flow, and set up facilitation so students thrive. If you want to go deeper, you can branch into a Coding Lab focused on basketball data."
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/index.html#what-you-will-do-and-learn",
+    "href": "module-3-implementation-in-your-context/index.html#what-you-will-do-and-learn",
+    "title": "Module 3 – Implementation in Your Context",
+    "section": "What you will do and learn",
+    "text": "What you will do and learn\n\nAlign selected activities to curriculum expectations and student goals.\nChoose datasets and sports themes that fit your learners.\nMap an instructional flow and scaffolds for your context.\nPlan grouping and facilitation for a data-driven classroom.\n(Optional) Explore a Coding Lab path to extend technical depth."
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/index.html#how-to-use-this-module",
+    "href": "module-3-implementation-in-your-context/index.html#how-to-use-this-module",
+    "title": "Module 3 – Implementation in Your Context",
+    "section": "How to use this module",
+    "text": "How to use this module\n\nStart with the Planning Toolkit to design your implementation.\nIf desired, add the Coding Lab sub-menu for deeper technical work.\nWrap with the Implementation Checklist to finalize your launch plan."
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/index.html#planning-toolkit",
+    "href": "module-3-implementation-in-your-context/index.html#planning-toolkit",
+    "title": "Module 3 – Implementation in Your Context",
+    "section": "Planning Toolkit",
+    "text": "Planning Toolkit\n\nAlign Activities to Curriculum\nSelect Datasets and Sports Themes\nMap Instructional Flow\nGrouping & Facilitation Strategies\nImplementation Checklist"
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/index.html#optional-deep-dive-paths",
+    "href": "module-3-implementation-in-your-context/index.html#optional-deep-dive-paths",
+    "title": "Module 3 – Implementation in Your Context",
+    "section": "Optional: Deep-Dive Paths",
+    "text": "Optional: Deep-Dive Paths\n\nCoding Lab: Basketball Data\n\nImport & Prepare Data (CSV, Sheets)\n\nVisualize Shots & Trends (bar, line, scatter)\n\nStats Toolbox (percentages, mean/median)\n\nPlayer Comparisons (side-by-side views)\n\nBuild a Mini Dashboard\n\n\n(Links for Coding Lab pages will appear once those files are added to the repo.)"
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/index.html#outcomes",
+    "href": "module-3-implementation-in-your-context/index.html#outcomes",
+    "title": "Module 3 – Implementation in Your Context",
+    "section": "Outcomes",
+    "text": "Outcomes\nBy the end of Module 3, you will have: - a classroom-ready plan aligned to curriculum, - a set of datasets and activities matched to your students, - a clear flow and facilitation approach, - optional extensions for deeper coding experiences."
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html",
+    "title": "Map Instructional Flow",
+    "section": "",
+    "text": "Here’s the same previous format, with your updated times applied.",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Map Instructional Flow"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#prerequisites-at-a-glance",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#prerequisites-at-a-glance",
+    "title": "Map Instructional Flow",
+    "section": "Prerequisites at a Glance",
+    "text": "Prerequisites at a Glance\n\nFirst timer: Jupyter Notebook Demo → one Input lesson → one Output lesson\nAny Process lesson expects at least one Input lesson first\nScatter/line usually benefits from Statistics (to talk about trend/center/variation)",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Map Instructional Flow"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#quick-start-flow-recipes",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#quick-start-flow-recipes",
+    "title": "Map Instructional Flow",
+    "section": "Quick-Start Flow Recipes",
+    "text": "Quick-Start Flow Recipes\n\nA) “First Run” (≈60 min)\n\nGoal: get everyone from raw data to one clear chart with a takeaway\nFlow:\n\nJupyter Notebook Demo (10 min, teacher-led)\nData from a CSV File (15 min)\nColumns (15 min)\nBar Graphs or Scatter Plots (15 min)\n1–2 sentence insight + share-out (≈5 min)\n\n\n\nNeed a true 45 min option? Skip either Columns or swap CSV → Within the Notebook to trim setup time.\n\n\n\nB) 2×45 “Explore → Explain”\n\nPeriod 1 (Explore): Notebook Demo (10) → Google Sheet (10–15) → Columns (15) → Bar Graphs (15)\nPeriod 2 (Explain): Filtering (15) → Statistics (10–15) → Scatter (15) → Quick gallery walk (5)\n\n\n\nC) 3×45 “Collect → Analyze → Tell the Story”\n\nPeriod 1: Class data collection → Data from a CSV (import class file, 15)\nPeriod 2: Columns (15) → Filtering (15) → Statistics (10–15)\nPeriod 3: Scatter (15) or Bar (15) → Draft captions → 1-slide share-out\n\n\n\nD) Half-Day FUNdamentals (≈2.5–3 hrs)\n\nBlock 1 (60–70): Demo (10) → CSV (15) → Columns (15) → Bar/Scatter (15)\nBlock 2 (60–70): Filtering (15) → Statistics (10–15) → Second chart (Bar/Scatter 15) or Histograms (10–15)\nBlock 3 (30–40): Synthesis poster (chart + insight) → 1-minute standups",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Map Instructional Flow"
+    ]
+  },
+  {
+    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#menu-builder-with-time-estimates",
+    "href": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#menu-builder-with-time-estimates",
+    "title": "Map Instructional Flow",
+    "section": "Menu Builder with Time Estimates",
+    "text": "Menu Builder with Time Estimates\n\n\n\n\n\n\n\n\n\nStep\nLesson\nTypical Time\nNotes\n\n\n\n\n0\nJupyter Notebook Demo\n10 min\nTeacher-led walkthrough\n\n\n1\nData from a CSV File\n15 min\nFastest on-ramp for local files\n\n\n1\nData from a Google Sheet\n10–15 min\nGreat for shared class data\n\n\n1\nData from a Webpage\n15–20 min\nMay require light cleaning\n\n\n1\nData from an Excel File\n10–15 min\nUseful if .xlsx is on hand\n\n\n1\nData from Within the Notebook\n8–10 min\nRemoves file friction\n\n\n2\nColumns (explore/select)\n15 min\nUpdated per your call\n\n\n2\nFiltering Our Data\n15 min\nUpdated per your call\n\n\n2\nSorting Our Data\n6–8 min\nOften quick once columns are known\n\n\n2\nAdding New Columns\n10–15 min\nRatios/percents or simple formulas\n\n\n2\nStatistics\n10–15 min\nMean/median/min/max, describe()\n\n\n3\nBar Graphs\n15 min\nUpdated per your call\n\n\n3\nScatter Plots\n15 min\nUpdated per your call\n\n\n3\nLine Graphs\n12–18 min\nConsider time for axis choices\n\n\n3\nPie Charts\n10–12 min\nKeep categories small\n\n\n3\nHistograms\n10–15 min\nBin-choice discussion adds time",
+    "crumbs": [
+      "Home",
+      "Module 3",
+      "Planning Toolkit",
+      "Map Instructional Flow"
+    ]
   },
   {
     "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/01-align-activities-to-curriculum.html",
@@ -125,6 +505,154 @@
       "Module 3",
       "Planning Toolkit",
       "Align Activities to Curriculum and Student Goals"
+    ]
+  },
+  {
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/04-labyrinth-activity.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/04-labyrinth-activity.html",
+    "title": "Labyrinth Activity",
+    "section": "",
+    "text": "Next up — the Basketball Labyrinth! This activity is designed to get you into both looking at the data and doing some basic coding. Think of it as a virtual escape room: you’ll solve puzzles, uncover clues, and make your way through the data to reach the end.\nWe have another teacher who will walk you through the activity, but we recommend you also open the Basketball Labyrinth yourself to an external site. so you can explore and experience it firsthand.\n==NEED VIDEO EMBED INFO==",
+    "crumbs": [
+      "Home",
+      "Module 2",
+      "Labyrinth Activity"
+    ]
+  },
+  {
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/02-data-is-everywhere.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/02-data-is-everywhere.html",
+    "title": "Data is Everywhere!",
+    "section": "",
+    "text": "To kick things off, we’ll look at how data drives decisions in basketball — and why that matters far beyond the court. Start by watching this video about a data scientist working in basketball.\n==NEED VIDEO EMBED INFO== (x2)",
+    "crumbs": [
+      "Home",
+      "Module 2",
+      "Data is Everywhere!"
+    ]
+  },
+  {
+    "objectID": "module-1-welcome-to-data-dunkers/05-creating-your-playbook.html",
+    "href": "module-1-welcome-to-data-dunkers/05-creating-your-playbook.html",
+    "title": "Creating your Playbook",
+    "section": "",
+    "text": "In basketball — and in data science — good decisions start with good information. This page is your chance to think through the best way to navigate the course, based on your needs and interests.\nWe’ve set up a Playlab chat bot to guide you. It will ask a few simple questions to help you decide where to jump in and what path might make the most sense for you. You only need to share as much information as you’re comfortable with — or you can skip it entirely and move on.\nThink of it as building your personal Data Dunkers Implementation Playbook, so you can get the most out of your time here.\n==ADD PLAYLAB CHAT BOT HERE OR MERELY HAVE THEM LOOK AT THE COURSE.==",
+    "crumbs": [
+      "Home",
+      "Module 1",
+      "Creating your Playbook"
+    ]
+  },
+  {
+    "objectID": "module-1-welcome-to-data-dunkers/03-flavors-of-the-program.html",
+    "href": "module-1-welcome-to-data-dunkers/03-flavors-of-the-program.html",
+    "title": "Flavors of the Program",
+    "section": "",
+    "text": "There’s more than one way to bring the Data Dunkers vision to life. Just like players can join a game in different roles, you can step in at the point that makes the most sense for you and your students. Throughout this course, we’ll explore practical ways to embed the program — whether you run it as a special event, stretch it into a unit, or weave pieces into your lessons over time.\n\n\n\nAlt text\n\n\n\nFUNdamentals – 2 half-days – A focused introduction to the core activities and concepts.\nUnit using FUNdamentals – Spread the activities across multiple class periods over several weeks.\nHack-a-thon – A high-energy, one-day or multi-day event where students tackle data challenges.\nEmbedded lessons – Integrate Data Dunkers activities into your regular curriculum throughout the year.\nProject – Launch a stand-alone project that connects data skills to real-world issues or student interests.\n\nFor the start of this course, we are going to use the entry point of the FUNdamentals — which you can run as a special event or embed the pieces of it into your class as a unit.",
+    "crumbs": [
+      "Home",
+      "Module 1",
+      "Flavors of the Program"
+    ]
+  },
+  {
+    "objectID": "module-1-welcome-to-data-dunkers/01-welcome.html",
+    "href": "module-1-welcome-to-data-dunkers/01-welcome.html",
+    "title": "Welcome to Data Dunkers!",
+    "section": "",
+    "text": "We’re excited to have you join the Data Dunkers Support Course — a space designed to help you bring the energy of sports and the power of data into your classroom. Here, you’ll explore flexible activities, ready-to-use tools, and real-world examples that make data science approachable and engaging for your students.\nBefore we dive in, listen in to Pascal Siakam’s welcome to students, showing his passion for this program. Pascal is not only an NBA Champion and 2025 Eastern Conference Finals MVP but most importantly, he deeply cares about our students’ future.",
+    "crumbs": [
+      "Home",
+      "Module 1",
+      "Welcome to Data Dunkers!"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Dunkers LMS",
+    "section": "",
+    "text": "This course focuses on how you can implement data science learning in your school setting in ways that fit your schedule, curriculum, and students by implementing Data Dunkers curriculum and support. We’ll start by exploring the core FUNdamentals approach—how it works, how it engages students through sports-themed data activities, and how to adapt it for different grade levels and classroom contexts.\nFrom there, participants will look at multiple ways to extend and deepen the experience, including:\nBy the end, participants will leave with a clear, adaptable game plan for bringing Data Dunkers to life—whether you run a short, focused experience or build toward more advanced, student-driven work."
+  },
+  {
+    "objectID": "index.html#course-objectives",
+    "href": "index.html#course-objectives",
+    "title": "Data Dunkers LMS",
+    "section": "Course Objectives",
+    "text": "Course Objectives\nBy the end of this course, participants will be able to:\n\nUnderstand the Data Dunkers FUNdamentals model – Explain its structure, learning goals, and how it engages students in data science through sports contexts.\nIdentify implementation options – Select one or more ways to bring FUNdamentals into their school or program (e.g., short-term workshop, embedded lessons, after-school model).\nAdapt activities for context – Modify lesson plans, pacing, and resources to meet student needs, grade levels, and available time.\nExtend beyond the basics (optional) – Explore opportunities to integrate careers, advanced coding, AI tools, diverse data sets, or long-term projects.\nPlan for launch – Develop a clear, personalized implementation plan, including timeline, support needs, and expected student outcomes."
+  },
+  {
+    "objectID": "index.html#success-criteria-for-participants",
+    "href": "index.html#success-criteria-for-participants",
+    "title": "Data Dunkers LMS",
+    "section": "Success Criteria for Participants",
+    "text": "Success Criteria for Participants\nParticipants will have successfully completed the course when they can:\n\nDescribe the key elements and purpose of the FUNdamentals program.\nSelect and justify an implementation pathway that fits their setting.\nDemonstrate readiness by adapting at least one FUNdamentals lesson or activity for their classroom.\nIdentify at least one possible extension (career connection, advanced coding, AI, diverse data set, or project-based work) that aligns with their teaching context.\nProduce a documented game plan that outlines:\n\nChosen model(s) for implementation.\nTimeline and pacing considerations.\nRequired supports and resources.\nExpected student learning outcomes.\n\n\n\n\n(Quarto Demo Site)"
+  },
+  {
+    "objectID": "module-1-welcome-to-data-dunkers/02-what-is-data-dunkers.html",
+    "href": "module-1-welcome-to-data-dunkers/02-what-is-data-dunkers.html",
+    "title": "What Is Data Dunkers?",
+    "section": "",
+    "text": "Data isn’t just for scientists or statisticians — it’s becoming a core skill for success in almost every career. Whether in sports, healthcare, engineering, or creative industries, the ability to understand and use data is a game-changer for students’ futures.\nThe World Economic Forum lists data analysis and data science among the most in-demand skills in their Future of Jobs report, with demand only expected to grow in the years ahead. You can explore the report here: World Economic Forum – Future of Jobs Report\nWhy it matters for us as educators: Data science isn’t just about numbers — it’s about curiosity, problem-solving, and storytelling. In Data Dunkers, we use the excitement of sports to spark student interest, then connect those skills to real-world applications that prepare them for jobs and challenges we can’t even imagine yet.\nWatch the video below for Dell Technologies’ and PS43 Foundations overview on the Data Dunkers program.\n==NEED VIDEO EMBED INFO==",
+    "crumbs": [
+      "Home",
+      "Module 1",
+      "What Is Data Dunkers?"
+    ]
+  },
+  {
+    "objectID": "module-1-welcome-to-data-dunkers/04-the-fundamentals-game-plan.html",
+    "href": "module-1-welcome-to-data-dunkers/04-the-fundamentals-game-plan.html",
+    "title": "The FUNdamentals Game Plan",
+    "section": "",
+    "text": "Let’s take a look at the game plan for the FUNdamentals program. This is the core starting point for many Data Dunkers experiences — a focused, high-energy introduction to data science through the excitement of sports. You’ll see how the activities build skills step-by-step, keep students engaged, and connect learning to real-world applications. Watch the video below to see how it all comes together in action.\n==NEED VIDEO EMBED INFO==",
+    "crumbs": [
+      "Home",
+      "Module 1",
+      "The FUNdamentals Game Plan"
+    ]
+  },
+  {
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/01-welcome-to-the-court.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/01-welcome-to-the-court.html",
+    "title": "Welcome to the Court",
+    "section": "",
+    "text": "The best way to understand how you might use Data Dunkers in your classroom is to first experience it like a student. In this section, you’ll step into their shoes — exploring activities, solving challenges, and seeing how data comes alive through sports.\nTo guide you through this part of the course, you’ll have a Virtual Coach. This coach will help you navigate the activities, offer prompts and tips, and keep you moving forward.\n==NEED VIDEO EMBED INFO==",
+    "crumbs": [
+      "Home",
+      "Module 2",
+      "Welcome to the Court"
+    ]
+  },
+  {
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/03-quick-timeout-look-at-jupyter-notebook.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/03-quick-timeout-look-at-jupyter-notebook.html",
+    "title": "Quick Timeout: Look at Jupyter Notebook",
+    "section": "",
+    "text": "Before we get into our first BIG activity, we’re going to step out of the student role for a moment and give you, as a teacher, a quick look at one of the tools we’ll be using.\nWe usually embed this learning into the experience with the students, but we wanted to provide you with a greater explanation up front.\nWatch this short video explaining how Jupyter Notebooks work. We’ll use these for the next two activities, so this quick overview will help you understand how they’re set up and how you and your students can interact with them.\nWe’ve also included a link to a sample notebook to an external site. that contains some of the information we’ll discuss in the video — so you can actually try out the notebook environment for yourself.\n==NEED VIDEO EMBED INFO==",
+    "crumbs": [
+      "Home",
+      "Module 2",
+      "Quick Timeout: Look at Jupyter Notebook"
+    ]
+  },
+  {
+    "objectID": "module-2-step-into-the-game-experience-like-a-student/05-to-understanding-the-instructional-approach.html",
+    "href": "module-2-step-into-the-game-experience-like-a-student/05-to-understanding-the-instructional-approach.html",
+    "title": "TO: Understanding the Instructional Approach",
+    "section": "",
+    "text": "Before we move on, let’s take a quick time out to look at the instructional approach behind the Data Dunkers program. This short video will walk you through the thinking that shapes how we design activities, guide student learning, and connect data skills to real-world relevance.\nUnderstanding this approach will help you see how each part of the program builds both engagement and skill — and how you can adapt these strategies for your own students.\n==NEED VIDEO EMBED INFO==",
+    "crumbs": [
+      "Home",
+      "Module 2",
+      "TO: Understanding the Instructional Approach"
     ]
   },
   {
@@ -232,205 +760,73 @@
     ]
   },
   {
-    "objectID": "module-3-implementation-in-your-context/index.html",
-    "href": "module-3-implementation-in-your-context/index.html",
-    "title": "Module 3 – Implementation in Your Context",
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html",
+    "title": "Using Internal Data",
     "section": "",
-    "text": "This module helps you tailor Data Dunkers to your class. You’ll align activities to the Ontario curriculum, choose the right datasets and themes, map an instructional flow, and set up facilitation so students thrive. If you want to go deeper, you can branch into a Coding Lab focused on basketball data."
-  },
-  {
-    "objectID": "module-3-implementation-in-your-context/index.html#what-you-will-do-and-learn",
-    "href": "module-3-implementation-in-your-context/index.html#what-you-will-do-and-learn",
-    "title": "Module 3 – Implementation in Your Context",
-    "section": "What you will do and learn",
-    "text": "What you will do and learn\n\nAlign selected activities to curriculum expectations and student goals.\nChoose datasets and sports themes that fit your learners.\nMap an instructional flow and scaffolds for your context.\nPlan grouping and facilitation for a data-driven classroom.\n(Optional) Explore a Coding Lab path to extend technical depth."
-  },
-  {
-    "objectID": "module-3-implementation-in-your-context/index.html#how-to-use-this-module",
-    "href": "module-3-implementation-in-your-context/index.html#how-to-use-this-module",
-    "title": "Module 3 – Implementation in Your Context",
-    "section": "How to use this module",
-    "text": "How to use this module\n\nStart with the Planning Toolkit to design your implementation.\nIf desired, add the Coding Lab sub-menu for deeper technical work.\nWrap with the Implementation Checklist to finalize your launch plan."
-  },
-  {
-    "objectID": "module-3-implementation-in-your-context/index.html#planning-toolkit",
-    "href": "module-3-implementation-in-your-context/index.html#planning-toolkit",
-    "title": "Module 3 – Implementation in Your Context",
-    "section": "Planning Toolkit",
-    "text": "Planning Toolkit\n\nAlign Activities to Curriculum\nSelect Datasets and Sports Themes\nMap Instructional Flow\nGrouping & Facilitation Strategies\nImplementation Checklist"
-  },
-  {
-    "objectID": "module-3-implementation-in-your-context/index.html#optional-deep-dive-paths",
-    "href": "module-3-implementation-in-your-context/index.html#optional-deep-dive-paths",
-    "title": "Module 3 – Implementation in Your Context",
-    "section": "Optional: Deep-Dive Paths",
-    "text": "Optional: Deep-Dive Paths\n\nCoding Lab: Basketball Data\n\nImport & Prepare Data (CSV, Sheets)\n\nVisualize Shots & Trends (bar, line, scatter)\n\nStats Toolbox (percentages, mean/median)\n\nPlayer Comparisons (side-by-side views)\n\nBuild a Mini Dashboard\n\n\n(Links for Coding Lab pages will appear once those files are added to the repo.)"
-  },
-  {
-    "objectID": "module-3-implementation-in-your-context/index.html#outcomes",
-    "href": "module-3-implementation-in-your-context/index.html#outcomes",
-    "title": "Module 3 – Implementation in Your Context",
-    "section": "Outcomes",
-    "text": "Outcomes\nBy the end of Module 3, you will have: - a classroom-ready plan aligned to curriculum, - a set of datasets and activities matched to your students, - a clear flow and facilitation approach, - optional extensions for deeper coding experiences."
-  },
-  {
-    "objectID": "module-1-welcome-to-data-dunkers/02-what-is-data-dunkers.html",
-    "href": "module-1-welcome-to-data-dunkers/02-what-is-data-dunkers.html",
-    "title": "What Is Data Dunkers?",
-    "section": "",
-    "text": "Data isn’t just for scientists or statisticians — it’s becoming a core skill for success in almost every career. Whether in sports, healthcare, engineering, or creative industries, the ability to understand and use data is a game-changer for students’ futures.\nThe World Economic Forum lists data analysis and data science among the most in-demand skills in their Future of Jobs report, with demand only expected to grow in the years ahead. You can explore the report here: World Economic Forum – Future of Jobs Report\nWhy it matters for us as educators: Data science isn’t just about numbers — it’s about curiosity, problem-solving, and storytelling. In Data Dunkers, we use the excitement of sports to spark student interest, then connect those skills to real-world applications that prepare them for jobs and challenges we can’t even imagine yet.\nWatch the video below for Dell Technologies’ and PS43 Foundations overview on the Data Dunkers program.\n==NEED VIDEO EMBED INFO==",
-    "crumbs": [
-      "Home",
-      "Module 1",
-      "What Is Data Dunkers?"
-    ]
-  },
-  {
-    "objectID": "module-1-welcome-to-data-dunkers/01-welcome.html",
-    "href": "module-1-welcome-to-data-dunkers/01-welcome.html",
-    "title": "Welcome to Data Dunkers!",
-    "section": "",
-    "text": "We’re excited to have you join the Data Dunkers Support Course — a space designed to help you bring the energy of sports and the power of data into your classroom. Here, you’ll explore flexible activities, ready-to-use tools, and real-world examples that make data science approachable and engaging for your students.\nBefore we dive in, listen in to Pascal Siakam’s welcome to students, showing his passion for this program. Pascal is not only an NBA Champion and 2025 Eastern Conference Finals MVP but most importantly, he deeply cares about our students’ future.",
-    "crumbs": [
-      "Home",
-      "Module 1",
-      "Welcome to Data Dunkers!"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Data Dunkers LMS",
-    "section": "",
-    "text": "This course focuses on how you can implement data science learning in your school setting in ways that fit your schedule, curriculum, and students by implementing Data Dunkers curriculum and support. We’ll start by exploring the core FUNdamentals approach—how it works, how it engages students through sports-themed data activities, and how to adapt it for different grade levels and classroom contexts.\nFrom there, participants will look at multiple ways to extend and deepen the experience, including:\nBy the end, participants will leave with a clear, adaptable game plan for bringing Data Dunkers to life—whether you run a short, focused experience or build toward more advanced, student-driven work."
-  },
-  {
-    "objectID": "index.html#course-objectives",
-    "href": "index.html#course-objectives",
-    "title": "Data Dunkers LMS",
-    "section": "Course Objectives",
-    "text": "Course Objectives\nBy the end of this course, participants will be able to:\n\nUnderstand the Data Dunkers FUNdamentals model – Explain its structure, learning goals, and how it engages students in data science through sports contexts.\nIdentify implementation options – Select one or more ways to bring FUNdamentals into their school or program (e.g., short-term workshop, embedded lessons, after-school model).\nAdapt activities for context – Modify lesson plans, pacing, and resources to meet student needs, grade levels, and available time.\nExtend beyond the basics (optional) – Explore opportunities to integrate careers, advanced coding, AI tools, diverse data sets, or long-term projects.\nPlan for launch – Develop a clear, personalized implementation plan, including timeline, support needs, and expected student outcomes."
-  },
-  {
-    "objectID": "index.html#success-criteria-for-participants",
-    "href": "index.html#success-criteria-for-participants",
-    "title": "Data Dunkers LMS",
-    "section": "Success Criteria for Participants",
-    "text": "Success Criteria for Participants\nParticipants will have successfully completed the course when they can:\n\nDescribe the key elements and purpose of the FUNdamentals program.\nSelect and justify an implementation pathway that fits their setting.\nDemonstrate readiness by adapting at least one FUNdamentals lesson or activity for their classroom.\nIdentify at least one possible extension (career connection, advanced coding, AI, diverse data set, or project-based work) that aligns with their teaching context.\nProduce a documented game plan that outlines:\n\nChosen model(s) for implementation.\nTimeline and pacing considerations.\nRequired supports and resources.\nExpected student learning outcomes.\n\n\n\n\n(Quarto Demo Site)"
-  },
-  {
-    "objectID": "module-2-step-into-the-game-experience-like-a-student/05-to-understanding-the-instructional-approach.html",
-    "href": "module-2-step-into-the-game-experience-like-a-student/05-to-understanding-the-instructional-approach.html",
-    "title": "TO: Understanding the Instructional Approach",
-    "section": "",
-    "text": "Before we move on, let’s take a quick time out to look at the instructional approach behind the Data Dunkers program. This short video will walk you through the thinking that shapes how we design activities, guide student learning, and connect data skills to real-world relevance.\nUnderstanding this approach will help you see how each part of the program builds both engagement and skill — and how you can adapt these strategies for your own students.\n==NEED VIDEO EMBED INFO==",
-    "crumbs": [
-      "Home",
-      "Module 2",
-      "TO: Understanding the Instructional Approach"
-    ]
-  },
-  {
-    "objectID": "module-2-step-into-the-game-experience-like-a-student/03-quick-timeout-look-at-jupyter-notebook.html",
-    "href": "module-2-step-into-the-game-experience-like-a-student/03-quick-timeout-look-at-jupyter-notebook.html",
-    "title": "Quick Timeout: Look at Jupyter Notebook",
-    "section": "",
-    "text": "Before we get into our first BIG activity, we’re going to step out of the student role for a moment and give you, as a teacher, a quick look at one of the tools we’ll be using.\nWe usually embed this learning into the experience with the students, but we wanted to provide you with a greater explanation up front.\nWatch this short video explaining how Jupyter Notebooks work. We’ll use these for the next two activities, so this quick overview will help you understand how they’re set up and how you and your students can interact with them.\nWe’ve also included a link to a sample notebook to an external site. that contains some of the information we’ll discuss in the video — so you can actually try out the notebook environment for yourself.\n==NEED VIDEO EMBED INFO==",
-    "crumbs": [
-      "Home",
-      "Module 2",
-      "Quick Timeout: Look at Jupyter Notebook"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02C-sorting.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02C-sorting.html",
-    "title": "Sorting the Data",
-    "section": "",
-    "text": "Surface patterns by ordering rows with df.sort_values(...): sort by one column, then by multiple keys (e.g., [\"Player\",\"Distance\"]), and control ascending/descending for consistent, reproducible tables.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb.\n\nLesson coming soon!",
+    "text": "In this lesson series we’ll use five input locations: internal data defined directly in code, CSV files, Excel workbooks, Google Sheets (via a share/export link), and simple HTML tables from webpages.",
     "crumbs": [
       "Home",
       "Module 6",
       "Going Further with Coding",
-      "Process Data",
-      "Sorting the Data"
+      "Input Data",
+      "Using Internal Data"
     ]
   },
   {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.html",
-    "title": "Creating New Columns",
-    "section": "",
-    "text": "Create derived fields with vectorized formulas and simple conditions—e.g., shooting percentage from Makes/Attempts, and distance buckets (Short/Medium/Long). These metrics power richer comparisons and will feed directly into visualizations.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb.\n\nLesson coming soon!",
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html#when-to-use-internal-data",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html#when-to-use-internal-data",
+    "title": "Using Internal Data",
+    "section": "When to Use Internal Data",
+    "text": "When to Use Internal Data\nWhen you’re just starting out, one of the easiest ways to work with data is to include it directly inside your program or notebook. Since everything is written in the same place, you don’t need to worry about opening extra files or setting up outside sources.\nThis approach works best when your dataset is small, maybe just a few rows of numbers or categories. It keeps things simple and lets you focus on how the data is being used, not on file management. Another bonus is that you can define both the column names and the values right in your code, making the table’s structure clear and easy to control.\n\nStep 1 — Import Libraries and Embed Data\nIn this step, we bring in needed tools (libraries) and define a simple dataset entirely in code.\n\n\nCode\n# Import the libraries we need\nimport pandas as pd\nimport plotly.express as px\n\n# Define simple data in code\nx_data = [0, 1, 2, 3, 4, 5]\ny_data = [0, 1, 4, 9, 16, 25]\nprint(x_data, y_data)\n\n\n[0, 1, 2, 3, 4, 5] [0, 1, 4, 9, 16, 25]\n\n\nThe two lists represent a basic relationship: each y is the square of the corresponding x. This kind of data is perfect for showing how tables and charts map numbers in columns → rows → plots.\n\n\nStep 2 — Create a DataFrame and Preview It\nIn this step, we turn the raw lists into a structured table (called a DataFrame) so it’s easier to see patterns and check for errors before plotting.\n\n\nCode\n# Create a DataFrame from the simple data, naming the columns\ndf = pd.DataFrame({\"x\": x_data, \"y\": y_data})\n\n\n\n\nCode\n# Preview the first few rows of the table\ndf.head()\n\n\n\n\n\n\n\n\n\nx\ny\n\n\n\n\n0\n0\n0\n\n\n1\n1\n1\n\n\n2\n2\n4\n\n\n3\n3\n9\n\n\n4\n4\n16\n\n\n\n\n\n\n\nYou’ll see two columns (“x” and “y”) and six rows. This preview lets you verify your data is embedded correctly — columns are clearly labeled, rows line up with the x and y pairs, and nothing unexpected (like wrong types) is hiding.\n\n\nStep 3 — Plot a Scatter Plot\nNow that you have a table, we’ll make a scatter plot to help us see how two variables relate (x vs. y here). Scatter plots are great for showing trends or patterns.\n\n\nCode\nfig = px.scatter(df, x=\"x\", y=\"y\", title=\"Example Scatter Plot: y = x²\")\nfig.show()\n\n\n                            \n                                            \n\n\nIn this plot, each point is one (x, y) pair. As x increases, you’ll see y increasing faster (because y = x²). This visual helps you check whether your entered data worked and gives you intuition about relationships.",
     "crumbs": [
       "Home",
       "Module 6",
       "Going Further with Coding",
-      "Process Data",
-      "Creating New Columns"
+      "Input Data",
+      "Using Internal Data"
     ]
   },
   {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html",
-    "title": "Selecting Columns for Analysis",
-    "section": "",
-    "text": "Students load a real NBA player CSV into a DataFrame, explore what each column represents, and practice selecting specific fields for analysis. They also use a short for loop to iterate through df.columns, building familiarity with the dataset’s structure so they can target the right variables later.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb.\n\nLesson coming soon!",
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html#talk-about-it",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html#talk-about-it",
+    "title": "Using Internal Data",
+    "section": "Talk About It",
+    "text": "Talk About It\n\nWhat do the column names (“x”, “y”) suggest about what each value means? How would you describe “x” and “y” to someone who knows nothing about this data?\nThe example uses simple numbers where y = x². If you changed “y” to something else (for example, z = x³ or y = 2x), how would the scatter plot change, and what questions could that let you ask?\nAre there limitations with data you’ve embedded in code (like this)? What is one thing this dataset can’t show you, and why?",
     "crumbs": [
       "Home",
       "Module 6",
       "Going Further with Coding",
-      "Process Data",
-      "Selecting Columns for Analysis"
+      "Input Data",
+      "Using Internal Data"
     ]
   },
   {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02B-filtering.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02B-filtering.html",
-    "title": "Filtering the Data",
-    "section": "",
-    "text": "Keep only the rows that matter using boolean masks and readable conditions (e.g., df[\"Distance\"] &gt;= 6, df[\"Player\"].isin([...])). Emphasis is on clear, chainable filters students will reuse in later charts and comparisons.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb.\n\nLesson coming soon!",
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html#lesson-notebook",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html#lesson-notebook",
+    "title": "Using Internal Data",
+    "section": "Lesson Notebook",
+    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version includes one exercise where you’ll use provided lists to plot Pascal Siakam’s field goals made over his Raptors career—applying the same setup → input → output flow you saw above.\nOpen the lesson here.",
     "crumbs": [
       "Home",
       "Module 6",
       "Going Further with Coding",
-      "Process Data",
-      "Filtering the Data"
+      "Input Data",
+      "Using Internal Data"
     ]
   },
   {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03D-histograms.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03D-histograms.html",
-    "title": "Creating Histograms",
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01C-import-excel.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01C-import-excel.html",
+    "title": "Data from Excel Files",
     "section": "",
-    "text": "Reveal the distribution of a numeric variable (e.g., shot distance or points per game) to see clustering, spread, and outliers.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-histograms.ipynb.\n\nLesson coming soon!",
+    "text": "Bring in Excel data with pd.read_excel(...); choose a sheet if needed and preview a few rows—handy when teachers share XLSX templates.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb.\n\nLesson coming soon!",
     "crumbs": [
       "Home",
       "Module 6",
       "Going Further with Coding",
-      "Output",
-      "Creating Histograms"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03B-line-and-scatter.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03B-line-and-scatter.html",
-    "title": "Creating Line and Scatter Plots",
-    "section": "",
-    "text": "Show change or relationships: lines for trends over an ordered axis; scatter to explore how two variables move together.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-scatter-plots.ipynb.\n\nLesson coming soon!",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Output",
-      "Creating Line and Scatter Plots"
+      "Input Data",
+      "Data from Excel Files"
     ]
   },
   {
@@ -448,339 +844,31 @@
     ]
   },
   {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01D-import-google-sheets.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01D-import-google-sheets.html",
-    "title": "Data from Google Sheets",
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html",
+    "title": "Selecting Columns for Analysis",
     "section": "",
-    "text": "Use a Google Sheet’s share/export link (CSV export is simplest) so pandas can read it like a regular CSV; verify headers and sample rows.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb.\n\nLesson coming soon!",
+    "text": "Students load a real NBA player CSV into a DataFrame, explore what each column represents, and practice selecting specific fields for analysis. They also use a short for loop to iterate through df.columns, building familiarity with the dataset’s structure so they can target the right variables later.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb.\n\nLesson coming soon!",
     "crumbs": [
       "Home",
       "Module 6",
       "Going Further with Coding",
-      "Input Data",
-      "Data from Google Sheets"
+      "Process Data",
+      "Selecting Columns for Analysis"
     ]
   },
   {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html",
-    "title": "Using Internal Data",
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02C-sorting.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02C-sorting.html",
+    "title": "Sorting the Data",
     "section": "",
-    "text": "In the IPO (Input–Process–Output) way of thinking, a program receives input (data), processes it (computations or rules), and outputs results. In the simplest sense, input is any information that goes into the program—from a user, a file, a sensor, or values defined in code—before it’s transformed by the process step into an output. (Wikipedia)\nIn this lesson series we’ll use five input locations: internal data defined directly in code, CSV files, Excel workbooks, Google Sheets (via a share/export link), and simple HTML tables from webpages.",
+    "text": "Surface patterns by ordering rows with df.sort_values(...): sort by one column, then by multiple keys (e.g., [\"Player\",\"Distance\"]), and control ascending/descending for consistent, reproducible tables.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb.\n\nLesson coming soon!",
     "crumbs": [
       "Home",
       "Module 6",
       "Going Further with Coding",
-      "Input Data",
-      "Using Internal Data"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html#what-input-means",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html#what-input-means",
-    "title": "Using Internal Data",
-    "section": "",
-    "text": "In the IPO (Input–Process–Output) way of thinking, a program receives input (data), processes it (computations or rules), and outputs results. In the simplest sense, input is any information that goes into the program—from a user, a file, a sensor, or values defined in code—before it’s transformed by the process step into an output. (Wikipedia)\nIn this lesson series we’ll use five input locations: internal data defined directly in code, CSV files, Excel workbooks, Google Sheets (via a share/export link), and simple HTML tables from webpages.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Input Data",
-      "Using Internal Data"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html#when-to-use-internal-data",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html#when-to-use-internal-data",
-    "title": "Using Internal Data",
-    "section": "When to Use Internal Data",
-    "text": "When to Use Internal Data\nWhen you’re just starting out, one of the easiest ways to work with data is to include it directly inside your program or notebook. Since everything is written in the same place, you don’t need to worry about opening extra files or setting up outside sources.\nThis approach works best when your dataset is small, maybe just a few rows of numbers or categories. It keeps things simple and lets you focus on how the data is being used, not on file management. Another bonus is that you can define both the column names and the values right in your code, making the table’s structure clear and easy to control.\nCool, thanks for the data. For the Step 1 – Imports & Encode Data section (or whatever we rename it), we’ll build a small code block around that and frame it philosophically.\nHere’s the draft markdown just for that section, using your data. We can rename the title later if you want.\n\nStep 1 — Imports & Embedding Basic Data\nIn this step, we bring in needed tools (libraries) and define a simple dataset entirely in code. We call this “encoding data” when we translate raw values into variables we can work with.\n\n\nCode\n# Import the libraries we need\nimport pandas as pd\nimport plotly.express as px\n\n\n\n\nCode\n# Define simple data in code\nx_data = [0, 1, 2, 3, 4, 5]\ny_data = [0, 1, 4, 9, 16, 25]\nprint(x_data, y_data)\n\n\n[0, 1, 2, 3, 4, 5] [0, 1, 4, 9, 16, 25]\n\n\nThe two lists represent a basic relationship: each y is the square of the corresponding x. This kind of data is perfect for showing how tables and charts map numbers in columns → rows → plots.\n\n\nStep 2 — Make a Table (Dataframe) and Preview It\nIn this step, we turn the raw lists into a structured table so it’s easier to see patterns and check for errors before plotting.\n\n\nCode\n# Create a DataFrame from the simple data, naming the columns\ndf = pd.DataFrame({\"x\": x_data, \"y\": y_data})\n\n\n\n\nCode\n# Preview the first few rows of the table\ndf.head()\n\n\n\n\n\n\n\n\n\nx\ny\n\n\n\n\n0\n0\n0\n\n\n1\n1\n1\n\n\n2\n2\n4\n\n\n3\n3\n9\n\n\n4\n4\n16\n\n\n\n\n\n\n\nYou’ll see two columns (“x” and “y”) and six rows. This preview lets you verify your data is encoded correctly—columns are clearly labeled, rows line up with the x and y pairs, and nothing unexpected (like wrong types) is hiding.\nCool, here’s the updated Step 3 section changed to a scatter plot instead of bar, with small runnable blocks and beginner‑friendly framing:\n\n\nStep 3 — Plot a Simple Scatter Plot\nNow that you have a table, we’ll make a scatter plot to help us see how two variables relate (x vs. y here). Scatter plots are great for showing trends or patterns.\n\n\nCode\nfig = px.scatter(df, x=\"x\", y=\"y\", title=\"Example Scatter Plot: y = x²\")\nfig.show()\n\n\n                            \n                                            \n\n\nIn this plot, each point is one (x, y) pair. As x increases, you’ll see y increasing faster (because y = x²). This visual helps you check whether your data encoding worked and gives you intuition about relationships.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Input Data",
-      "Using Internal Data"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html#talk-about-it",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html#talk-about-it",
-    "title": "Using Internal Data",
-    "section": "Talk About It",
-    "text": "Talk About It\n\nWhat do the column names (“x”, “y”) suggest about what each value means? How would you describe “x” and “y” to someone who knows nothing about this data?\nThe example uses simple numbers where y = x². If you changed “y” to something else (for example, z = x³ or y = 2x), how would the scatter plot change, and what questions could that let you ask?\nAre there limitations with data you’ve embedded in code (like this)? What is one thing this dataset can’t show you, and why?\n\nCool, thanks for pasting the actual notebook content. That helps a lot. Based on what’s in the lesson, here’s a revised Lesson Notebook blurb that matches more closely, in title case, and only claims what’s actually there (not overpromising).",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Input Data",
-      "Using Internal Data"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html#lesson-notebook",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html#lesson-notebook",
-    "title": "Using Internal Data",
-    "section": "Lesson Notebook",
-    "text": "Lesson Notebook\nNow It’s Your Turn To Practice: The notebook version includes one exercise where you’ll use provided lists to plot Pascal Siakam’s field goals made over his Raptors career—applying the same setup → input → output flow you saw above.\nOpen the lesson here.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Input Data",
-      "Using Internal Data"
-    ]
-  },
-  {
-    "objectID": "notebooks/notebooks.html",
-    "href": "notebooks/notebooks.html",
-    "title": "Notebooks",
-    "section": "",
-    "text": "Here are the available notebooks:\n\nData from Internal"
-  },
-  {
-    "objectID": "notebooks/data-from-internal.html",
-    "href": "notebooks/data-from-internal.html",
-    "title": "Getting Data from Within the Jupyter Notebook or .py File",
-    "section": "",
-    "text": "Open this notebook in Callysto | Colab."
-  },
-  {
-    "objectID": "notebooks/data-from-internal.html#lesson-objectives",
-    "href": "notebooks/data-from-internal.html#lesson-objectives",
-    "title": "Getting Data from Within the Jupyter Notebook or .py File",
-    "section": "Lesson Objectives",
-    "text": "Lesson Objectives\nBy the end of this lesson, students will be able to: - Learn how to define and manipulate data directly within a program. (Example: Define lists of X and Y values directly in a Jupyter Notebook and use them to create a plot.) - Understand the basic flow of data through a program using the IPO model. (Example: Use the IPO (Input, Process, Output) model to structure a program that plots X and Y values.) - Create and enhance visual representations of data within a notebook. (Example: Use the Plotly Express library to create a line plot of X and Y values and add a title to the plot.)"
-  },
-  {
-    "objectID": "notebooks/data-from-internal.html#introduction",
-    "href": "notebooks/data-from-internal.html#introduction",
-    "title": "Getting Data from Within the Jupyter Notebook or .py File",
-    "section": "Introduction",
-    "text": "Introduction\nThere are many ways we can import data, but the most common are from the program itself, a CSV (comma separated values) file, from an Excel spreadsheet, from a Google Sheet, or from a webpage.\nIn this demo, we will demonstrate how to get data from within the Jupyter Notebook itself."
-  },
-  {
-    "objectID": "notebooks/data-from-internal.html#program-setup",
-    "href": "notebooks/data-from-internal.html#program-setup",
-    "title": "Getting Data from Within the Jupyter Notebook or .py File",
-    "section": "Program Setup",
-    "text": "Program Setup\nThis first code block may have to be run if the plotly.express library hasn’t already been installed. Once this has been done once, it will never have to be done again. You can skip it for now, but if you get an error message related to plotly.express not being installed, go ahead and run it.\n\n\nCode\n# only if necessary\n%pip install plotly -q\n\n\nNote: you may need to restart the kernel to use updated packages."
-  },
-  {
-    "objectID": "notebooks/data-from-internal.html#setup",
-    "href": "notebooks/data-from-internal.html#setup",
-    "title": "Getting Data from Within the Jupyter Notebook or .py File",
-    "section": "Setup",
-    "text": "Setup\nWe always start any Python program by importing any libraries we might need. For our first example, we only need the plotly.express library.\nImporting libraries is performed by using the import command, like this:\n\n\nCode\n# import support libraries\nimport plotly.express as px\nprint('Libraries imported')\n\n\nLibraries imported\n\n\nThe line above the import command that starts with # is a comment and is ignored by the program. We add comments to make our program easier to understand."
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01C-import-excel.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01C-import-excel.html",
-    "title": "Data from Excel Files",
-    "section": "",
-    "text": "Bring in Excel data with pd.read_excel(...); choose a sheet if needed and preview a few rows—handy when teachers share XLSX templates.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb.\n\nLesson coming soon!",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Input Data",
-      "Data from Excel Files"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01B-import-csv.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01B-import-csv.html",
-    "title": "Data from CSV Files",
-    "section": "",
-    "text": "Load a shared or local CSV using pd.read_csv(...), then take a quick look at shape, column names, and a few rows to confirm what came in before moving on.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-csv.ipynb.\n\nLesson coming soon!",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Input Data",
-      "Data from CSV Files"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html",
-    "title": "Overview",
-    "section": "",
-    "text": "Choose how students will bring data into a pandas DataFrame. Pick the on-ramp that matches your setup (self-contained internal data, CSV, Excel, Google Sheets, or a simple table from the web).",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Input Data",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#using-internal-data",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#using-internal-data",
-    "title": "Overview",
-    "section": "Using Internal Data",
-    "text": "Using Internal Data\nThis lesson is for classes that want self-contained data inside the notebook or Python program—create small tables from lists or dictionaries with pandas.DataFrame, name the columns, and preview with head().\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-internal.ipynb.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Input Data",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-csv-files",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-csv-files",
-    "title": "Overview",
-    "section": "Data from CSV Files",
-    "text": "Data from CSV Files\nLoad a shared or local CSV using pd.read_csv(...), then take a quick look at shape, column names, and a few rows to confirm what came in before moving on.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-csv.ipynb.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Input Data",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-excel-files",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-excel-files",
-    "title": "Overview",
-    "section": "Data from Excel Files",
-    "text": "Data from Excel Files\nBring in Excel data with pd.read_excel(...); choose a sheet if needed and preview a few rows—handy when teachers share XLSX templates.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Input Data",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-google-sheets",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-google-sheets",
-    "title": "Overview",
-    "section": "Data from Google Sheets",
-    "text": "Data from Google Sheets\nUse a Google Sheet’s share/export link (CSV export is simplest) so pandas can read it like a regular CSV; verify headers and sample rows.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Input Data",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-webpages",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-webpages",
-    "title": "Overview",
-    "section": "Data from Webpages",
-    "text": "Data from Webpages\nUse pd.read_html(...) to fetch a simple HTML table from a webpage into a DataFrame; if multiple tables are found, pick the right one and preview a few rows.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-webpage.ipynb.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Input Data",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03C-pie-charts.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03C-pie-charts.html",
-    "title": "Creating Pie Charts",
-    "section": "",
-    "text": "Display proportions of a whole (used sparingly) to highlight simple “share of total” stories.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-pie-charts.ipynb.\n\nLesson coming soon!",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Output",
-      "Creating Pie Charts"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html",
-    "title": "Overview",
-    "section": "",
-    "text": "Turn your processed tables into clear visuals students can read and explain. Each page below focuses on a core chart type you’ll re-use across activities.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Output",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-bar-graphs",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-bar-graphs",
-    "title": "Overview",
-    "section": "Creating Bar Graphs",
-    "text": "Creating Bar Graphs\nCompare values across categories (e.g., attempts by distance or makes by player) with simple, labeled bars for fast pattern-spotting.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-bar-graphs.ipynb.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Output",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-line-and-scatter-plots",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-line-and-scatter-plots",
-    "title": "Overview",
-    "section": "Creating Line and Scatter Plots",
-    "text": "Creating Line and Scatter Plots\nShow change or relationships: lines for trends over an ordered axis; scatter to explore how two variables move together.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-scatter-plots.ipynb.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Output",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-pie-charts",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-pie-charts",
-    "title": "Overview",
-    "section": "Creating Pie Charts",
-    "text": "Creating Pie Charts\nDisplay proportions of a whole (used sparingly) to highlight simple “share of total” stories.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-pie-charts.ipynb.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Output",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-histograms",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-histograms",
-    "title": "Overview",
-    "section": "Creating Histograms",
-    "text": "Creating Histograms\nReveal the distribution of a numeric variable (e.g., shot distance or points per game) to see clustering, spread, and outliers.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-histograms.ipynb.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Output",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03A-bar-graphs.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03A-bar-graphs.html",
-    "title": "Creating Bar Graphs",
-    "section": "",
-    "text": "Compare values across categories (e.g., attempts by distance or makes by player) with simple, labeled bars for fast pattern-spotting.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-bar-graphs.ipynb.\n\nLesson coming soon!",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Output",
-      "Creating Bar Graphs"
+      "Process Data",
+      "Sorting the Data"
     ]
   },
   {
@@ -795,20 +883,6 @@
       "Going Further with Coding",
       "Process Data",
       "Summarizing with Statistics"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html",
-    "title": "Cleaning the Data (Basics)",
-    "section": "",
-    "text": "A light scrub after core table skills: standardize column names/case, coerce numeric columns used in sorts/percentages, and drop empty rows so charts and stats don’t break. Informed by the table/analysis lessons here:\n\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb (GitHub)\n\n\nLesson coming soon!",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Process Data",
-      "Cleaning the Data (Basics)"
     ]
   },
   {
@@ -910,127 +984,129 @@
     ]
   },
   {
-    "objectID": "module-2-step-into-the-game-experience-like-a-student/02-data-is-everywhere.html",
-    "href": "module-2-step-into-the-game-experience-like-a-student/02-data-is-everywhere.html",
-    "title": "Data is Everywhere!",
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03B-line-and-scatter.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03B-line-and-scatter.html",
+    "title": "Creating Line and Scatter Plots",
     "section": "",
-    "text": "To kick things off, we’ll look at how data drives decisions in basketball — and why that matters far beyond the court. Start by watching this video about a data scientist working in basketball.\n==NEED VIDEO EMBED INFO== (x2)",
+    "text": "Show change or relationships: lines for trends over an ordered axis; scatter to explore how two variables move together.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-scatter-plots.ipynb.\n\nLesson coming soon!",
     "crumbs": [
       "Home",
-      "Module 2",
-      "Data is Everywhere!"
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Creating Line and Scatter Plots"
     ]
   },
   {
-    "objectID": "module-2-step-into-the-game-experience-like-a-student/04-labyrinth-activity.html",
-    "href": "module-2-step-into-the-game-experience-like-a-student/04-labyrinth-activity.html",
-    "title": "Labyrinth Activity",
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03D-histograms.html",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03D-histograms.html",
+    "title": "Creating Histograms",
     "section": "",
-    "text": "Next up — the Basketball Labyrinth! This activity is designed to get you into both looking at the data and doing some basic coding. Think of it as a virtual escape room: you’ll solve puzzles, uncover clues, and make your way through the data to reach the end.\nWe have another teacher who will walk you through the activity, but we recommend you also open the Basketball Labyrinth yourself to an external site. so you can explore and experience it firsthand.\n==NEED VIDEO EMBED INFO==",
+    "text": "Reveal the distribution of a numeric variable (e.g., shot distance or points per game) to see clustering, spread, and outliers.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-histograms.ipynb.\n\nLesson coming soon!",
     "crumbs": [
       "Home",
-      "Module 2",
-      "Labyrinth Activity"
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Creating Histograms"
     ]
   },
   {
-    "objectID": "module-2-step-into-the-game-experience-like-a-student/01-welcome-to-the-court.html",
-    "href": "module-2-step-into-the-game-experience-like-a-student/01-welcome-to-the-court.html",
-    "title": "Welcome to the Court",
+    "objectID": "notebooks/data-from-internal.html",
+    "href": "notebooks/data-from-internal.html",
+    "title": "Getting Data from Within the Jupyter Notebook or .py File",
     "section": "",
-    "text": "The best way to understand how you might use Data Dunkers in your classroom is to first experience it like a student. In this section, you’ll step into their shoes — exploring activities, solving challenges, and seeing how data comes alive through sports.\nTo guide you through this part of the course, you’ll have a Virtual Coach. This coach will help you navigate the activities, offer prompts and tips, and keep you moving forward.\n==NEED VIDEO EMBED INFO==",
-    "crumbs": [
-      "Home",
-      "Module 2",
-      "Welcome to the Court"
-    ]
+    "text": "Open this notebook in Callysto | Colab."
   },
   {
-    "objectID": "module-1-welcome-to-data-dunkers/05-creating-your-playbook.html",
-    "href": "module-1-welcome-to-data-dunkers/05-creating-your-playbook.html",
-    "title": "Creating your Playbook",
-    "section": "",
-    "text": "In basketball — and in data science — good decisions start with good information. This page is your chance to think through the best way to navigate the course, based on your needs and interests.\nWe’ve set up a Playlab chat bot to guide you. It will ask a few simple questions to help you decide where to jump in and what path might make the most sense for you. You only need to share as much information as you’re comfortable with — or you can skip it entirely and move on.\nThink of it as building your personal Data Dunkers Implementation Playbook, so you can get the most out of your time here.\n==ADD PLAYLAB CHAT BOT HERE OR MERELY HAVE THEM LOOK AT THE COURSE.==",
-    "crumbs": [
-      "Home",
-      "Module 1",
-      "Creating your Playbook"
-    ]
+    "objectID": "notebooks/data-from-internal.html#lesson-objectives",
+    "href": "notebooks/data-from-internal.html#lesson-objectives",
+    "title": "Getting Data from Within the Jupyter Notebook or .py File",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\nBy the end of this lesson, students will be able to: - Learn how to define and manipulate data directly within a program. (Example: Define lists of X and Y values directly in a Jupyter Notebook and use them to create a plot.) - Understand the basic flow of data through a program using the IPO model. (Example: Use the IPO (Input, Process, Output) model to structure a program that plots X and Y values.) - Create and enhance visual representations of data within a notebook. (Example: Use the Plotly Express library to create a line plot of X and Y values and add a title to the plot.)"
   },
   {
-    "objectID": "module-1-welcome-to-data-dunkers/03-flavors-of-the-program.html",
-    "href": "module-1-welcome-to-data-dunkers/03-flavors-of-the-program.html",
-    "title": "Flavors of the Program",
-    "section": "",
-    "text": "There’s more than one way to bring the Data Dunkers vision to life. Just like players can join a game in different roles, you can step in at the point that makes the most sense for you and your students. Throughout this course, we’ll explore practical ways to embed the program — whether you run it as a special event, stretch it into a unit, or weave pieces into your lessons over time.\n\n\n\nAlt text\n\n\n\nFUNdamentals – 2 half-days – A focused introduction to the core activities and concepts.\nUnit using FUNdamentals – Spread the activities across multiple class periods over several weeks.\nHack-a-thon – A high-energy, one-day or multi-day event where students tackle data challenges.\nEmbedded lessons – Integrate Data Dunkers activities into your regular curriculum throughout the year.\nProject – Launch a stand-alone project that connects data skills to real-world issues or student interests.\n\nFor the start of this course, we are going to use the entry point of the FUNdamentals — which you can run as a special event or embed the pieces of it into your class as a unit.",
-    "crumbs": [
-      "Home",
-      "Module 1",
-      "Flavors of the Program"
-    ]
+    "objectID": "notebooks/data-from-internal.html#introduction",
+    "href": "notebooks/data-from-internal.html#introduction",
+    "title": "Getting Data from Within the Jupyter Notebook or .py File",
+    "section": "Introduction",
+    "text": "Introduction\nThere are many ways we can import data, but the most common are from the program itself, a CSV (comma separated values) file, from an Excel spreadsheet, from a Google Sheet, or from a webpage.\nIn this demo, we will demonstrate how to get data from within the Jupyter Notebook itself."
   },
   {
-    "objectID": "module-1-welcome-to-data-dunkers/04-the-fundamentals-game-plan.html",
-    "href": "module-1-welcome-to-data-dunkers/04-the-fundamentals-game-plan.html",
-    "title": "The FUNdamentals Game Plan",
-    "section": "",
-    "text": "Let’s take a look at the game plan for the FUNdamentals program. This is the core starting point for many Data Dunkers experiences — a focused, high-energy introduction to data science through the excitement of sports. You’ll see how the activities build skills step-by-step, keep students engaged, and connect learning to real-world applications. Watch the video below to see how it all comes together in action.\n==NEED VIDEO EMBED INFO==",
-    "crumbs": [
-      "Home",
-      "Module 1",
-      "The FUNdamentals Game Plan"
-    ]
+    "objectID": "notebooks/data-from-internal.html#program-setup",
+    "href": "notebooks/data-from-internal.html#program-setup",
+    "title": "Getting Data from Within the Jupyter Notebook or .py File",
+    "section": "Program Setup",
+    "text": "Program Setup\nThis first code block may have to be run if the plotly.express library hasn’t already been installed. Once this has been done once, it will never have to be done again. You can skip it for now, but if you get an error message related to plotly.express not being installed, go ahead and run it.\n\n\nCode\n# only if necessary\n%pip install plotly -q\n\n\nNote: you may need to restart the kernel to use updated packages."
   },
   {
-    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html",
-    "href": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html",
-    "title": "Map Instructional Flow",
-    "section": "",
-    "text": "Here’s the same previous format, with your updated times applied.",
-    "crumbs": [
-      "Home",
-      "Module 3",
-      "Planning Toolkit",
-      "Map Instructional Flow"
-    ]
+    "objectID": "notebooks/data-from-internal.html#setup",
+    "href": "notebooks/data-from-internal.html#setup",
+    "title": "Getting Data from Within the Jupyter Notebook or .py File",
+    "section": "Setup",
+    "text": "Setup\nWe always start any Python program by importing any libraries we might need. For our first example, we only need the plotly.express library.\nImporting libraries is performed by using the import command, like this:\n\n\nCode\n# import support libraries\nimport plotly.express as px\nprint('Libraries imported')\n\n\nLibraries imported\n\n\nThe line above the import command that starts with # is a comment and is ignored by the program. We add comments to make our program easier to understand."
   },
   {
-    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#prerequisites-at-a-glance",
-    "href": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#prerequisites-at-a-glance",
-    "title": "Map Instructional Flow",
-    "section": "Prerequisites at a Glance",
-    "text": "Prerequisites at a Glance\n\nFirst timer: Jupyter Notebook Demo → one Input lesson → one Output lesson\nAny Process lesson expects at least one Input lesson first\nScatter/line usually benefits from Statistics (to talk about trend/center/variation)",
-    "crumbs": [
-      "Home",
-      "Module 3",
-      "Planning Toolkit",
-      "Map Instructional Flow"
-    ]
+    "objectID": "slides/intro.html#install-python",
+    "href": "slides/intro.html#install-python",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Install Python",
+    "text": "Install Python\n\nDownload from python.org\nCheck “Add Python to PATH” during setup\nVerify:\npython --version\npip --version\nOptional: uninstall or remove older versions (e.g., Python 3.11)"
   },
   {
-    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#quick-start-flow-recipes",
-    "href": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#quick-start-flow-recipes",
-    "title": "Map Instructional Flow",
-    "section": "Quick-Start Flow Recipes",
-    "text": "Quick-Start Flow Recipes\n\nA) “First Run” (≈60 min)\n\nGoal: get everyone from raw data to one clear chart with a takeaway\nFlow:\n\nJupyter Notebook Demo (10 min, teacher-led)\nData from a CSV File (15 min)\nColumns (15 min)\nBar Graphs or Scatter Plots (15 min)\n1–2 sentence insight + share-out (≈5 min)\n\n\n\nNeed a true 45 min option? Skip either Columns or swap CSV → Within the Notebook to trim setup time.\n\n\n\nB) 2×45 “Explore → Explain”\n\nPeriod 1 (Explore): Notebook Demo (10) → Google Sheet (10–15) → Columns (15) → Bar Graphs (15)\nPeriod 2 (Explain): Filtering (15) → Statistics (10–15) → Scatter (15) → Quick gallery walk (5)\n\n\n\nC) 3×45 “Collect → Analyze → Tell the Story”\n\nPeriod 1: Class data collection → Data from a CSV (import class file, 15)\nPeriod 2: Columns (15) → Filtering (15) → Statistics (10–15)\nPeriod 3: Scatter (15) or Bar (15) → Draft captions → 1-slide share-out\n\n\n\nD) Half-Day FUNdamentals (≈2.5–3 hrs)\n\nBlock 1 (60–70): Demo (10) → CSV (15) → Columns (15) → Bar/Scatter (15)\nBlock 2 (60–70): Filtering (15) → Statistics (10–15) → Second chart (Bar/Scatter 15) or Histograms (10–15)\nBlock 3 (30–40): Synthesis poster (chart + insight) → 1-minute standups",
-    "crumbs": [
-      "Home",
-      "Module 3",
-      "Planning Toolkit",
-      "Map Instructional Flow"
-    ]
+    "objectID": "slides/intro.html#install-quarto-cli",
+    "href": "slides/intro.html#install-quarto-cli",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Install Quarto CLI",
+    "text": "Install Quarto CLI\n\nDownload from quarto.org/get-started\nRun installer (MSI for Windows)\nVerify installation:\nquarto --version\nquarto check\nIf needed, add Quarto bin folder to PATH"
   },
   {
-    "objectID": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#menu-builder-with-time-estimates",
-    "href": "module-3-implementation-in-your-context/1-planning-toolkit/03-map-instructional-flow.html#menu-builder-with-time-estimates",
-    "title": "Map Instructional Flow",
-    "section": "Menu Builder with Time Estimates",
-    "text": "Menu Builder with Time Estimates\n\n\n\n\n\n\n\n\n\nStep\nLesson\nTypical Time\nNotes\n\n\n\n\n0\nJupyter Notebook Demo\n10 min\nTeacher-led walkthrough\n\n\n1\nData from a CSV File\n15 min\nFastest on-ramp for local files\n\n\n1\nData from a Google Sheet\n10–15 min\nGreat for shared class data\n\n\n1\nData from a Webpage\n15–20 min\nMay require light cleaning\n\n\n1\nData from an Excel File\n10–15 min\nUseful if .xlsx is on hand\n\n\n1\nData from Within the Notebook\n8–10 min\nRemoves file friction\n\n\n2\nColumns (explore/select)\n15 min\nUpdated per your call\n\n\n2\nFiltering Our Data\n15 min\nUpdated per your call\n\n\n2\nSorting Our Data\n6–8 min\nOften quick once columns are known\n\n\n2\nAdding New Columns\n10–15 min\nRatios/percents or simple formulas\n\n\n2\nStatistics\n10–15 min\nMean/median/min/max, describe()\n\n\n3\nBar Graphs\n15 min\nUpdated per your call\n\n\n3\nScatter Plots\n15 min\nUpdated per your call\n\n\n3\nLine Graphs\n12–18 min\nConsider time for axis choices\n\n\n3\nPie Charts\n10–12 min\nKeep categories small\n\n\n3\nHistograms\n10–15 min\nBin-choice discussion adds time",
-    "crumbs": [
-      "Home",
-      "Module 3",
-      "Planning Toolkit",
-      "Map Instructional Flow"
-    ]
+    "objectID": "slides/intro.html#install-extra-python-packages",
+    "href": "slides/intro.html#install-extra-python-packages",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Install Extra Python Packages",
+    "text": "Install Extra Python Packages\n\nIn terminal, run:\npip install jupyter pyyaml\nWhy install?\n\njupyter: enables running notebooks/code cells in Quarto\npyyaml: fixes YAML parsing error in Quarto checks\n\nVerify:\nquarto check"
+  },
+  {
+    "objectID": "slides/intro.html#create-your-first-quarto-project",
+    "href": "slides/intro.html#create-your-first-quarto-project",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Create Your First Quarto Project",
+    "text": "Create Your First Quarto Project\n\nIn terminal, run:\nquarto create-project \"Data Dunkers Quarto Test\" --type website\ncd \"Data Dunkers Quarto Test\"\nquarto preview"
+  },
+  {
+    "objectID": "slides/intro.html#project-files",
+    "href": "slides/intro.html#project-files",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Project files",
+    "text": "Project files\n\n_quarto.yml → site configuration\nindex.qmd → homepage\nabout.qmd → starter page"
+  },
+  {
+    "objectID": "slides/intro.html#open-in-vs-code",
+    "href": "slides/intro.html#open-in-vs-code",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Open in VS Code",
+    "text": "Open in VS Code\n\nOpen folder in VS Code: File → Open Folder…\nInstall Quarto extension (already installed ✅)\nEdit .qmd files with syntax highlighting\nPreview in browser or integrated panel"
+  },
+  {
+    "objectID": "slides/intro.html#add-a-slideshow",
+    "href": "slides/intro.html#add-a-slideshow",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Add a Slideshow",
+    "text": "Add a Slideshow\n\nCreate folder slides/\nAdd intro.qmd with front matter:\n---\ntitle: \"Data Dunkers Demo Slides\"\nformat: revealjs\n---\nEach --- in file makes a new slide\nLink slideshow in _quarto.yml navbar"
+  },
+  {
+    "objectID": "slides/intro.html#publish-the-site",
+    "href": "slides/intro.html#publish-the-site",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Publish the Site",
+    "text": "Publish the Site\n\nOption A: GitHub Pages\n\nCommit & push to GitHub\nAdd GitHub Action workflow for Quarto\nSite URL: https://pbeens.github.io/data-dunkers-quarto-test/\n\nOption B: Netlify\n\nConnect repo at netlify.com\nAuto-builds on push\nSite URL: https://data-dunkers-quarto-test.netlify.app/"
+  },
+  {
+    "objectID": "slides/intro.html#summary",
+    "href": "slides/intro.html#summary",
+    "title": "Data Dunkers Demo Slides",
+    "section": "Summary",
+    "text": "Summary\n\n✅ Installed Python\n✅ Installed Quarto CLI\n✅ Installed Jupyter + PyYAML\n✅ Created and previewed Quarto project\n✅ Opened in VS Code\n✅ Added slideshow alongside website\n✅ Ready to publish demo site"
   }
 ]
