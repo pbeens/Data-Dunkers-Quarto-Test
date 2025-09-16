@@ -1,19 +1,12 @@
 ---
 title: "Using Internal Data"
-format: 
+format:
   html:
     code-fold: show
 jupyter: python3
 ---
 
-## What Input Means
-
-In the IPO (Input–Process–Output) way of thinking, a program **receives input** (data), **processes** it (computations or rules), and **outputs** results. In the simplest sense, **input is any information that goes into the program**—from a user, a file, a sensor, or values defined in code—before it’s transformed by the process step into an output. ([Wikipedia][1])
-
 In this lesson series we’ll use five input locations: **internal data** defined directly in code, **CSV files**, **Excel workbooks**, **Google Sheets** (via a share/export link), and **simple HTML tables from webpages**.
-
-[1]: https://en.wikipedia.org/wiki/IPO_model?utm_source=chatgpt.com "IPO model"
-
 
 ## When to Use Internal Data
 
@@ -21,21 +14,15 @@ When you’re just starting out, one of the easiest ways to work with data is to
 
 This approach works best when your dataset is small, maybe just a few rows of numbers or categories. It keeps things simple and lets you focus on how the data is being used, not on file management. Another bonus is that you can define both the column names and the values right in your code, making the table’s structure clear and easy to control.
 
-Cool, thanks for the data. For the **Step 1 – Imports & Encode Data** section (or whatever we rename it), we’ll build a small code block around that and frame it philosophically.
+### Step 1 — Import Libraries and Embed Data
 
-Here’s the draft **markdown** just for that section, using your data. We can rename the title later if you want.
-
-### Step 1 — Imports & Embedding Basic Data
-
-In this step, we bring in needed tools (libraries) and define a simple dataset entirely in code. We call this “encoding data” when we translate raw values into variables we can work with.
+In this step, we bring in needed tools (libraries) and define a simple dataset entirely in code. 
 
 ```{python}
 # Import the libraries we need
 import pandas as pd
 import plotly.express as px
-```
 
-```{python}
 # Define simple data in code
 x_data = [0, 1, 2, 3, 4, 5]
 y_data = [0, 1, 4, 9, 16, 25]
@@ -44,9 +31,9 @@ print(x_data, y_data)
 
 The two lists represent a basic relationship: each `y` is the square of the corresponding `x`. This kind of data is perfect for showing how tables and charts map numbers in columns → rows → plots.
 
-### Step 2 — Make a Table (Dataframe) and Preview It
+### Step 2 — Create a DataFrame and Preview It
 
-In this step, we turn the raw lists into a structured table so it’s easier to see patterns and check for errors before plotting.
+In this step, we turn the raw lists into a structured table (called a DataFrame) so it’s easier to see patterns and check for errors before plotting.
 
 ```{python}
 # Create a DataFrame from the simple data, naming the columns
@@ -58,11 +45,9 @@ df = pd.DataFrame({"x": x_data, "y": y_data})
 df.head()
 ```
 
-You’ll see two columns (“x” and “y”) and six rows. This preview lets you verify your data is encoded correctly—columns are clearly labeled, rows line up with the `x` and `y` pairs, and nothing unexpected (like wrong types) is hiding.
+You’ll see two columns (“x” and “y”) and six rows. This preview lets you verify your data is embedded correctly — columns are clearly labeled, rows line up with the `x` and `y` pairs, and nothing unexpected (like wrong types) is hiding.
 
-Cool, here's the updated **Step 3** section changed to a scatter plot instead of bar, with small runnable blocks and beginner‑friendly framing:
-
-### Step 3 — Plot a Simple Scatter Plot
+### Step 3 — Plot a Scatter Plot
 
 Now that you have a table, we’ll make a scatter plot to help us see how two variables relate (x vs. y here). Scatter plots are great for showing trends or patterns.
 
@@ -71,7 +56,7 @@ fig = px.scatter(df, x="x", y="y", title="Example Scatter Plot: y = x²")
 fig.show()
 ```
 
-In this plot, each point is one (x, y) pair. As x increases, you’ll see y increasing faster (because y = x²). This visual helps you check whether your data encoding worked and gives you intuition about relationships.
+In this plot, each point is one (x, y) pair. As x increases, you’ll see y increasing faster (because y = x²). This visual helps you check whether your entered data worked and gives you intuition about relationships.
 
 ## Talk About It
 
@@ -81,14 +66,8 @@ In this plot, each point is one (x, y) pair. As x increases, you’ll see y incr
 
 * Are there limitations with data you’ve embedded in code (like this)? What is one thing this dataset can’t show you, and why?
 
-Cool, thanks for pasting the actual notebook content. That helps a lot. Based on what’s in the lesson, here’s a revised **Lesson Notebook** blurb that matches more closely, in title case, and only claims what’s actually there (not overpromising).
-
 ## Lesson Notebook
 
-Now It’s Your Turn To Practice: The notebook version includes one exercise where you’ll use provided lists to plot Pascal Siakam’s field goals made over his Raptors career—applying the same setup → input → output flow you saw above.
+Now it’s your turn to practice: The notebook version includes one exercise where you’ll use provided lists to plot Pascal Siakam’s field goals made over his Raptors career—applying the same setup → input → output flow you saw above.
 
 Open the lesson [here](https://github.com/Data-Dunkers/lessons/blob/main/data-from-internal.ipynb).
-
-
-
-
