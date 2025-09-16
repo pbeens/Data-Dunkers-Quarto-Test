@@ -3,3 +3,34 @@ title: "Going Further with Coding"
 format: html
 ---
 
+This path builds on what you’ve already learned: you’ll bring in data in different ways, work with it (filter, sort, compute), and then turn it into clear visuals that help you notice patterns and stories.
+
+In thinking about this work, one helpful model is **Input → Process → Output**. It reminds us that any data task involves three stages:
+
+- **Input**: how data gets into your program or tool  
+- **Process**: how you clean, transform, or filter that data  
+- **Output**: how you visualize or present what you’ve learned  
+
+Use this model to guide your learning in this section — it helps you see why each step matters before moving on.
+
+## [Input Methods](01-input/index.qmd)
+
+Explore different ways to **bring data into your coding environment**: using internal data structures, CSV, Excel, Google Sheets, or pulling tables from web pages. 
+
+*Corresponds with the following lessons:*  
+Data‑from‑internal • data‑from‑csv • data‑from‑excel • data‑from‑google‑sheet • data‑from‑webpage (in the Data‑Dunkers lessons repo)
+
+## [Process Data](02-process/index.qmd)
+
+Learn how to **shape your data**: choose columns, apply filters, sort rows, add new computed columns, and use quick summary statistics so you understand your data before graphing.
+
+*Corresponds with the following lessons:*  
+data‑columns • data‑filtering • data‑sorting • data‑new‑columns • data‑statistics
+
+## [Output Visualizations](03-output/index.qmd)
+
+Convert cleaned data into visuals that highlight insights and comparisons: bar graphs, line and scatter plots, pie charts, histograms, etc.
+
+*Corresponds with the following lessons:*  
+graphing‑bar‑graphs • graphing‑scatter‑plots • graphing‑pie‑charts • graphing‑histograms
+
