@@ -916,15 +916,57 @@
   {
     "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01E-import-webpage.html",
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01E-import-webpage.html",
-    "title": "Data from Webpages",
+    "title": "Importing Data From a Webpage",
     "section": "",
-    "text": "Use pd.read_html(...) to fetch a simple HTML table from a webpage into a DataFrame; if multiple tables are found, pick the right one and preview a few rows.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-webpage.ipynb.\n\nLesson coming soon!",
+    "text": "In this lesson, we’ll learn how to import and work with data stored in an HTML table on a webpage. Many websites publish statistics or datasets in tables, and with Python we can bring those tables directly into our code.",
     "crumbs": [
       "Home",
       "Module 6",
       "Going Further with Coding",
       "Input Data",
-      "Data from Webpages"
+      "Importing Data From a Webpage"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01E-import-webpage.html#when-to-use-a-webpage",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01E-import-webpage.html#when-to-use-a-webpage",
+    "title": "Importing Data From a Webpage",
+    "section": "When to Use a Webpage",
+    "text": "When to Use a Webpage\nOne common use for webpages in data analysis is when they include tables — for example, sports stats, government data, or league standings. Pandas can read these tables directly from the page’s URL, saving time compared to copying and pasting.\nThe main difference from CSV or Excel is that webpages can have multiple tables. Pandas assigns an index to each table, starting at zero, and you choose the one you need.\n\nStep 1 — Import Libraries and Load Webpage Data\nIn this step, we bring in the tools we need (pandas for working with tables, plotly.express for charts) and load a dataset directly from a webpage.\n\n\nCode\n# Setup\nimport plotly.express as px\nimport pandas as pd\n\n# Input: Read the first table from the webpage into a DataFrame\nurl = \"https://github.com/Data-Dunkers/data/raw/refs/heads/main/demo/x-y-data.html\"\ndf = pd.read_html(url)[0]   # Index 0 means the first table on the page\n\n\n\n\nStep 2 — Preview the Data\nCheck that the data was loaded correctly.\n\n\nCode\n# Preview the first few rows\ndf.head()\n\n\n\n\n\n\n\n\n\nX\nY\n\n\n\n\n0\n0\n0\n\n\n1\n1\n1\n\n\n2\n2\n4\n\n\n3\n3\n9\n\n\n4\n4\n16\n\n\n\n\n\n\n\nConfirm that the columns and rows line up with the table you expected.\n\n\nStep 3 — Plot the Data\nOnce the table is loaded, we can plot it just like any other DataFrame.\n\n\nCode\n# Create a line plot\npx.line(df, x=\"X\", y=\"Y\", title=\"Data from a Webpage Table\")",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Importing Data From a Webpage"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01E-import-webpage.html#talk-about-it",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01E-import-webpage.html#talk-about-it",
+    "title": "Importing Data From a Webpage",
+    "section": "Talk About It",
+    "text": "Talk About It\n\nWhy might it be useful to load data directly from a webpage instead of downloading it first?\nWhat challenges could you face if a webpage has multiple tables?\nWhat risks come with relying on webpages for data (for example, if the site changes its layout)?",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Importing Data From a Webpage"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01E-import-webpage.html#lesson-notebook",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01E-import-webpage.html#lesson-notebook",
+    "title": "Importing Data From a Webpage",
+    "section": "Lesson Notebook",
+    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes exercises where you’ll load and visualize data from webpages.\nOpen the lesson here.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Importing Data From a Webpage"
     ]
   },
   {
