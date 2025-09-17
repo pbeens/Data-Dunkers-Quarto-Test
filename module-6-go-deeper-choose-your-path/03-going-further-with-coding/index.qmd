@@ -33,4 +33,3 @@ Convert cleaned data into visuals that highlight insights and comparisons: bar g
 
 *Corresponds with the following lessons:*  
 graphing‑bar‑graphs • graphing‑scatter‑plots • graphing‑pie‑charts • graphing‑histograms
-
