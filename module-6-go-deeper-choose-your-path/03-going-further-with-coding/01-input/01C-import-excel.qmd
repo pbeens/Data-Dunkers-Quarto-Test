@@ -1,13 +1,92 @@
 ---
-title: "Data from Excel Files"
-format: html
+title: "Importing Data From an Excel File"
+format:
+  html:
+    code-fold: show
+jupyter: python3
 ---
 
-Bring in **Excel** data with `pd.read_excel(...)`; choose a sheet if needed and preview a few rows—handy when teachers share XLSX templates.  
+In this lesson, we’ll learn how to import and work with data stored in an Excel spreadsheet. Excel files are common in schools, businesses, and research — and just like CSVs, they can be loaded into Python for analysis.
 
-Corresponds with the lesson at: [https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb). 
+## When to Use an Excel File
 
+Excel files are useful when your data is already organized into worksheets or when it comes from systems that export in `.xlsx` format. They support multiple sheets, cell formatting, and formulas, but in most cases we just need the raw data inside.  
+
+Loading Excel data into Python is very similar to loading CSV files — the main difference is that we use `read_excel()` instead of `read_csv()`.
+
+### Step 1 — Import Libraries and Load Excel Data
+
+In this step, we bring in the tools we need (`pandas` for working with tables, `plotly.express` for charts) and load a dataset directly from an Excel file.  
+
+```{python}
+# Setup
+import plotly.express as px
+import pandas as pd
+
+# Input: Read the Excel file into a DataFrame named df
+url = "https://github.com/Data-Dunkers/data/raw/refs/heads/main/demo/x-y-data.xlsx"
+df = pd.read_excel(url)
+```
+
+We now have our data stored in a Pandas **DataFrame**, just like when we used a CSV file.
+
+### Step 2 — Preview the Data
+
+Before analyzing or plotting, it’s important to confirm the data looks as expected. Pandas provides quick functions like `head()` and `tail()` to peek at the data.
+
+```{python}
+# Preview the first few rows
+df.head()
+```
+
+```{python}
+# Preview the last 2 rows
+df.tail(2)
+```
+
+This helps verify the data loaded properly, with the expected columns and rows.
+
+### Step 3 — Plot the Data
+
+With the data loaded and verified, we can now create a plot. The steps are almost identical to the CSV example, except that our input came from an Excel file.
+
+```{python}
+# Create a line plot
+px.line(df, x="X", y="Y", title="Data from an Excel File")
+```
 
 ---
 
-**Lesson coming soon!**
+## Exercise
+
+Using the code above as an example, load the dataset of Pascal Siakam’s field goals made over his Raptors career (provided as an Excel file) and plot the results.
+
+```{python}
+# Setup
+import plotly.express as px
+import pandas as pd
+
+# Input
+url = "https://raw.githubusercontent.com/Data-Dunkers/data-dunkers-modules/main/data/NBA/Pascal_Siakam.xlsx"
+df = pd.read_excel(url)
+
+# Process & Output
+px.line(df, x="Season", y="FGM", title="Pascal Siakam Field Goals by Season")
+```
+
+---
+
+## Talk About It
+
+* How is using `read_excel()` similar to `read_csv()`?
+* What are some reasons an organization might use Excel instead of CSV for storing data?
+* What challenges could arise when working with Excel files (for example, multiple sheets, merged cells, or hidden formatting)?
+
+---
+
+## Lesson Notebook
+
+Now it’s your turn to practice: The notebook version of this lesson includes exercises where you’ll load basketball data from Excel and create your own plots.
+
+Open the lesson [here](https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb).
+
