@@ -1,13 +1,67 @@
 ---
-title: "Data from Google Sheets"
-format: html
+title: "Importing Data From a Google Sheet"
+format:
+  html:
+    code-fold: show
+jupyter: python3
 ---
 
-Use a Google Sheet’s share/export link (CSV export is simplest) so pandas can read it like a regular CSV; verify headers and sample rows.  
+In this lesson, we’ll learn how to import and work with data stored in a Google Sheet. Google Sheets are popular because they’re free, easy to share, and cloud-based, which makes them a convenient way to publish and access data.
 
-Corresponds with the lesson at: [https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb). 
+## When to Use a Google Sheet
 
+Google Sheets are useful when you want to work with data that is shared online and updated regularly. They can be used much like CSV files once you generate the correct link.
 
----
+To load a Google Sheet into Python, the sheet must be set to **Anyone with the link can view**. Then the URL is adjusted so it ends with:
 
-**Lesson coming soon!**
+```
+/export?format=csv
+```
+
+This tells Pandas to treat the Google Sheet as if it were a CSV file.
+
+### Step 1 — Import Libraries and Load Google Sheet Data
+
+In this step, we bring in the tools we need (`pandas` for working with tables, `plotly.express` for charts) and load a dataset directly from a Google Sheet link.
+
+```{python}
+# Setup
+import plotly.express as px
+import pandas as pd
+
+# Input: Read the Google Sheet (shared as CSV) into a DataFrame
+url = "https://docs.google.com/spreadsheets/d/1ZULKhYzsMd4eYwiprsyGgE9Df3gaVtO8WRalUQDn-xE/export?format=csv"
+df = pd.read_csv(url)
+```
+
+### Step 2 — Preview the Data
+
+As always, it’s good to take a quick look at the data to confirm it is loaded correctly.
+
+```{python}
+# Preview the first few rows
+df.head()
+```
+
+Check that the columns and rows appear as expected.
+
+### Step 3 — Plot the Data
+
+Once the data is loaded, plotting works the same way as with CSV or Excel files.
+
+```{python}
+# Create a line plot
+px.line(df, x="X", y="Y", title="Data from a Google Sheet")
+```
+
+## Talk About It
+
+* Why might someone choose to share data in a Google Sheet instead of a CSV or Excel file?
+* What are the advantages of being able to update a dataset online (like in a Google Sheet) compared to using a static file?
+* What potential issues could you run into when working with shared Google Sheets?
+
+## Lesson Notebook
+
+Now it’s your turn to practice: The notebook version of this lesson includes exercises where you’ll load real basketball data from Google Sheets and create your own plots.
+
+Open the lesson [here](https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb).
