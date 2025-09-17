@@ -281,15 +281,57 @@
   {
     "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01D-import-google-sheets.html",
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01D-import-google-sheets.html",
-    "title": "Data from Google Sheets",
+    "title": "Importing Data From a Google Sheet",
     "section": "",
-    "text": "Use a Google Sheet’s share/export link (CSV export is simplest) so pandas can read it like a regular CSV; verify headers and sample rows.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb.\n\nLesson coming soon!",
+    "text": "In this lesson, we’ll learn how to import and work with data stored in a Google Sheet. Google Sheets are popular because they’re free, easy to share, and cloud-based, which makes them a convenient way to publish and access data.",
     "crumbs": [
       "Home",
       "Module 6",
       "Going Further with Coding",
       "Input Data",
-      "Data from Google Sheets"
+      "Importing Data From a Google Sheet"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01D-import-google-sheets.html#when-to-use-a-google-sheet",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01D-import-google-sheets.html#when-to-use-a-google-sheet",
+    "title": "Importing Data From a Google Sheet",
+    "section": "When to Use a Google Sheet",
+    "text": "When to Use a Google Sheet\nGoogle Sheets are useful when you want to work with data that is shared online and updated regularly. They can be used much like CSV files once you generate the correct link.\nTo load a Google Sheet into Python, the sheet must be set to Anyone with the link can view. Then the URL is adjusted so it ends with:\n/export?format=csv\nThis tells Pandas to treat the Google Sheet as if it were a CSV file.\n\nStep 1 — Import Libraries and Load Google Sheet Data\nIn this step, we bring in the tools we need (pandas for working with tables, plotly.express for charts) and load a dataset directly from a Google Sheet link.\n\n\nCode\n# Setup\nimport plotly.express as px\nimport pandas as pd\n\n# Input: Read the Google Sheet (shared as CSV) into a DataFrame\nurl = \"https://docs.google.com/spreadsheets/d/1ZULKhYzsMd4eYwiprsyGgE9Df3gaVtO8WRalUQDn-xE/export?format=csv\"\ndf = pd.read_csv(url)\n\n\n\n\nStep 2 — Preview the Data\nAs always, it’s good to take a quick look at the data to confirm it is loaded correctly.\n\n\nCode\n# Preview the first few rows\ndf.head()\n\n\n\n\n\n\n\n\n\nX\nY\n\n\n\n\n0\n0\n0\n\n\n1\n1\n1\n\n\n2\n2\n4\n\n\n3\n3\n9\n\n\n4\n4\n16\n\n\n\n\n\n\n\nCheck that the columns and rows appear as expected.\n\n\nStep 3 — Plot the Data\nOnce the data is loaded, plotting works the same way as with CSV or Excel files.\n\n\nCode\n# Create a line plot\npx.line(df, x=\"X\", y=\"Y\", title=\"Data from a Google Sheet\")",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Importing Data From a Google Sheet"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01D-import-google-sheets.html#talk-about-it",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01D-import-google-sheets.html#talk-about-it",
+    "title": "Importing Data From a Google Sheet",
+    "section": "Talk About It",
+    "text": "Talk About It\n\nWhy might someone choose to share data in a Google Sheet instead of a CSV or Excel file?\nWhat are the advantages of being able to update a dataset online (like in a Google Sheet) compared to using a static file?\nWhat potential issues could you run into when working with shared Google Sheets?",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Importing Data From a Google Sheet"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01D-import-google-sheets.html#lesson-notebook",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01D-import-google-sheets.html#lesson-notebook",
+    "title": "Importing Data From a Google Sheet",
+    "section": "Lesson Notebook",
+    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes exercises where you’ll load real basketball data from Google Sheets and create your own plots.\nOpen the lesson here.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Importing Data From a Google Sheet"
     ]
   },
   {
@@ -818,15 +860,57 @@
   {
     "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01C-import-excel.html",
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01C-import-excel.html",
-    "title": "Data from Excel Files",
+    "title": "Importing Data From an Excel File",
     "section": "",
-    "text": "Bring in Excel data with pd.read_excel(...); choose a sheet if needed and preview a few rows—handy when teachers share XLSX templates.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb.\n\nLesson coming soon!",
+    "text": "In this lesson, we’ll learn how to import and work with data stored in an Excel spreadsheet. Excel files are common in schools, businesses, and research — and just like CSVs, they can be loaded into Python for analysis.",
     "crumbs": [
       "Home",
       "Module 6",
       "Going Further with Coding",
       "Input Data",
-      "Data from Excel Files"
+      "Importing Data From an Excel File"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01C-import-excel.html#when-to-use-an-excel-file",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01C-import-excel.html#when-to-use-an-excel-file",
+    "title": "Importing Data From an Excel File",
+    "section": "When to Use an Excel File",
+    "text": "When to Use an Excel File\nExcel files are useful when your data is already organized into worksheets or when it comes from systems that export in .xlsx format. They support multiple sheets, cell formatting, and formulas, but in most cases we just need the raw data inside.\nLoading Excel data into Python is very similar to loading CSV files — the main difference is that we use read_excel() instead of read_csv().\n\nStep 1 — Import Libraries and Load Excel Data\nIn this step, we bring in the tools we need (pandas for working with tables, plotly.express for charts) and load a dataset directly from an Excel file.\n\n\nCode\n# Setup\nimport plotly.express as px\nimport pandas as pd\n\n# Input: Read the Excel file into a DataFrame named df\nurl = \"https://github.com/Data-Dunkers/data/raw/refs/heads/main/demo/x-y-data.xlsx\"\ndf = pd.read_excel(url)\n\n\nWe now have our data stored in a Pandas DataFrame, just like when we used a CSV file.\n\n\nStep 2 — Preview the Data\nBefore analyzing or plotting, it’s important to confirm the data looks as expected. Pandas provides quick functions like head() and tail() to peek at the data.\n\n\nCode\n# Preview the first few rows\ndf.head()\n\n\n\n\n\n\n\n\n\nX\nY\n\n\n\n\n0\n0\n0\n\n\n1\n1\n1\n\n\n2\n2\n4\n\n\n3\n3\n9\n\n\n4\n4\n16\n\n\n\n\n\n\n\n\n\nCode\n# Preview the last 2 rows\ndf.tail(2)\n\n\n\n\n\n\n\n\n\nX\nY\n\n\n\n\n4\n4\n16\n\n\n5\n5\n25\n\n\n\n\n\n\n\nThis helps verify the data loaded properly, with the expected columns and rows.\n\n\nStep 3 — Plot the Data\nWith the data loaded and verified, we can now create a plot. The steps are almost identical to the CSV example, except that our input came from an Excel file.\n\n\nCode\n# Create a line plot\npx.line(df, x=\"X\", y=\"Y\", title=\"Data from an Excel File\")",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Importing Data From an Excel File"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01C-import-excel.html#talk-about-it",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01C-import-excel.html#talk-about-it",
+    "title": "Importing Data From an Excel File",
+    "section": "Talk About It",
+    "text": "Talk About It\n\nHow is using read_excel() similar to read_csv()?\nWhat are some reasons an organization might use Excel instead of CSV for storing data?\nWhat challenges could arise when working with Excel files (for example, multiple sheets, merged cells, or hidden formatting)?",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Importing Data From an Excel File"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01C-import-excel.html#lesson-notebook",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01C-import-excel.html#lesson-notebook",
+    "title": "Importing Data From an Excel File",
+    "section": "Lesson Notebook",
+    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes exercises where you’ll load basketball data from Excel and create your own plots.\nOpen the lesson here.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Input Data",
+      "Importing Data From an Excel File"
     ]
   },
   {
