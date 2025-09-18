@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Selecting Columns for Analysis – Data Dunkers LMS</title>
+<title>Working With Columns in a DataFrame – Data Dunkers LMS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,10 +20,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -68,6 +103,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -127,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Module 6</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Going Further with Coding</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html">Process Data</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html">Selecting Columns for Analysis</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Module 6</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Going Further with Coding</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html">Process Data</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html">Working With Columns in a DataFrame</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -359,7 +397,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Selecting Columns for Analysis</span></a>
+ <span class="menu-text">Working With Columns in a DataFrame</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -444,15 +482,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#when-to-work-with-columns" id="toc-when-to-work-with-columns" class="nav-link active" data-scroll-target="#when-to-work-with-columns">When to Work With Columns</a></li>
+  <li><a href="#talk-about-it" id="toc-talk-about-it" class="nav-link" data-scroll-target="#talk-about-it">Talk About It</a></li>
+  <li><a href="#lesson-notebook" id="toc-lesson-notebook" class="nav-link" data-scroll-target="#lesson-notebook">Lesson Notebook</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Module 6</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Going Further with Coding</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html">Process Data</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html">Selecting Columns for Analysis</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Module 6</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Going Further with Coding</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html">Process Data</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html">Working With Columns in a DataFrame</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Selecting Columns for Analysis</h1>
+<h1 class="title">Working With Columns in a DataFrame</h1>
 </div>
 
 
@@ -469,12 +515,361 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Students <strong>load a real NBA player CSV</strong> into a DataFrame, explore what each column represents, and practice <strong>selecting specific fields</strong> for analysis. They also use a short <code>for</code> loop to iterate through <code>df.columns</code>, building familiarity with the dataset’s structure so they can target the right variables later.</p>
-<p>Corresponds with the lesson at: <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb">https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb</a>.</p>
-<hr>
-<p><strong>Lesson coming soon!</strong></p>
+<p>In this lesson, we’ll learn how to work with columns in a Pandas DataFrame. Columns represent the different variables or measurements in your dataset (like points scored, rebounds, or field goals made).</p>
+<section id="when-to-work-with-columns" class="level2">
+<h2 class="anchored" data-anchor-id="when-to-work-with-columns">When to Work With Columns</h2>
+<p>Often we don’t need an entire dataset — we just want to focus on certain variables. Pandas makes it easy to list all available columns, access specific ones, and even select multiple columns at once.</p>
+<section id="step-1-import-libraries-and-load-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-import-libraries-and-load-data">Step 1 — Import Libraries and Load Data</h3>
+<p>We’ll use Pandas to load Pascal Siakam’s basketball data from a CSV file into a DataFrame.</p>
+<div id="de8170bd" class="cell" data-execution_count="1">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Input: Load data into a DataFrame</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://github.com/Data-Dunkers/data/raw/refs/heads/main/NBA/Pascal_Siakam.csv"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview the first few rows</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div>
 
 
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">PLAYER_ID</th>
+<th data-quarto-table-cell-role="th">SEASON_ID</th>
+<th data-quarto-table-cell-role="th">LEAGUE_ID</th>
+<th data-quarto-table-cell-role="th">TEAM_ID</th>
+<th data-quarto-table-cell-role="th">TEAM_ABBREVIATION</th>
+<th data-quarto-table-cell-role="th">PLAYER_AGE</th>
+<th data-quarto-table-cell-role="th">GP</th>
+<th data-quarto-table-cell-role="th">GS</th>
+<th data-quarto-table-cell-role="th">MIN</th>
+<th data-quarto-table-cell-role="th">FGM</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">REB</th>
+<th data-quarto-table-cell-role="th">AST</th>
+<th data-quarto-table-cell-role="th">STL</th>
+<th data-quarto-table-cell-role="th">BLK</th>
+<th data-quarto-table-cell-role="th">TOV</th>
+<th data-quarto-table-cell-role="th">PF</th>
+<th data-quarto-table-cell-role="th">PTS</th>
+<th data-quarto-table-cell-role="th">FG2M</th>
+<th data-quarto-table-cell-role="th">FG2A</th>
+<th data-quarto-table-cell-role="th">FG2_PCT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>1627783</td>
+<td>2016-17</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>23.0</td>
+<td>55</td>
+<td>38</td>
+<td>859.0</td>
+<td>103</td>
+<td>...</td>
+<td>185</td>
+<td>17</td>
+<td>26</td>
+<td>45</td>
+<td>33</td>
+<td>109</td>
+<td>229</td>
+<td>102</td>
+<td>198</td>
+<td>0.515</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>1627783</td>
+<td>2017-18</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>24.0</td>
+<td>81</td>
+<td>5</td>
+<td>1679.0</td>
+<td>253</td>
+<td>...</td>
+<td>364</td>
+<td>159</td>
+<td>62</td>
+<td>42</td>
+<td>67</td>
+<td>166</td>
+<td>589</td>
+<td>224</td>
+<td>366</td>
+<td>0.612</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>1627783</td>
+<td>2018-19</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>25.0</td>
+<td>80</td>
+<td>79</td>
+<td>2548.0</td>
+<td>519</td>
+<td>...</td>
+<td>549</td>
+<td>248</td>
+<td>73</td>
+<td>52</td>
+<td>154</td>
+<td>241</td>
+<td>1354</td>
+<td>440</td>
+<td>731</td>
+<td>0.602</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>1627783</td>
+<td>2019-20</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>26.0</td>
+<td>60</td>
+<td>60</td>
+<td>2110.0</td>
+<td>500</td>
+<td>...</td>
+<td>439</td>
+<td>207</td>
+<td>61</td>
+<td>53</td>
+<td>148</td>
+<td>170</td>
+<td>1371</td>
+<td>369</td>
+<td>739</td>
+<td>0.499</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>1627783</td>
+<td>2020-21</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>27.0</td>
+<td>56</td>
+<td>56</td>
+<td>2006.0</td>
+<td>437</td>
+<td>...</td>
+<td>405</td>
+<td>250</td>
+<td>64</td>
+<td>37</td>
+<td>130</td>
+<td>174</td>
+<td>1196</td>
+<td>364</td>
+<td>715</td>
+<td>0.509</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 30 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-view-the-columns" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-view-the-columns">Step 2 — View the Columns</h3>
+<p>You can see which columns are available by using the <code>.columns</code> attribute.</p>
+<div id="e2d5fac8" class="cell" data-execution_count="2">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List all the columns</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df.columns</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>Index(['PLAYER_ID', 'SEASON_ID', 'LEAGUE_ID', 'TEAM_ID', 'TEAM_ABBREVIATION',
+       'PLAYER_AGE', 'GP', 'GS', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A',
+       'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL',
+       'BLK', 'TOV', 'PF', 'PTS', 'FG2M', 'FG2A', 'FG2_PCT'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<p>You can also use a Python <code>for loop</code> to print them one at a time.</p>
+<div id="5bc97b9c" class="cell" data-execution_count="3">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print each column name</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> df.columns:</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(column)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>PLAYER_ID
+SEASON_ID
+LEAGUE_ID
+TEAM_ID
+TEAM_ABBREVIATION
+PLAYER_AGE
+GP
+GS
+MIN
+FGM
+FGA
+FG_PCT
+FG3M
+FG3A
+FG3_PCT
+FTM
+FTA
+FT_PCT
+OREB
+DREB
+REB
+AST
+STL
+BLK
+TOV
+PF
+PTS
+FG2M
+FG2A
+FG2_PCT</code></pre>
+</div>
+</div>
+</section>
+<section id="step-3-select-specific-columns" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-select-specific-columns">Step 3 — Select Specific Columns</h3>
+<p>Once you know the column names, you can focus on the ones you want.</p>
+<div id="c643b576" class="cell" data-execution_count="4">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select a single column</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"FGM"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>0    103
+1    253
+2    519
+3    500
+4    437
+5    596
+6    630
+7    325
+8    203
+9    528
+Name: FGM, dtype: int64</code></pre>
+</div>
+</div>
+<div id="ffdccd4f" class="cell" data-execution_count="5">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select multiple columns</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">"FGM"</span>, <span class="st">"FGA"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">FGM</th>
+<th data-quarto-table-cell-role="th">FGA</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>103</td>
+<td>205</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>253</td>
+<td>498</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>519</td>
+<td>945</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>500</td>
+<td>1104</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>437</td>
+<td>961</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>596</td>
+<td>1207</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>630</td>
+<td>1313</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>325</td>
+<td>623</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">8</th>
+<td>203</td>
+<td>370</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">9</th>
+<td>528</td>
+<td>993</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>This way you can zoom in on field goals made (FGM) and attempted (FGA) without looking at the rest of the dataset.</p>
+</section>
+</section>
+<section id="talk-about-it" class="level2">
+<h2 class="anchored" data-anchor-id="talk-about-it">Talk About It</h2>
+<ul>
+<li>Why might you want to look at only a few columns instead of the entire dataset?</li>
+<li>How does being able to list all the columns help you as a data analyst?</li>
+<li>If a dataset has dozens of columns, how might you decide which ones are most important for your analysis?</li>
+</ul>
+</section>
+<section id="lesson-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-notebook">Lesson Notebook</h2>
+<p>Now it’s your turn to practice: The notebook version of this lesson includes exercises where you’ll explore columns, filter for specific stats, and practice selecting multiple fields.</p>
+<p>Open the lesson <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb">here</a>.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
