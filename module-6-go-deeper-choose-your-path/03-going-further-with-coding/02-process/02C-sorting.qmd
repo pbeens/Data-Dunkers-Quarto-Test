@@ -1,13 +1,70 @@
 ---
 title: "Sorting the Data"
-format: html
+format:
+  html:
+    code-fold: show
+jupyter: python3
 ---
 
-Surface patterns by ordering rows with `df.sort_values(...)`: sort by one column, then by **multiple keys** (e.g., `["Player","Distance"]`), and control ascending/descending for consistent, reproducible tables. 
+In this lesson, we’ll learn how to sort data in a Pandas DataFrame. Sorting helps us organize information, making it easier to compare values and spot patterns.
 
-Corresponds with the lesson at: [https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb). 
+## When to Sort Data
 
+Sorting is useful when we want to find the highest or lowest values in a dataset or to arrange rows in a meaningful order. For example, we could sort by points scored to see a player’s best seasons first.
 
----
+### Step 1 — Import Libraries and Load Data
 
-**Lesson coming soon!**
+We’ll use Pandas to load Pascal Siakam’s basketball data from a CSV file into a DataFrame, then narrow it down to a smaller set of essential columns so it’s easier to work with.
+
+```{python}
+# Setup
+import pandas as pd
+
+# Input: Load Pascal Siakam's data into a DataFrame
+url = "https://raw.githubusercontent.com/pbeens/Data-Dunkers/main/Data/Pascal_Siakam.csv"
+df = pd.read_csv(url)
+
+# Reduce the DataFrame to essential columns
+columns = ["SEASON_ID", "TEAM_ABBREVIATION", "GP", "GS", "MIN", "FGM", "FGA", "STL", "BLK"]
+df_small = df[columns]
+
+# Preview the first few rows
+df_small.head()
+```
+
+### Step 2 — Sort by a Single Column
+
+We can sort the DataFrame by steals (`STL`). By default, sorting is ascending (lowest to highest).
+
+```{python}
+# Sort by steals in ascending order
+df_small.sort_values("STL")
+```
+
+To sort in descending order (highest to lowest), add `ascending=False`.
+
+```{python}
+# Sort by steals in descending order
+df_small.sort_values("STL", ascending=False)
+```
+
+### Step 3 — Sort by Multiple Columns
+
+We can also sort by more than one column. For example, first by blocks (`BLK`) and then by steals (`STL`).
+
+```{python}
+# Sort by blocks first, then steals
+df_small.sort_values(["BLK", "STL"])
+```
+
+## Talk About It
+
+* Why is sorting a useful tool in data analysis?
+* When would you want ascending order, and when would descending order make more sense?
+* How could sorting by multiple columns give you a deeper understanding of the data?
+
+## Lesson Notebook
+
+Now it’s your turn to practice: The notebook version of this lesson includes more sorting examples and activities.
+
+Open the lesson [here](https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb).
