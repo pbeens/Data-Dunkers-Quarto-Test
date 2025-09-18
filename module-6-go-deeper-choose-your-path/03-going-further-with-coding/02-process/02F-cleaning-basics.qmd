@@ -1,21 +1,104 @@
 ---
-title: "Cleaning the Data (Basics)"
-format: html
+title: "Cleaning the Data"
+format:
+  html:
+    code-fold: show
+jupyter: python3
 ---
 
-A **light scrub after** core table skills: standardize column names/case, coerce numeric columns used in sorts/percentages, and drop empty rows so charts and stats don’t break. Informed by the table/analysis lessons here:
+In this lesson, we’ll learn how to clean messy data in a Pandas DataFrame. Real-world data often has problems like missing values, duplicates, inconsistent text, or impossible numbers. Cleaning is an important first step before analysis.
 
-- [https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb)
-    
-- [https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb)
-    
-- [https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb)
-    
-- [https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb)
-    
-- [https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb](https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb) ([GitHub](https://github.com/Data-Dunkers/lessons "GitHub - Data-Dunkers/lessons: Data Dunkers Lessons"))
+## When to Clean Data
 
+Clean data makes analysis more reliable. Even small problems — like a missing value or inconsistent capitalization — can lead to wrong results or errors in code. By checking and fixing data issues, we can trust our analysis more.
 
----
+### Step 1 — Import Libraries and Load Dirty Data
 
-**Lesson coming soon!**
+We’ll load an intentionally messy version of Pascal Siakam’s career stats. This dataset includes missing values, duplicates, inconsistent team names, and some unrealistic numbers.
+
+```{python}
+# Setup
+import pandas as pd
+
+# Input: Load the intentionally messy Pascal Siakam dataset
+url = "https://github.com/Data-Dunkers/data/raw/refs/heads/main/NBA/Pascal_Siakam_dirty.csv"
+df = pd.read_csv(url)
+
+# Preview the data
+df
+```
+
+### Step 2 — Find Missing Values
+
+Pandas can show us where data is missing using `.isnull().sum()`.
+
+```{python}
+# Count missing values in each column
+df.isnull().sum()
+```
+
+To fix missing values, we can drop them with `.dropna()` or fill them with something else. Here we’ll fill missing percentages with the column’s mean.
+
+```{python}
+# Fill missing values in FT_PCT with the average
+df["FT_PCT"] = df["FT_PCT"].fillna(df["FT_PCT"].mean())
+
+# Drop rows with missing FGM
+df = df.dropna(subset=["FGM"])
+df
+```
+
+### Step 3 — Remove Duplicates
+
+Sometimes rows are accidentally repeated. We can remove duplicates with one line.
+
+```{python}
+# Remove duplicate rows
+df = df.drop_duplicates()
+```
+
+### Step 4 — Fix Inconsistent Text
+
+Team abbreviations in this dataset are inconsistent (`TOR`, `tor`, `Tor`). We can make them all uppercase.
+
+```{python}
+# Standardize team abbreviations to uppercase
+df["TEAM_ABBREVIATION"] = df["TEAM_ABBREVIATION"].str.upper()
+```
+
+### Step 5 — Handle Impossible Values
+
+Negative minutes or unrealistic point totals can distort analysis. We can filter them out.
+
+```{python}
+# Keep only rows where minutes are non-negative
+df = df[df["MIN"] >= 0]
+
+# Keep only rows where points are less than 200
+df = df[df["PTS"] < 200]
+```
+
+### Step 6 — Fix Data Types
+
+Sometimes numbers are stored as text. We can convert them back to numeric form.
+
+```{python}
+# Convert FGA to numeric, forcing errors to NaN
+df["FGA"] = pd.to_numeric(df["FGA"], errors="coerce")
+
+# Preview after conversion
+df.head()
+```
+
+## Talk About It
+
+* Why is it important to clean data before doing analysis?
+* Which problems (missing values, duplicates, text inconsistencies, impossible values, or wrong types) do you think are most common in real datasets?
+* How could cleaning choices (dropping vs. filling) affect your final results?
+
+## Lesson Notebook
+
+Now it’s your turn to practice: The notebook version of this lesson includes the same cleaning demos plus additional practice tasks.
+
+Open the lesson [here](https://github.com/Data-Dunkers/lessons/blob/main/data-cleaning.ipynb).
+
