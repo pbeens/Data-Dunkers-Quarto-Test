@@ -155,15 +155,57 @@
   {
     "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html",
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html",
-    "title": "Cleaning the Data (Basics)",
+    "title": "Cleaning the Data",
     "section": "",
-    "text": "A light scrub after core table skills: standardize column names/case, coerce numeric columns used in sorts/percentages, and drop empty rows so charts and stats don’t break. Informed by the table/analysis lessons here:\n\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb\nhttps://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb (GitHub)\n\n\nLesson coming soon!",
+    "text": "In this lesson, we’ll learn how to clean messy data in a Pandas DataFrame. Real-world data often has problems like missing values, duplicates, inconsistent text, or impossible numbers. Cleaning is an important first step before analysis.",
     "crumbs": [
       "Home",
       "Module 6",
       "Going Further with Coding",
       "Process Data",
-      "Cleaning the Data (Basics)"
+      "Cleaning the Data"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html#when-to-clean-data",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html#when-to-clean-data",
+    "title": "Cleaning the Data",
+    "section": "When to Clean Data",
+    "text": "When to Clean Data\nClean data makes analysis more reliable. Even small problems — like a missing value or inconsistent capitalization — can lead to wrong results or errors in code. By checking and fixing data issues, we can trust our analysis more.\n\nStep 1 — Import Libraries and Load Dirty Data\nWe’ll load an intentionally messy version of Pascal Siakam’s career stats. This dataset includes missing values, duplicates, inconsistent team names, and some unrealistic numbers.\n\n\nCode\n# Setup\nimport pandas as pd\n\n# Input: Load the intentionally messy Pascal Siakam dataset\nurl = \"https://github.com/Data-Dunkers/data/raw/refs/heads/main/NBA/Pascal_Siakam_dirty.csv\"\ndf = pd.read_csv(url)\n\n# Preview the data\ndf\n\n\n\n\n\n\n\n\n\nSEASON_ID\nTEAM_ABBREVIATION\nGP\nGS\nMIN\nFGM\nFGA\nPTS\nFT_PCT\n\n\n\n\n0\n2016-17\nTOR\n55\n0\n-10.0\n103.0\n214\n268\n0.689\n\n\n1\n2017-18\ntor\n81\n5\n20.7\n253.0\nfive hundred\n640\n0.621\n\n\n2\n2018-19\nTor\n80\n79\n31.9\nNaN\n1024\n1160\n0.785\n\n\n3\n2019-20\nTOR\n61\n61\n35.2\n500.0\n1020\n999\n0.792\n\n\n4\n2020-21\nTOR\n56\n56\n34.8\n437.0\n865\n1050\nNaN\n\n\n5\n2019-20\nTOR\n61\n61\n35.2\n500.0\n1020\n1200\n0.792\n\n\n\n\n\n\n\n\n\nStep 2 — Find Missing Values\nPandas can show us where data is missing using .isnull().sum().\n\n\nCode\n# Count missing values in each column\ndf.isnull().sum()\n\n\nSEASON_ID            0\nTEAM_ABBREVIATION    0\nGP                   0\nGS                   0\nMIN                  0\nFGM                  1\nFGA                  0\nPTS                  0\nFT_PCT               1\ndtype: int64\n\n\nTo fix missing values, we can drop them with .dropna() or fill them with something else. Here we’ll fill missing percentages with the column’s mean.\n\n\nCode\n# Fill missing values in FT_PCT with the average\ndf[\"FT_PCT\"] = df[\"FT_PCT\"].fillna(df[\"FT_PCT\"].mean())\n\n# Drop rows with missing FGM\ndf = df.dropna(subset=[\"FGM\"])\ndf\n\n\n\n\n\n\n\n\n\nSEASON_ID\nTEAM_ABBREVIATION\nGP\nGS\nMIN\nFGM\nFGA\nPTS\nFT_PCT\n\n\n\n\n0\n2016-17\nTOR\n55\n0\n-10.0\n103.0\n214\n268\n0.6890\n\n\n1\n2017-18\ntor\n81\n5\n20.7\n253.0\nfive hundred\n640\n0.6210\n\n\n3\n2019-20\nTOR\n61\n61\n35.2\n500.0\n1020\n999\n0.7920\n\n\n4\n2020-21\nTOR\n56\n56\n34.8\n437.0\n865\n1050\n0.7358\n\n\n5\n2019-20\nTOR\n61\n61\n35.2\n500.0\n1020\n1200\n0.7920\n\n\n\n\n\n\n\n\n\nStep 3 — Remove Duplicates\nSometimes rows are accidentally repeated. We can remove duplicates with one line.\n\n\nCode\n# Remove duplicate rows\ndf = df.drop_duplicates()\n\n\n\n\nStep 4 — Fix Inconsistent Text\nTeam abbreviations in this dataset are inconsistent (TOR, tor, Tor). We can make them all uppercase.\n\n\nCode\n# Standardize team abbreviations to uppercase\ndf[\"TEAM_ABBREVIATION\"] = df[\"TEAM_ABBREVIATION\"].str.upper()\n\n\n\n\nStep 5 — Handle Impossible Values\nNegative minutes or unrealistic point totals can distort analysis. We can filter them out.\n\n\nCode\n# Keep only rows where minutes are non-negative\ndf = df[df[\"MIN\"] &gt;= 0]\n\n# Keep only rows where points are less than 200\ndf = df[df[\"PTS\"] &lt; 200]\n\n\n\n\nStep 6 — Fix Data Types\nSometimes numbers are stored as text. We can convert them back to numeric form.\n\n\nCode\n# Convert FGA to numeric, forcing errors to NaN\ndf[\"FGA\"] = pd.to_numeric(df[\"FGA\"], errors=\"coerce\")\n\n# Preview after conversion\ndf.head()\n\n\n\n\n\n\n\n\n\nSEASON_ID\nTEAM_ABBREVIATION\nGP\nGS\nMIN\nFGM\nFGA\nPTS\nFT_PCT",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Cleaning the Data"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html#talk-about-it",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html#talk-about-it",
+    "title": "Cleaning the Data",
+    "section": "Talk About It",
+    "text": "Talk About It\n\nWhy is it important to clean data before doing analysis?\nWhich problems (missing values, duplicates, text inconsistencies, impossible values, or wrong types) do you think are most common in real datasets?\nHow could cleaning choices (dropping vs. filling) affect your final results?",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Cleaning the Data"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html#lesson-notebook",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html#lesson-notebook",
+    "title": "Cleaning the Data",
+    "section": "Lesson Notebook",
+    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes the same cleaning demos plus additional practice tasks.\nOpen the lesson here.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Cleaning the Data"
     ]
   },
   {

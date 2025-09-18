@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Cleaning the Data (Basics) – Data Dunkers LMS</title>
+<title>Cleaning the Data – Data Dunkers LMS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,10 +20,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -68,6 +103,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -127,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Module 6</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Going Further with Coding</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html">Process Data</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html">Cleaning the Data (Basics)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Module 6</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Going Further with Coding</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html">Process Data</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html">Cleaning the Data</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -389,7 +427,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Cleaning the Data (Basics)</span></a>
+ <span class="menu-text">Cleaning the Data</span></a>
   </div>
 </li>
       </ul>
@@ -444,15 +482,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#when-to-clean-data" id="toc-when-to-clean-data" class="nav-link active" data-scroll-target="#when-to-clean-data">When to Clean Data</a></li>
+  <li><a href="#talk-about-it" id="toc-talk-about-it" class="nav-link" data-scroll-target="#talk-about-it">Talk About It</a></li>
+  <li><a href="#lesson-notebook" id="toc-lesson-notebook" class="nav-link" data-scroll-target="#lesson-notebook">Lesson Notebook</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Module 6</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Going Further with Coding</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html">Process Data</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html">Cleaning the Data (Basics)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Module 6</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/index.html">Going Further with Coding</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html">Process Data</a></li><li class="breadcrumb-item"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html">Cleaning the Data</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Cleaning the Data (Basics)</h1>
+<h1 class="title">Cleaning the Data</h1>
 </div>
 
 
@@ -469,18 +515,336 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>A <strong>light scrub after</strong> core table skills: standardize column names/case, coerce numeric columns used in sorts/percentages, and drop empty rows so charts and stats don’t break. Informed by the table/analysis lessons here:</p>
+<p>In this lesson, we’ll learn how to clean messy data in a Pandas DataFrame. Real-world data often has problems like missing values, duplicates, inconsistent text, or impossible numbers. Cleaning is an important first step before analysis.</p>
+<section id="when-to-clean-data" class="level2">
+<h2 class="anchored" data-anchor-id="when-to-clean-data">When to Clean Data</h2>
+<p>Clean data makes analysis more reliable. Even small problems — like a missing value or inconsistent capitalization — can lead to wrong results or errors in code. By checking and fixing data issues, we can trust our analysis more.</p>
+<section id="step-1-import-libraries-and-load-dirty-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-import-libraries-and-load-dirty-data">Step 1 — Import Libraries and Load Dirty Data</h3>
+<p>We’ll load an intentionally messy version of Pascal Siakam’s career stats. This dataset includes missing values, duplicates, inconsistent team names, and some unrealistic numbers.</p>
+<div id="e1987f53" class="cell" data-execution_count="1">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Input: Load the intentionally messy Pascal Siakam dataset</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://github.com/Data-Dunkers/data/raw/refs/heads/main/NBA/Pascal_Siakam_dirty.csv"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview the data</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">SEASON_ID</th>
+<th data-quarto-table-cell-role="th">TEAM_ABBREVIATION</th>
+<th data-quarto-table-cell-role="th">GP</th>
+<th data-quarto-table-cell-role="th">GS</th>
+<th data-quarto-table-cell-role="th">MIN</th>
+<th data-quarto-table-cell-role="th">FGM</th>
+<th data-quarto-table-cell-role="th">FGA</th>
+<th data-quarto-table-cell-role="th">PTS</th>
+<th data-quarto-table-cell-role="th">FT_PCT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>2016-17</td>
+<td>TOR</td>
+<td>55</td>
+<td>0</td>
+<td>-10.0</td>
+<td>103.0</td>
+<td>214</td>
+<td>268</td>
+<td>0.689</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>2017-18</td>
+<td>tor</td>
+<td>81</td>
+<td>5</td>
+<td>20.7</td>
+<td>253.0</td>
+<td>five hundred</td>
+<td>640</td>
+<td>0.621</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>2018-19</td>
+<td>Tor</td>
+<td>80</td>
+<td>79</td>
+<td>31.9</td>
+<td>NaN</td>
+<td>1024</td>
+<td>1160</td>
+<td>0.785</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>2019-20</td>
+<td>TOR</td>
+<td>61</td>
+<td>61</td>
+<td>35.2</td>
+<td>500.0</td>
+<td>1020</td>
+<td>999</td>
+<td>0.792</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>2020-21</td>
+<td>TOR</td>
+<td>56</td>
+<td>56</td>
+<td>34.8</td>
+<td>437.0</td>
+<td>865</td>
+<td>1050</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>2019-20</td>
+<td>TOR</td>
+<td>61</td>
+<td>61</td>
+<td>35.2</td>
+<td>500.0</td>
+<td>1020</td>
+<td>1200</td>
+<td>0.792</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-find-missing-values" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-find-missing-values">Step 2 — Find Missing Values</h3>
+<p>Pandas can show us where data is missing using <code>.isnull().sum()</code>.</p>
+<div id="bab4e619" class="cell" data-execution_count="2">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Count missing values in each column</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df.isnull().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>SEASON_ID            0
+TEAM_ABBREVIATION    0
+GP                   0
+GS                   0
+MIN                  0
+FGM                  1
+FGA                  0
+PTS                  0
+FT_PCT               1
+dtype: int64</code></pre>
+</div>
+</div>
+<p>To fix missing values, we can drop them with <code>.dropna()</code> or fill them with something else. Here we’ll fill missing percentages with the column’s mean.</p>
+<div id="4e0f068f" class="cell" data-execution_count="3">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fill missing values in FT_PCT with the average</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"FT_PCT"</span>] <span class="op">=</span> df[<span class="st">"FT_PCT"</span>].fillna(df[<span class="st">"FT_PCT"</span>].mean())</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop rows with missing FGM</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.dropna(subset<span class="op">=</span>[<span class="st">"FGM"</span>])</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">SEASON_ID</th>
+<th data-quarto-table-cell-role="th">TEAM_ABBREVIATION</th>
+<th data-quarto-table-cell-role="th">GP</th>
+<th data-quarto-table-cell-role="th">GS</th>
+<th data-quarto-table-cell-role="th">MIN</th>
+<th data-quarto-table-cell-role="th">FGM</th>
+<th data-quarto-table-cell-role="th">FGA</th>
+<th data-quarto-table-cell-role="th">PTS</th>
+<th data-quarto-table-cell-role="th">FT_PCT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>2016-17</td>
+<td>TOR</td>
+<td>55</td>
+<td>0</td>
+<td>-10.0</td>
+<td>103.0</td>
+<td>214</td>
+<td>268</td>
+<td>0.6890</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>2017-18</td>
+<td>tor</td>
+<td>81</td>
+<td>5</td>
+<td>20.7</td>
+<td>253.0</td>
+<td>five hundred</td>
+<td>640</td>
+<td>0.6210</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">3</th>
+<td>2019-20</td>
+<td>TOR</td>
+<td>61</td>
+<td>61</td>
+<td>35.2</td>
+<td>500.0</td>
+<td>1020</td>
+<td>999</td>
+<td>0.7920</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">4</th>
+<td>2020-21</td>
+<td>TOR</td>
+<td>56</td>
+<td>56</td>
+<td>34.8</td>
+<td>437.0</td>
+<td>865</td>
+<td>1050</td>
+<td>0.7358</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">5</th>
+<td>2019-20</td>
+<td>TOR</td>
+<td>61</td>
+<td>61</td>
+<td>35.2</td>
+<td>500.0</td>
+<td>1020</td>
+<td>1200</td>
+<td>0.7920</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="step-3-remove-duplicates" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-remove-duplicates">Step 3 — Remove Duplicates</h3>
+<p>Sometimes rows are accidentally repeated. We can remove duplicates with one line.</p>
+<div id="27d2b2f4" class="cell" data-execution_count="4">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove duplicate rows</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.drop_duplicates()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="step-4-fix-inconsistent-text" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-fix-inconsistent-text">Step 4 — Fix Inconsistent Text</h3>
+<p>Team abbreviations in this dataset are inconsistent (<code>TOR</code>, <code>tor</code>, <code>Tor</code>). We can make them all uppercase.</p>
+<div id="7c3df875" class="cell" data-execution_count="5">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Standardize team abbreviations to uppercase</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"TEAM_ABBREVIATION"</span>] <span class="op">=</span> df[<span class="st">"TEAM_ABBREVIATION"</span>].<span class="bu">str</span>.upper()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="step-5-handle-impossible-values" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-handle-impossible-values">Step 5 — Handle Impossible Values</h3>
+<p>Negative minutes or unrealistic point totals can distort analysis. We can filter them out.</p>
+<div id="5878e82e" class="cell" data-execution_count="6">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only rows where minutes are non-negative</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">"MIN"</span>] <span class="op">&gt;=</span> <span class="dv">0</span>]</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only rows where points are less than 200</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">"PTS"</span>] <span class="op">&lt;</span> <span class="dv">200</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="step-6-fix-data-types" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-fix-data-types">Step 6 — Fix Data Types</h3>
+<p>Sometimes numbers are stored as text. We can convert them back to numeric form.</p>
+<div id="e8799c3b" class="cell" data-execution_count="7">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert FGA to numeric, forcing errors to NaN</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"FGA"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"FGA"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview after conversion</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">SEASON_ID</th>
+<th data-quarto-table-cell-role="th">TEAM_ABBREVIATION</th>
+<th data-quarto-table-cell-role="th">GP</th>
+<th data-quarto-table-cell-role="th">GS</th>
+<th data-quarto-table-cell-role="th">MIN</th>
+<th data-quarto-table-cell-role="th">FGM</th>
+<th data-quarto-table-cell-role="th">FGA</th>
+<th data-quarto-table-cell-role="th">PTS</th>
+<th data-quarto-table-cell-role="th">FT_PCT</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="talk-about-it" class="level2">
+<h2 class="anchored" data-anchor-id="talk-about-it">Talk About It</h2>
 <ul>
-<li><p><a href="https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb">https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb</a></p></li>
-<li><p><a href="https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb">https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb</a></p></li>
-<li><p><a href="https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb">https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb</a></p></li>
-<li><p><a href="https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb">https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb</a></p></li>
-<li><p><a href="https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb">https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb</a> (<a href="https://github.com/Data-Dunkers/lessons" title="GitHub - Data-Dunkers/lessons: Data Dunkers Lessons">GitHub</a>)</p></li>
+<li>Why is it important to clean data before doing analysis?</li>
+<li>Which problems (missing values, duplicates, text inconsistencies, impossible values, or wrong types) do you think are most common in real datasets?</li>
+<li>How could cleaning choices (dropping vs.&nbsp;filling) affect your final results?</li>
 </ul>
-<hr>
-<p><strong>Lesson coming soon!</strong></p>
+</section>
+<section id="lesson-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-notebook">Lesson Notebook</h2>
+<p>Now it’s your turn to practice: The notebook version of this lesson includes the same cleaning demos plus additional practice tasks.</p>
+<p>Open the lesson <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-cleaning.ipynb">here</a>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
