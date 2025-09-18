@@ -171,7 +171,49 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.html",
     "title": "Creating New Columns",
     "section": "",
-    "text": "Create derived fields with vectorized formulas and simple conditions—e.g., shooting percentage from Makes/Attempts, and distance buckets (Short/Medium/Long). These metrics power richer comparisons and will feed directly into visualizations.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb.\n\nLesson coming soon!",
+    "text": "In this lesson, we’ll learn how to create new columns in a Pandas DataFrame. New columns can be made by combining or transforming existing columns to generate more meaningful statistics.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Creating New Columns"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.html#when-to-create-new-columns",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.html#when-to-create-new-columns",
+    "title": "Creating New Columns",
+    "section": "When to Create New Columns",
+    "text": "When to Create New Columns\nSometimes the dataset doesn’t include the exact information you need. By performing calculations on existing columns, you can create new ones — such as averages, totals, or percentages — to reveal additional insights.\n\nStep 1 — Import Libraries and Load Data\nWe’ll use Pandas to load Raptors team data from a CSV file into a DataFrame.\n\n\nCode\n# Setup\nimport pandas as pd\n\n# Input: Load Raptors data into a DataFrame\nurl = \"https://github.com/Data-Dunkers/data/raw/refs/heads/main/NBA/raptors-2023.csv\"\ndf = pd.read_csv(url)\n\n# Reduce the DataFrame to essential columns\ncolumns = [\"Player\", \"G\", \"MP\", \"FG%\", \"FT%\"]\ndf_small = df[columns]\n\n# Preview\ndf_small.head()\n\n\n\n\n\n\n\n\n\nPlayer\nG\nMP\nFG%\nFT%\n\n\n\n\n0\nChristian Koloko\n58.0\n13.8\n0.480\n0.627\n\n\n1\nChris Boucher\n307.0\n18.4\n0.486\n0.780\n\n\n2\nDalano Banton\n95.0\n10.3\n0.416\n0.632\n\n\n3\nFred VanVleet\n417.0\n29.7\n0.402\n0.869\n\n\n4\nGary Trent Jr.\n270.0\n28.9\n0.421\n0.827\n\n\n\n\n\n\n\n\n\nStep 2 — Create a New Column\nWe can create a new column called Shot Average (%) by averaging the Field Goal Percentage (FG%) and Free Throw Percentage (FT%).\n\n\nCode\n# Create a new column by averaging FG% and FT%\ndf_small[\"Shot Average (%)\"] = (df[\"FG%\"] + df[\"FT%\"]) / 2\n\n# Display selected columns\ndf_small[[\"Player\", \"FG%\", \"FT%\", \"Shot Average (%)\"]]\n\n\n\n\n\n\n\n\n\nPlayer\nFG%\nFT%\nShot Average (%)\n\n\n\n\n0\nChristian Koloko\n0.480\n0.627\n0.5535\n\n\n1\nChris Boucher\n0.486\n0.780\n0.6330\n\n\n2\nDalano Banton\n0.416\n0.632\n0.5240\n\n\n3\nFred VanVleet\n0.402\n0.869\n0.6355\n\n\n4\nGary Trent Jr.\n0.421\n0.827\n0.6240\n\n\n5\nJakob Poeltl\n0.628\n0.536\n0.5820\n\n\n6\nJeff Dowtin\n0.398\n0.727\n0.5625\n\n\n7\nJoe Wieskamp\n0.329\n0.538\n0.4335\n\n\n8\nMalachi Flynn\n0.374\n0.752\n0.5630\n\n\n9\nOG Anunoby\n0.471\n0.744\n0.6075\n\n\n10\nOtto Porter Jr.\n0.478\n0.797\n0.6375\n\n\n11\nPascal Siakam\n0.487\n0.774\n0.6305\n\n\n12\nPrecious Achiuwa\n0.474\n0.605\n0.5395\n\n\n13\nRon Harper Jr.\n0.500\n1.000\n0.7500\n\n\n14\nScottie Barnes\n0.473\n0.755\n0.6140\n\n\n15\nThaddeus Young\n0.503\n0.663\n0.5830\n\n\n16\nWill Barton\n0.430\n0.787\n0.6085\n\n\n\n\n\n\n\n\n\nStep 3 — Round the New Column\nTo make the new column easier to read, we can round it to one decimal place.\n\n\nCode\n# Round the Shot Average column to one decimal place\ndf_small[\"Shot Average (%)\"] = df_small[\"Shot Average (%)\"].round(1)\n\n# Display selected columns\ndf_small[[\"Player\", \"FG%\", \"FT%\", \"Shot Average (%)\"]]\n\n\n\n\n\n\n\n\n\nPlayer\nFG%\nFT%\nShot Average (%)\n\n\n\n\n0\nChristian Koloko\n0.480\n0.627\n0.6\n\n\n1\nChris Boucher\n0.486\n0.780\n0.6\n\n\n2\nDalano Banton\n0.416\n0.632\n0.5\n\n\n3\nFred VanVleet\n0.402\n0.869\n0.6\n\n\n4\nGary Trent Jr.\n0.421\n0.827\n0.6\n\n\n5\nJakob Poeltl\n0.628\n0.536\n0.6\n\n\n6\nJeff Dowtin\n0.398\n0.727\n0.6\n\n\n7\nJoe Wieskamp\n0.329\n0.538\n0.4\n\n\n8\nMalachi Flynn\n0.374\n0.752\n0.6\n\n\n9\nOG Anunoby\n0.471\n0.744\n0.6\n\n\n10\nOtto Porter Jr.\n0.478\n0.797\n0.6\n\n\n11\nPascal Siakam\n0.487\n0.774\n0.6\n\n\n12\nPrecious Achiuwa\n0.474\n0.605\n0.5\n\n\n13\nRon Harper Jr.\n0.500\n1.000\n0.8\n\n\n14\nScottie Barnes\n0.473\n0.755\n0.6\n\n\n15\nThaddeus Young\n0.503\n0.663\n0.6\n\n\n16\nWill Barton\n0.430\n0.787\n0.6",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Creating New Columns"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.html#talk-about-it",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.html#talk-about-it",
+    "title": "Creating New Columns",
+    "section": "Talk About It",
+    "text": "Talk About It\n\nWhy might you want to create new columns instead of only using the data that’s already provided?\nWhat are some risks of creating new columns (for example, introducing errors if you calculate incorrectly)?\nHow can rounding or formatting improve the readability of new data?",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Creating New Columns"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.html#lesson-notebook",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.html#lesson-notebook",
+    "title": "Creating New Columns",
+    "section": "Lesson Notebook",
+    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes more examples of adding and formatting new columns.\nOpen the lesson here.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -185,7 +227,49 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02B-filtering.html",
     "title": "Filtering the Data",
     "section": "",
-    "text": "Keep only the rows that matter using boolean masks and readable conditions (e.g., df[\"Distance\"] &gt;= 6, df[\"Player\"].isin([...])). Emphasis is on clear, chainable filters students will reuse in later charts and comparisons.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb.\n\nLesson coming soon!",
+    "text": "In this lesson, we’ll learn how to filter data in a Pandas DataFrame. Filtering lets you focus on what’s important — whether that’s specific seasons, certain statistics, or rows that meet particular conditions.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Filtering the Data"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02B-filtering.html#when-to-filter-data",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02B-filtering.html#when-to-filter-data",
+    "title": "Filtering the Data",
+    "section": "When to Filter Data",
+    "text": "When to Filter Data\nDatasets often contain more information than we need. Filtering allows us to narrow things down, making it easier to see patterns and answer specific questions.\nFor example, we might want to only look at seasons before a certain year, or just the rows where a player’s free throw percentage was above 75%.\n\nStep 1 — Import Libraries and Load Data\nWe’ll use Pandas to load Pascal Siakam’s basketball data from a CSV file into a DataFrame.\n\n\nCode\n# Setup\nimport pandas as pd\n\n# Input: Load Pascal Siakam's data into a DataFrame\nurl = \"https://raw.githubusercontent.com/pbeens/Data-Dunkers/main/Data/Pascal_Siakam.csv\"\ndf = pd.read_csv(url)\n\n# Preview the first few rows\ndf.head()\n\n\n\n\n\n\n\n\n\nPLAYER_ID\nSEASON_ID\nLEAGUE_ID\nTEAM_ID\nTEAM_ABBREVIATION\nPLAYER_AGE\nGP\nGS\nMIN\nFGM\n...\nREB\nAST\nSTL\nBLK\nTOV\nPF\nPTS\nFG2M\nFG2A\nFG2_PCT\n\n\n\n\n0\n1627783\n2016-17\n0\n1610612761\nTOR\n23.0\n55\n38\n859.0\n103\n...\n185\n17\n26\n45\n33\n109\n229\n102\n198\n0.515\n\n\n1\n1627783\n2017-18\n0\n1610612761\nTOR\n24.0\n81\n5\n1679.0\n253\n...\n364\n159\n62\n42\n67\n166\n589\n224\n366\n0.612\n\n\n2\n1627783\n2018-19\n0\n1610612761\nTOR\n25.0\n80\n79\n2548.0\n519\n...\n549\n248\n73\n52\n154\n241\n1354\n440\n731\n0.602\n\n\n3\n1627783\n2019-20\n0\n1610612761\nTOR\n26.0\n60\n60\n2110.0\n500\n...\n439\n207\n61\n53\n148\n170\n1371\n369\n739\n0.499\n\n\n4\n1627783\n2020-21\n0\n1610612761\nTOR\n27.0\n56\n56\n2006.0\n437\n...\n405\n250\n64\n37\n130\n174\n1196\n364\n715\n0.509\n\n\n\n\n5 rows × 30 columns\n\n\n\n\n\nStep 2 — Filter Rows\nWe can filter the DataFrame to only include seasons up to 2022–23.\n\n\nCode\n# Filter to include only seasons up to 2022-23\ndf = df[df[\"SEASON_ID\"] &lt;= \"2022-23\"]\n\n# Display the filtered DataFrame\ndf\n\n\n\n\n\n\n\n\n\nPLAYER_ID\nSEASON_ID\nLEAGUE_ID\nTEAM_ID\nTEAM_ABBREVIATION\nPLAYER_AGE\nGP\nGS\nMIN\nFGM\n...\nREB\nAST\nSTL\nBLK\nTOV\nPF\nPTS\nFG2M\nFG2A\nFG2_PCT\n\n\n\n\n0\n1627783\n2016-17\n0\n1610612761\nTOR\n23.0\n55\n38\n859.0\n103\n...\n185\n17\n26\n45\n33\n109\n229\n102\n198\n0.515\n\n\n1\n1627783\n2017-18\n0\n1610612761\nTOR\n24.0\n81\n5\n1679.0\n253\n...\n364\n159\n62\n42\n67\n166\n589\n224\n366\n0.612\n\n\n2\n1627783\n2018-19\n0\n1610612761\nTOR\n25.0\n80\n79\n2548.0\n519\n...\n549\n248\n73\n52\n154\n241\n1354\n440\n731\n0.602\n\n\n3\n1627783\n2019-20\n0\n1610612761\nTOR\n26.0\n60\n60\n2110.0\n500\n...\n439\n207\n61\n53\n148\n170\n1371\n369\n739\n0.499\n\n\n4\n1627783\n2020-21\n0\n1610612761\nTOR\n27.0\n56\n56\n2006.0\n437\n...\n405\n250\n64\n37\n130\n174\n1196\n364\n715\n0.509\n\n\n5\n1627783\n2021-22\n0\n1610612761\nTOR\n28.0\n68\n68\n2578.0\n596\n...\n580\n360\n85\n42\n181\n225\n1551\n521\n989\n0.527\n\n\n6\n1627783\n2022-23\n0\n1610612761\nTOR\n29.0\n71\n71\n2652.0\n630\n...\n556\n415\n65\n36\n169\n228\n1720\n537\n1026\n0.523\n\n\n\n\n7 rows × 30 columns\n\n\n\nWe can also filter using conditions on specific statistics. For example, rows where Siakam’s free throw percentage (FT_PCT) was above 75%.\n\n\nCode\n# Filter to include rows where FT% &gt; 75\ndf[df[\"FT_PCT\"] &gt; 0.75]\n\n\n\n\n\n\n\n\n\nPLAYER_ID\nSEASON_ID\nLEAGUE_ID\nTEAM_ID\nTEAM_ABBREVIATION\nPLAYER_AGE\nGP\nGS\nMIN\nFGM\n...\nREB\nAST\nSTL\nBLK\nTOV\nPF\nPTS\nFG2M\nFG2A\nFG2_PCT\n\n\n\n\n2\n1627783\n2018-19\n0\n1610612761\nTOR\n25.0\n80\n79\n2548.0\n519\n...\n549\n248\n73\n52\n154\n241\n1354\n440\n731\n0.602\n\n\n3\n1627783\n2019-20\n0\n1610612761\nTOR\n26.0\n60\n60\n2110.0\n500\n...\n439\n207\n61\n53\n148\n170\n1371\n369\n739\n0.499\n\n\n4\n1627783\n2020-21\n0\n1610612761\nTOR\n27.0\n56\n56\n2006.0\n437\n...\n405\n250\n64\n37\n130\n174\n1196\n364\n715\n0.509\n\n\n6\n1627783\n2022-23\n0\n1610612761\nTOR\n29.0\n71\n71\n2652.0\n630\n...\n556\n415\n65\n36\n169\n228\n1720\n537\n1026\n0.523\n\n\n\n\n4 rows × 30 columns\n\n\n\n\n\nStep 3 — Combine Multiple Conditions\nWe can combine filters using & (and) or | (or).\n\n\nCode\n# Filter rows where FT% &gt; 75 and GS == GP (started every game)\ndf[(df[\"FT_PCT\"] &gt; 0.75) & (df[\"GS\"] == df[\"GP\"])]\n\n\n\n\n\n\n\n\n\nPLAYER_ID\nSEASON_ID\nLEAGUE_ID\nTEAM_ID\nTEAM_ABBREVIATION\nPLAYER_AGE\nGP\nGS\nMIN\nFGM\n...\nREB\nAST\nSTL\nBLK\nTOV\nPF\nPTS\nFG2M\nFG2A\nFG2_PCT\n\n\n\n\n3\n1627783\n2019-20\n0\n1610612761\nTOR\n26.0\n60\n60\n2110.0\n500\n...\n439\n207\n61\n53\n148\n170\n1371\n369\n739\n0.499\n\n\n4\n1627783\n2020-21\n0\n1610612761\nTOR\n27.0\n56\n56\n2006.0\n437\n...\n405\n250\n64\n37\n130\n174\n1196\n364\n715\n0.509\n\n\n6\n1627783\n2022-23\n0\n1610612761\nTOR\n29.0\n71\n71\n2652.0\n630\n...\n556\n415\n65\n36\n169\n228\n1720\n537\n1026\n0.523\n\n\n\n\n3 rows × 30 columns\n\n\n\nComparison operators in Python include:\n\n&gt; greater than\n&lt; less than\n== equal to\n!= not equal to\n&gt;= greater than or equal to\n&lt;= less than or equal to\n& and\n| or",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Filtering the Data"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02B-filtering.html#talk-about-it",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02B-filtering.html#talk-about-it",
+    "title": "Filtering the Data",
+    "section": "Talk About It",
+    "text": "Talk About It\n\nWhy is filtering useful when working with a large dataset?\nWhat kinds of questions can you answer by filtering rows?\nHow might combining multiple conditions (&, |) help you refine your analysis further?",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Filtering the Data"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02B-filtering.html#lesson-notebook",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02B-filtering.html#lesson-notebook",
+    "title": "Filtering the Data",
+    "section": "Lesson Notebook",
+    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes more filtering examples and practice activities.\nOpen the lesson here.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -972,7 +1056,7 @@
   {
     "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html",
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html",
-    "title": "Working With Columns in a DataFrame",
+    "title": "Working With Columns",
     "section": "",
     "text": "In this lesson, we’ll learn how to work with columns in a Pandas DataFrame. Columns represent the different variables or measurements in your dataset (like points scored, rebounds, or field goals made).",
     "crumbs": [
@@ -980,13 +1064,13 @@
       "Module 6",
       "Going Further with Coding",
       "Process Data",
-      "Working With Columns in a DataFrame"
+      "Working With Columns"
     ]
   },
   {
     "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html#when-to-work-with-columns",
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html#when-to-work-with-columns",
-    "title": "Working With Columns in a DataFrame",
+    "title": "Working With Columns",
     "section": "When to Work With Columns",
     "text": "When to Work With Columns\nOften we don’t need an entire dataset — we just want to focus on certain variables. Pandas makes it easy to list all available columns, access specific ones, and even select multiple columns at once.\n\nStep 1 — Import Libraries and Load Data\nWe’ll use Pandas to load Pascal Siakam’s basketball data from a CSV file into a DataFrame.\n\n\nCode\n# Setup\nimport pandas as pd\n\n# Input: Load data into a DataFrame\nurl = \"https://github.com/Data-Dunkers/data/raw/refs/heads/main/NBA/Pascal_Siakam.csv\"\ndf = pd.read_csv(url)\n\n# Preview the first few rows\ndf.head()\n\n\n\n\n\n\n\n\n\nPLAYER_ID\nSEASON_ID\nLEAGUE_ID\nTEAM_ID\nTEAM_ABBREVIATION\nPLAYER_AGE\nGP\nGS\nMIN\nFGM\n...\nREB\nAST\nSTL\nBLK\nTOV\nPF\nPTS\nFG2M\nFG2A\nFG2_PCT\n\n\n\n\n0\n1627783\n2016-17\n0\n1610612761\nTOR\n23.0\n55\n38\n859.0\n103\n...\n185\n17\n26\n45\n33\n109\n229\n102\n198\n0.515\n\n\n1\n1627783\n2017-18\n0\n1610612761\nTOR\n24.0\n81\n5\n1679.0\n253\n...\n364\n159\n62\n42\n67\n166\n589\n224\n366\n0.612\n\n\n2\n1627783\n2018-19\n0\n1610612761\nTOR\n25.0\n80\n79\n2548.0\n519\n...\n549\n248\n73\n52\n154\n241\n1354\n440\n731\n0.602\n\n\n3\n1627783\n2019-20\n0\n1610612761\nTOR\n26.0\n60\n60\n2110.0\n500\n...\n439\n207\n61\n53\n148\n170\n1371\n369\n739\n0.499\n\n\n4\n1627783\n2020-21\n0\n1610612761\nTOR\n27.0\n56\n56\n2006.0\n437\n...\n405\n250\n64\n37\n130\n174\n1196\n364\n715\n0.509\n\n\n\n\n5 rows × 30 columns\n\n\n\n\n\nStep 2 — View the Columns\nYou can see which columns are available by using the .columns attribute.\n\n\nCode\n# List all the columns\ndf.columns\n\n\nIndex(['PLAYER_ID', 'SEASON_ID', 'LEAGUE_ID', 'TEAM_ID', 'TEAM_ABBREVIATION',\n       'PLAYER_AGE', 'GP', 'GS', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A',\n       'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL',\n       'BLK', 'TOV', 'PF', 'PTS', 'FG2M', 'FG2A', 'FG2_PCT'],\n      dtype='object')\n\n\nYou can also use a Python for loop to print them one at a time.\n\n\nCode\n# Print each column name\nfor column in df.columns:\n    print(column)\n\n\nPLAYER_ID\nSEASON_ID\nLEAGUE_ID\nTEAM_ID\nTEAM_ABBREVIATION\nPLAYER_AGE\nGP\nGS\nMIN\nFGM\nFGA\nFG_PCT\nFG3M\nFG3A\nFG3_PCT\nFTM\nFTA\nFT_PCT\nOREB\nDREB\nREB\nAST\nSTL\nBLK\nTOV\nPF\nPTS\nFG2M\nFG2A\nFG2_PCT\n\n\n\n\nStep 3 — Select Specific Columns\nOnce you know the column names, you can focus on the ones you want.\n\n\nCode\n# Select a single column\ndf[\"FGM\"]\n\n\n0    103\n1    253\n2    519\n3    500\n4    437\n5    596\n6    630\n7    325\n8    203\n9    528\nName: FGM, dtype: int64\n\n\n\n\nCode\n# Select multiple columns\ndf[[\"FGM\", \"FGA\"]]\n\n\n\n\n\n\n\n\n\nFGM\nFGA\n\n\n\n\n0\n103\n205\n\n\n1\n253\n498\n\n\n2\n519\n945\n\n\n3\n500\n1104\n\n\n4\n437\n961\n\n\n5\n596\n1207\n\n\n6\n630\n1313\n\n\n7\n325\n623\n\n\n8\n203\n370\n\n\n9\n528\n993\n\n\n\n\n\n\n\nThis way you can zoom in on field goals made (FGM) and attempted (FGA) without looking at the rest of the dataset.",
     "crumbs": [
@@ -994,13 +1078,13 @@
       "Module 6",
       "Going Further with Coding",
       "Process Data",
-      "Working With Columns in a DataFrame"
+      "Working With Columns"
     ]
   },
   {
     "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html#talk-about-it",
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html#talk-about-it",
-    "title": "Working With Columns in a DataFrame",
+    "title": "Working With Columns",
     "section": "Talk About It",
     "text": "Talk About It\n\nWhy might you want to look at only a few columns instead of the entire dataset?\nHow does being able to list all the columns help you as a data analyst?\nIf a dataset has dozens of columns, how might you decide which ones are most important for your analysis?",
     "crumbs": [
@@ -1008,13 +1092,13 @@
       "Module 6",
       "Going Further with Coding",
       "Process Data",
-      "Working With Columns in a DataFrame"
+      "Working With Columns"
     ]
   },
   {
     "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html#lesson-notebook",
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html#lesson-notebook",
-    "title": "Working With Columns in a DataFrame",
+    "title": "Working With Columns",
     "section": "Lesson Notebook",
     "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes exercises where you’ll explore columns, filter for specific stats, and practice selecting multiple fields.\nOpen the lesson here.",
     "crumbs": [
@@ -1022,7 +1106,7 @@
       "Module 6",
       "Going Further with Coding",
       "Process Data",
-      "Working With Columns in a DataFrame"
+      "Working With Columns"
     ]
   },
   {
@@ -1030,7 +1114,49 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02C-sorting.html",
     "title": "Sorting the Data",
     "section": "",
-    "text": "Surface patterns by ordering rows with df.sort_values(...): sort by one column, then by multiple keys (e.g., [\"Player\",\"Distance\"]), and control ascending/descending for consistent, reproducible tables.\nCorresponds with the lesson at: https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb.\n\nLesson coming soon!",
+    "text": "In this lesson, we’ll learn how to sort data in a Pandas DataFrame. Sorting helps us organize information, making it easier to compare values and spot patterns.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Sorting the Data"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02C-sorting.html#when-to-sort-data",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02C-sorting.html#when-to-sort-data",
+    "title": "Sorting the Data",
+    "section": "When to Sort Data",
+    "text": "When to Sort Data\nSorting is useful when we want to find the highest or lowest values in a dataset or to arrange rows in a meaningful order. For example, we could sort by points scored to see a player’s best seasons first.\n\nStep 1 — Import Libraries and Load Data\nWe’ll use Pandas to load Pascal Siakam’s basketball data from a CSV file into a DataFrame, then narrow it down to a smaller set of essential columns so it’s easier to work with.\n\n\nCode\n# Setup\nimport pandas as pd\n\n# Input: Load Pascal Siakam's data into a DataFrame\nurl = \"https://raw.githubusercontent.com/pbeens/Data-Dunkers/main/Data/Pascal_Siakam.csv\"\ndf = pd.read_csv(url)\n\n# Reduce the DataFrame to essential columns\ncolumns = [\"SEASON_ID\", \"TEAM_ABBREVIATION\", \"GP\", \"GS\", \"MIN\", \"FGM\", \"FGA\", \"STL\", \"BLK\"]\ndf_small = df[columns]\n\n# Preview the first few rows\ndf_small.head()\n\n\n\n\n\n\n\n\n\nSEASON_ID\nTEAM_ABBREVIATION\nGP\nGS\nMIN\nFGM\nFGA\nSTL\nBLK\n\n\n\n\n0\n2016-17\nTOR\n55\n38\n859.0\n103\n205\n26\n45\n\n\n1\n2017-18\nTOR\n81\n5\n1679.0\n253\n498\n62\n42\n\n\n2\n2018-19\nTOR\n80\n79\n2548.0\n519\n945\n73\n52\n\n\n3\n2019-20\nTOR\n60\n60\n2110.0\n500\n1104\n61\n53\n\n\n4\n2020-21\nTOR\n56\n56\n2006.0\n437\n961\n64\n37\n\n\n\n\n\n\n\n\n\nStep 2 — Sort by a Single Column\nWe can sort the DataFrame by steals (STL). By default, sorting is ascending (lowest to highest).\n\n\nCode\n# Sort by steals in ascending order\ndf_small.sort_values(\"STL\")\n\n\n\n\n\n\n\n\n\nSEASON_ID\nTEAM_ABBREVIATION\nGP\nGS\nMIN\nFGM\nFGA\nSTL\nBLK\n\n\n\n\n8\n2023-24\nIND\n24\n24\n786.0\n203\n370\n17\n8\n\n\n0\n2016-17\nTOR\n55\n38\n859.0\n103\n205\n26\n45\n\n\n7\n2023-24\nTOR\n39\n39\n1354.0\n325\n623\n32\n10\n\n\n9\n2023-24\nTOT\n63\n63\n2140.0\n528\n993\n49\n18\n\n\n3\n2019-20\nTOR\n60\n60\n2110.0\n500\n1104\n61\n53\n\n\n1\n2017-18\nTOR\n81\n5\n1679.0\n253\n498\n62\n42\n\n\n4\n2020-21\nTOR\n56\n56\n2006.0\n437\n961\n64\n37\n\n\n6\n2022-23\nTOR\n71\n71\n2652.0\n630\n1313\n65\n36\n\n\n2\n2018-19\nTOR\n80\n79\n2548.0\n519\n945\n73\n52\n\n\n5\n2021-22\nTOR\n68\n68\n2578.0\n596\n1207\n85\n42\n\n\n\n\n\n\n\nTo sort in descending order (highest to lowest), add ascending=False.\n\n\nCode\n# Sort by steals in descending order\ndf_small.sort_values(\"STL\", ascending=False)\n\n\n\n\n\n\n\n\n\nSEASON_ID\nTEAM_ABBREVIATION\nGP\nGS\nMIN\nFGM\nFGA\nSTL\nBLK\n\n\n\n\n5\n2021-22\nTOR\n68\n68\n2578.0\n596\n1207\n85\n42\n\n\n2\n2018-19\nTOR\n80\n79\n2548.0\n519\n945\n73\n52\n\n\n6\n2022-23\nTOR\n71\n71\n2652.0\n630\n1313\n65\n36\n\n\n4\n2020-21\nTOR\n56\n56\n2006.0\n437\n961\n64\n37\n\n\n1\n2017-18\nTOR\n81\n5\n1679.0\n253\n498\n62\n42\n\n\n3\n2019-20\nTOR\n60\n60\n2110.0\n500\n1104\n61\n53\n\n\n9\n2023-24\nTOT\n63\n63\n2140.0\n528\n993\n49\n18\n\n\n7\n2023-24\nTOR\n39\n39\n1354.0\n325\n623\n32\n10\n\n\n0\n2016-17\nTOR\n55\n38\n859.0\n103\n205\n26\n45\n\n\n8\n2023-24\nIND\n24\n24\n786.0\n203\n370\n17\n8\n\n\n\n\n\n\n\n\n\nStep 3 — Sort by Multiple Columns\nWe can also sort by more than one column. For example, first by blocks (BLK) and then by steals (STL).\n\n\nCode\n# Sort by blocks first, then steals\ndf_small.sort_values([\"BLK\", \"STL\"])\n\n\n\n\n\n\n\n\n\nSEASON_ID\nTEAM_ABBREVIATION\nGP\nGS\nMIN\nFGM\nFGA\nSTL\nBLK\n\n\n\n\n8\n2023-24\nIND\n24\n24\n786.0\n203\n370\n17\n8\n\n\n7\n2023-24\nTOR\n39\n39\n1354.0\n325\n623\n32\n10\n\n\n9\n2023-24\nTOT\n63\n63\n2140.0\n528\n993\n49\n18\n\n\n6\n2022-23\nTOR\n71\n71\n2652.0\n630\n1313\n65\n36\n\n\n4\n2020-21\nTOR\n56\n56\n2006.0\n437\n961\n64\n37\n\n\n1\n2017-18\nTOR\n81\n5\n1679.0\n253\n498\n62\n42\n\n\n5\n2021-22\nTOR\n68\n68\n2578.0\n596\n1207\n85\n42\n\n\n0\n2016-17\nTOR\n55\n38\n859.0\n103\n205\n26\n45\n\n\n2\n2018-19\nTOR\n80\n79\n2548.0\n519\n945\n73\n52\n\n\n3\n2019-20\nTOR\n60\n60\n2110.0\n500\n1104\n61\n53",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Sorting the Data"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02C-sorting.html#talk-about-it",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02C-sorting.html#talk-about-it",
+    "title": "Sorting the Data",
+    "section": "Talk About It",
+    "text": "Talk About It\n\nWhy is sorting a useful tool in data analysis?\nWhen would you want ascending order, and when would descending order make more sense?\nHow could sorting by multiple columns give you a deeper understanding of the data?",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Process Data",
+      "Sorting the Data"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02C-sorting.html#lesson-notebook",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02C-sorting.html#lesson-notebook",
+    "title": "Sorting the Data",
+    "section": "Lesson Notebook",
+    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes more sorting examples and activities.\nOpen the lesson here.",
     "crumbs": [
       "Home",
       "Module 6",

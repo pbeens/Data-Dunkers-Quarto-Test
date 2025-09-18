@@ -20,10 +20,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -68,6 +103,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -359,7 +397,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Working With Columns in a DataFrame</span></a>
+ <span class="menu-text">Working With Columns</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -444,8 +482,16 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#when-to-create-new-columns" id="toc-when-to-create-new-columns" class="nav-link active" data-scroll-target="#when-to-create-new-columns">When to Create New Columns</a></li>
+  <li><a href="#talk-about-it" id="toc-talk-about-it" class="nav-link" data-scroll-target="#talk-about-it">Talk About It</a></li>
+  <li><a href="#lesson-notebook" id="toc-lesson-notebook" class="nav-link" data-scroll-target="#lesson-notebook">Lesson Notebook</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -469,12 +515,415 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Create <strong>derived fields</strong> with vectorized formulas and simple conditions—e.g., shooting <strong>percentage</strong> from Makes/Attempts, and <strong>distance buckets</strong> (Short/Medium/Long). These metrics power richer comparisons and will feed directly into visualizations.</p>
-<p>Corresponds with the lesson at: <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb">https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb</a>.</p>
-<hr>
-<p><strong>Lesson coming soon!</strong></p>
+<p>In this lesson, we’ll learn how to create new columns in a Pandas DataFrame. New columns can be made by combining or transforming existing columns to generate more meaningful statistics.</p>
+<section id="when-to-create-new-columns" class="level2">
+<h2 class="anchored" data-anchor-id="when-to-create-new-columns">When to Create New Columns</h2>
+<p>Sometimes the dataset doesn’t include the exact information you need. By performing calculations on existing columns, you can create new ones — such as averages, totals, or percentages — to reveal additional insights.</p>
+<section id="step-1-import-libraries-and-load-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-import-libraries-and-load-data">Step 1 — Import Libraries and Load Data</h3>
+<p>We’ll use Pandas to load Raptors team data from a CSV file into a DataFrame.</p>
+<div id="e0331b08" class="cell" data-execution_count="1">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Input: Load Raptors data into a DataFrame</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://github.com/Data-Dunkers/data/raw/refs/heads/main/NBA/raptors-2023.csv"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Reduce the DataFrame to essential columns</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>columns <span class="op">=</span> [<span class="st">"Player"</span>, <span class="st">"G"</span>, <span class="st">"MP"</span>, <span class="st">"FG%"</span>, <span class="st">"FT%"</span>]</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>df_small <span class="op">=</span> df[columns]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>df_small.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div>
 
 
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Player</th>
+<th data-quarto-table-cell-role="th">G</th>
+<th data-quarto-table-cell-role="th">MP</th>
+<th data-quarto-table-cell-role="th">FG%</th>
+<th data-quarto-table-cell-role="th">FT%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Christian Koloko</td>
+<td>58.0</td>
+<td>13.8</td>
+<td>0.480</td>
+<td>0.627</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Chris Boucher</td>
+<td>307.0</td>
+<td>18.4</td>
+<td>0.486</td>
+<td>0.780</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Dalano Banton</td>
+<td>95.0</td>
+<td>10.3</td>
+<td>0.416</td>
+<td>0.632</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Fred VanVleet</td>
+<td>417.0</td>
+<td>29.7</td>
+<td>0.402</td>
+<td>0.869</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>Gary Trent Jr.</td>
+<td>270.0</td>
+<td>28.9</td>
+<td>0.421</td>
+<td>0.827</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-create-a-new-column" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-create-a-new-column">Step 2 — Create a New Column</h3>
+<p>We can create a new column called <code>Shot Average (%)</code> by averaging the Field Goal Percentage (<code>FG%</code>) and Free Throw Percentage (<code>FT%</code>).</p>
+<div id="8d7d8831" class="cell" data-execution_count="2">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new column by averaging FG% and FT%</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df_small[<span class="st">"Shot Average (%)"</span>] <span class="op">=</span> (df[<span class="st">"FG%"</span>] <span class="op">+</span> df[<span class="st">"FT%"</span>]) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Display selected columns</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df_small[[<span class="st">"Player"</span>, <span class="st">"FG%"</span>, <span class="st">"FT%"</span>, <span class="st">"Shot Average (%)"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Player</th>
+<th data-quarto-table-cell-role="th">FG%</th>
+<th data-quarto-table-cell-role="th">FT%</th>
+<th data-quarto-table-cell-role="th">Shot Average (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Christian Koloko</td>
+<td>0.480</td>
+<td>0.627</td>
+<td>0.5535</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Chris Boucher</td>
+<td>0.486</td>
+<td>0.780</td>
+<td>0.6330</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Dalano Banton</td>
+<td>0.416</td>
+<td>0.632</td>
+<td>0.5240</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Fred VanVleet</td>
+<td>0.402</td>
+<td>0.869</td>
+<td>0.6355</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>Gary Trent Jr.</td>
+<td>0.421</td>
+<td>0.827</td>
+<td>0.6240</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>Jakob Poeltl</td>
+<td>0.628</td>
+<td>0.536</td>
+<td>0.5820</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>Jeff Dowtin</td>
+<td>0.398</td>
+<td>0.727</td>
+<td>0.5625</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>Joe Wieskamp</td>
+<td>0.329</td>
+<td>0.538</td>
+<td>0.4335</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">8</th>
+<td>Malachi Flynn</td>
+<td>0.374</td>
+<td>0.752</td>
+<td>0.5630</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">9</th>
+<td>OG Anunoby</td>
+<td>0.471</td>
+<td>0.744</td>
+<td>0.6075</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">10</th>
+<td>Otto Porter Jr.</td>
+<td>0.478</td>
+<td>0.797</td>
+<td>0.6375</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">11</th>
+<td>Pascal Siakam</td>
+<td>0.487</td>
+<td>0.774</td>
+<td>0.6305</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">12</th>
+<td>Precious Achiuwa</td>
+<td>0.474</td>
+<td>0.605</td>
+<td>0.5395</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">13</th>
+<td>Ron Harper Jr.</td>
+<td>0.500</td>
+<td>1.000</td>
+<td>0.7500</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">14</th>
+<td>Scottie Barnes</td>
+<td>0.473</td>
+<td>0.755</td>
+<td>0.6140</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">15</th>
+<td>Thaddeus Young</td>
+<td>0.503</td>
+<td>0.663</td>
+<td>0.5830</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">16</th>
+<td>Will Barton</td>
+<td>0.430</td>
+<td>0.787</td>
+<td>0.6085</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="step-3-round-the-new-column" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-round-the-new-column">Step 3 — Round the New Column</h3>
+<p>To make the new column easier to read, we can round it to one decimal place.</p>
+<div id="b5ea6f30" class="cell" data-execution_count="3">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Round the Shot Average column to one decimal place</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df_small[<span class="st">"Shot Average (%)"</span>] <span class="op">=</span> df_small[<span class="st">"Shot Average (%)"</span>].<span class="bu">round</span>(<span class="dv">1</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Display selected columns</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>df_small[[<span class="st">"Player"</span>, <span class="st">"FG%"</span>, <span class="st">"FT%"</span>, <span class="st">"Shot Average (%)"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Player</th>
+<th data-quarto-table-cell-role="th">FG%</th>
+<th data-quarto-table-cell-role="th">FT%</th>
+<th data-quarto-table-cell-role="th">Shot Average (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Christian Koloko</td>
+<td>0.480</td>
+<td>0.627</td>
+<td>0.6</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Chris Boucher</td>
+<td>0.486</td>
+<td>0.780</td>
+<td>0.6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Dalano Banton</td>
+<td>0.416</td>
+<td>0.632</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Fred VanVleet</td>
+<td>0.402</td>
+<td>0.869</td>
+<td>0.6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>Gary Trent Jr.</td>
+<td>0.421</td>
+<td>0.827</td>
+<td>0.6</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>Jakob Poeltl</td>
+<td>0.628</td>
+<td>0.536</td>
+<td>0.6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>Jeff Dowtin</td>
+<td>0.398</td>
+<td>0.727</td>
+<td>0.6</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>Joe Wieskamp</td>
+<td>0.329</td>
+<td>0.538</td>
+<td>0.4</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">8</th>
+<td>Malachi Flynn</td>
+<td>0.374</td>
+<td>0.752</td>
+<td>0.6</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">9</th>
+<td>OG Anunoby</td>
+<td>0.471</td>
+<td>0.744</td>
+<td>0.6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">10</th>
+<td>Otto Porter Jr.</td>
+<td>0.478</td>
+<td>0.797</td>
+<td>0.6</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">11</th>
+<td>Pascal Siakam</td>
+<td>0.487</td>
+<td>0.774</td>
+<td>0.6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">12</th>
+<td>Precious Achiuwa</td>
+<td>0.474</td>
+<td>0.605</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">13</th>
+<td>Ron Harper Jr.</td>
+<td>0.500</td>
+<td>1.000</td>
+<td>0.8</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">14</th>
+<td>Scottie Barnes</td>
+<td>0.473</td>
+<td>0.755</td>
+<td>0.6</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">15</th>
+<td>Thaddeus Young</td>
+<td>0.503</td>
+<td>0.663</td>
+<td>0.6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">16</th>
+<td>Will Barton</td>
+<td>0.430</td>
+<td>0.787</td>
+<td>0.6</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="talk-about-it" class="level2">
+<h2 class="anchored" data-anchor-id="talk-about-it">Talk About It</h2>
+<ul>
+<li>Why might you want to create new columns instead of only using the data that’s already provided?</li>
+<li>What are some risks of creating new columns (for example, introducing errors if you calculate incorrectly)?</li>
+<li>How can rounding or formatting improve the readability of new data?</li>
+</ul>
+</section>
+<section id="lesson-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-notebook">Lesson Notebook</h2>
+<p>Now it’s your turn to practice: The notebook version of this lesson includes more examples of adding and formatting new columns.</p>
+<p>Open the lesson <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb">here</a>.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

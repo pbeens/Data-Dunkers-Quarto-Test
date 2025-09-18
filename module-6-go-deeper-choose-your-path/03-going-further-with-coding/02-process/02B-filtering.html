@@ -20,10 +20,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -68,6 +103,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -359,7 +397,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Working With Columns in a DataFrame</span></a>
+ <span class="menu-text">Working With Columns</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -444,8 +482,16 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#when-to-filter-data" id="toc-when-to-filter-data" class="nav-link active" data-scroll-target="#when-to-filter-data">When to Filter Data</a></li>
+  <li><a href="#talk-about-it" id="toc-talk-about-it" class="nav-link" data-scroll-target="#talk-about-it">Talk About It</a></li>
+  <li><a href="#lesson-notebook" id="toc-lesson-notebook" class="nav-link" data-scroll-target="#lesson-notebook">Lesson Notebook</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -469,12 +515,697 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Keep only the rows that matter using <strong>boolean masks</strong> and readable conditions (e.g., <code>df["Distance"] &gt;= 6</code>, <code>df["Player"].isin([...])</code>). Emphasis is on clear, chainable filters students will reuse in later charts and comparisons.</p>
-<p>Corresponds with the lesson at: <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb">https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb</a>.</p>
-<hr>
-<p><strong>Lesson coming soon!</strong></p>
+<p>In this lesson, we’ll learn how to filter data in a Pandas DataFrame. Filtering lets you focus on what’s important — whether that’s specific seasons, certain statistics, or rows that meet particular conditions.</p>
+<section id="when-to-filter-data" class="level2">
+<h2 class="anchored" data-anchor-id="when-to-filter-data">When to Filter Data</h2>
+<p>Datasets often contain more information than we need. Filtering allows us to narrow things down, making it easier to see patterns and answer specific questions.</p>
+<p>For example, we might want to only look at seasons before a certain year, or just the rows where a player’s free throw percentage was above 75%.</p>
+<section id="step-1-import-libraries-and-load-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-import-libraries-and-load-data">Step 1 — Import Libraries and Load Data</h3>
+<p>We’ll use Pandas to load Pascal Siakam’s basketball data from a CSV file into a DataFrame.</p>
+<div id="eafa59ed" class="cell" data-execution_count="1">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Input: Load Pascal Siakam's data into a DataFrame</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/pbeens/Data-Dunkers/main/Data/Pascal_Siakam.csv"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview the first few rows</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div>
 
 
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">PLAYER_ID</th>
+<th data-quarto-table-cell-role="th">SEASON_ID</th>
+<th data-quarto-table-cell-role="th">LEAGUE_ID</th>
+<th data-quarto-table-cell-role="th">TEAM_ID</th>
+<th data-quarto-table-cell-role="th">TEAM_ABBREVIATION</th>
+<th data-quarto-table-cell-role="th">PLAYER_AGE</th>
+<th data-quarto-table-cell-role="th">GP</th>
+<th data-quarto-table-cell-role="th">GS</th>
+<th data-quarto-table-cell-role="th">MIN</th>
+<th data-quarto-table-cell-role="th">FGM</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">REB</th>
+<th data-quarto-table-cell-role="th">AST</th>
+<th data-quarto-table-cell-role="th">STL</th>
+<th data-quarto-table-cell-role="th">BLK</th>
+<th data-quarto-table-cell-role="th">TOV</th>
+<th data-quarto-table-cell-role="th">PF</th>
+<th data-quarto-table-cell-role="th">PTS</th>
+<th data-quarto-table-cell-role="th">FG2M</th>
+<th data-quarto-table-cell-role="th">FG2A</th>
+<th data-quarto-table-cell-role="th">FG2_PCT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>1627783</td>
+<td>2016-17</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>23.0</td>
+<td>55</td>
+<td>38</td>
+<td>859.0</td>
+<td>103</td>
+<td>...</td>
+<td>185</td>
+<td>17</td>
+<td>26</td>
+<td>45</td>
+<td>33</td>
+<td>109</td>
+<td>229</td>
+<td>102</td>
+<td>198</td>
+<td>0.515</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>1627783</td>
+<td>2017-18</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>24.0</td>
+<td>81</td>
+<td>5</td>
+<td>1679.0</td>
+<td>253</td>
+<td>...</td>
+<td>364</td>
+<td>159</td>
+<td>62</td>
+<td>42</td>
+<td>67</td>
+<td>166</td>
+<td>589</td>
+<td>224</td>
+<td>366</td>
+<td>0.612</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>1627783</td>
+<td>2018-19</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>25.0</td>
+<td>80</td>
+<td>79</td>
+<td>2548.0</td>
+<td>519</td>
+<td>...</td>
+<td>549</td>
+<td>248</td>
+<td>73</td>
+<td>52</td>
+<td>154</td>
+<td>241</td>
+<td>1354</td>
+<td>440</td>
+<td>731</td>
+<td>0.602</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>1627783</td>
+<td>2019-20</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>26.0</td>
+<td>60</td>
+<td>60</td>
+<td>2110.0</td>
+<td>500</td>
+<td>...</td>
+<td>439</td>
+<td>207</td>
+<td>61</td>
+<td>53</td>
+<td>148</td>
+<td>170</td>
+<td>1371</td>
+<td>369</td>
+<td>739</td>
+<td>0.499</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>1627783</td>
+<td>2020-21</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>27.0</td>
+<td>56</td>
+<td>56</td>
+<td>2006.0</td>
+<td>437</td>
+<td>...</td>
+<td>405</td>
+<td>250</td>
+<td>64</td>
+<td>37</td>
+<td>130</td>
+<td>174</td>
+<td>1196</td>
+<td>364</td>
+<td>715</td>
+<td>0.509</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 30 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-filter-rows" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-filter-rows">Step 2 — Filter Rows</h3>
+<p>We can filter the DataFrame to only include seasons up to 2022–23.</p>
+<div id="fe3cbbf6" class="cell" data-execution_count="2">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter to include only seasons up to 2022-23</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">"SEASON_ID"</span>] <span class="op">&lt;=</span> <span class="st">"2022-23"</span>]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the filtered DataFrame</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">PLAYER_ID</th>
+<th data-quarto-table-cell-role="th">SEASON_ID</th>
+<th data-quarto-table-cell-role="th">LEAGUE_ID</th>
+<th data-quarto-table-cell-role="th">TEAM_ID</th>
+<th data-quarto-table-cell-role="th">TEAM_ABBREVIATION</th>
+<th data-quarto-table-cell-role="th">PLAYER_AGE</th>
+<th data-quarto-table-cell-role="th">GP</th>
+<th data-quarto-table-cell-role="th">GS</th>
+<th data-quarto-table-cell-role="th">MIN</th>
+<th data-quarto-table-cell-role="th">FGM</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">REB</th>
+<th data-quarto-table-cell-role="th">AST</th>
+<th data-quarto-table-cell-role="th">STL</th>
+<th data-quarto-table-cell-role="th">BLK</th>
+<th data-quarto-table-cell-role="th">TOV</th>
+<th data-quarto-table-cell-role="th">PF</th>
+<th data-quarto-table-cell-role="th">PTS</th>
+<th data-quarto-table-cell-role="th">FG2M</th>
+<th data-quarto-table-cell-role="th">FG2A</th>
+<th data-quarto-table-cell-role="th">FG2_PCT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>1627783</td>
+<td>2016-17</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>23.0</td>
+<td>55</td>
+<td>38</td>
+<td>859.0</td>
+<td>103</td>
+<td>...</td>
+<td>185</td>
+<td>17</td>
+<td>26</td>
+<td>45</td>
+<td>33</td>
+<td>109</td>
+<td>229</td>
+<td>102</td>
+<td>198</td>
+<td>0.515</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>1627783</td>
+<td>2017-18</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>24.0</td>
+<td>81</td>
+<td>5</td>
+<td>1679.0</td>
+<td>253</td>
+<td>...</td>
+<td>364</td>
+<td>159</td>
+<td>62</td>
+<td>42</td>
+<td>67</td>
+<td>166</td>
+<td>589</td>
+<td>224</td>
+<td>366</td>
+<td>0.612</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>1627783</td>
+<td>2018-19</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>25.0</td>
+<td>80</td>
+<td>79</td>
+<td>2548.0</td>
+<td>519</td>
+<td>...</td>
+<td>549</td>
+<td>248</td>
+<td>73</td>
+<td>52</td>
+<td>154</td>
+<td>241</td>
+<td>1354</td>
+<td>440</td>
+<td>731</td>
+<td>0.602</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>1627783</td>
+<td>2019-20</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>26.0</td>
+<td>60</td>
+<td>60</td>
+<td>2110.0</td>
+<td>500</td>
+<td>...</td>
+<td>439</td>
+<td>207</td>
+<td>61</td>
+<td>53</td>
+<td>148</td>
+<td>170</td>
+<td>1371</td>
+<td>369</td>
+<td>739</td>
+<td>0.499</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>1627783</td>
+<td>2020-21</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>27.0</td>
+<td>56</td>
+<td>56</td>
+<td>2006.0</td>
+<td>437</td>
+<td>...</td>
+<td>405</td>
+<td>250</td>
+<td>64</td>
+<td>37</td>
+<td>130</td>
+<td>174</td>
+<td>1196</td>
+<td>364</td>
+<td>715</td>
+<td>0.509</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>1627783</td>
+<td>2021-22</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>28.0</td>
+<td>68</td>
+<td>68</td>
+<td>2578.0</td>
+<td>596</td>
+<td>...</td>
+<td>580</td>
+<td>360</td>
+<td>85</td>
+<td>42</td>
+<td>181</td>
+<td>225</td>
+<td>1551</td>
+<td>521</td>
+<td>989</td>
+<td>0.527</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>1627783</td>
+<td>2022-23</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>29.0</td>
+<td>71</td>
+<td>71</td>
+<td>2652.0</td>
+<td>630</td>
+<td>...</td>
+<td>556</td>
+<td>415</td>
+<td>65</td>
+<td>36</td>
+<td>169</td>
+<td>228</td>
+<td>1720</td>
+<td>537</td>
+<td>1026</td>
+<td>0.523</td>
+</tr>
+</tbody>
+</table>
+
+<p>7 rows × 30 columns</p>
+</div>
+</div>
+</div>
+<p>We can also filter using conditions on specific statistics. For example, rows where Siakam’s free throw percentage (<code>FT_PCT</code>) was above 75%.</p>
+<div id="a1726ca7" class="cell" data-execution_count="3">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter to include rows where FT% &gt; 75</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df[df[<span class="st">"FT_PCT"</span>] <span class="op">&gt;</span> <span class="fl">0.75</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">PLAYER_ID</th>
+<th data-quarto-table-cell-role="th">SEASON_ID</th>
+<th data-quarto-table-cell-role="th">LEAGUE_ID</th>
+<th data-quarto-table-cell-role="th">TEAM_ID</th>
+<th data-quarto-table-cell-role="th">TEAM_ABBREVIATION</th>
+<th data-quarto-table-cell-role="th">PLAYER_AGE</th>
+<th data-quarto-table-cell-role="th">GP</th>
+<th data-quarto-table-cell-role="th">GS</th>
+<th data-quarto-table-cell-role="th">MIN</th>
+<th data-quarto-table-cell-role="th">FGM</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">REB</th>
+<th data-quarto-table-cell-role="th">AST</th>
+<th data-quarto-table-cell-role="th">STL</th>
+<th data-quarto-table-cell-role="th">BLK</th>
+<th data-quarto-table-cell-role="th">TOV</th>
+<th data-quarto-table-cell-role="th">PF</th>
+<th data-quarto-table-cell-role="th">PTS</th>
+<th data-quarto-table-cell-role="th">FG2M</th>
+<th data-quarto-table-cell-role="th">FG2A</th>
+<th data-quarto-table-cell-role="th">FG2_PCT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>1627783</td>
+<td>2018-19</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>25.0</td>
+<td>80</td>
+<td>79</td>
+<td>2548.0</td>
+<td>519</td>
+<td>...</td>
+<td>549</td>
+<td>248</td>
+<td>73</td>
+<td>52</td>
+<td>154</td>
+<td>241</td>
+<td>1354</td>
+<td>440</td>
+<td>731</td>
+<td>0.602</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>1627783</td>
+<td>2019-20</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>26.0</td>
+<td>60</td>
+<td>60</td>
+<td>2110.0</td>
+<td>500</td>
+<td>...</td>
+<td>439</td>
+<td>207</td>
+<td>61</td>
+<td>53</td>
+<td>148</td>
+<td>170</td>
+<td>1371</td>
+<td>369</td>
+<td>739</td>
+<td>0.499</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>1627783</td>
+<td>2020-21</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>27.0</td>
+<td>56</td>
+<td>56</td>
+<td>2006.0</td>
+<td>437</td>
+<td>...</td>
+<td>405</td>
+<td>250</td>
+<td>64</td>
+<td>37</td>
+<td>130</td>
+<td>174</td>
+<td>1196</td>
+<td>364</td>
+<td>715</td>
+<td>0.509</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">6</th>
+<td>1627783</td>
+<td>2022-23</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>29.0</td>
+<td>71</td>
+<td>71</td>
+<td>2652.0</td>
+<td>630</td>
+<td>...</td>
+<td>556</td>
+<td>415</td>
+<td>65</td>
+<td>36</td>
+<td>169</td>
+<td>228</td>
+<td>1720</td>
+<td>537</td>
+<td>1026</td>
+<td>0.523</td>
+</tr>
+</tbody>
+</table>
+
+<p>4 rows × 30 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="step-3-combine-multiple-conditions" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-combine-multiple-conditions">Step 3 — Combine Multiple Conditions</h3>
+<p>We can combine filters using <code>&amp;</code> (and) or <code>|</code> (or).</p>
+<div id="9e28b69f" class="cell" data-execution_count="4">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter rows where FT% &gt; 75 and GS == GP (started every game)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df[(df[<span class="st">"FT_PCT"</span>] <span class="op">&gt;</span> <span class="fl">0.75</span>) <span class="op">&amp;</span> (df[<span class="st">"GS"</span>] <span class="op">==</span> df[<span class="st">"GP"</span>])]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">PLAYER_ID</th>
+<th data-quarto-table-cell-role="th">SEASON_ID</th>
+<th data-quarto-table-cell-role="th">LEAGUE_ID</th>
+<th data-quarto-table-cell-role="th">TEAM_ID</th>
+<th data-quarto-table-cell-role="th">TEAM_ABBREVIATION</th>
+<th data-quarto-table-cell-role="th">PLAYER_AGE</th>
+<th data-quarto-table-cell-role="th">GP</th>
+<th data-quarto-table-cell-role="th">GS</th>
+<th data-quarto-table-cell-role="th">MIN</th>
+<th data-quarto-table-cell-role="th">FGM</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">REB</th>
+<th data-quarto-table-cell-role="th">AST</th>
+<th data-quarto-table-cell-role="th">STL</th>
+<th data-quarto-table-cell-role="th">BLK</th>
+<th data-quarto-table-cell-role="th">TOV</th>
+<th data-quarto-table-cell-role="th">PF</th>
+<th data-quarto-table-cell-role="th">PTS</th>
+<th data-quarto-table-cell-role="th">FG2M</th>
+<th data-quarto-table-cell-role="th">FG2A</th>
+<th data-quarto-table-cell-role="th">FG2_PCT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">3</th>
+<td>1627783</td>
+<td>2019-20</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>26.0</td>
+<td>60</td>
+<td>60</td>
+<td>2110.0</td>
+<td>500</td>
+<td>...</td>
+<td>439</td>
+<td>207</td>
+<td>61</td>
+<td>53</td>
+<td>148</td>
+<td>170</td>
+<td>1371</td>
+<td>369</td>
+<td>739</td>
+<td>0.499</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">4</th>
+<td>1627783</td>
+<td>2020-21</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>27.0</td>
+<td>56</td>
+<td>56</td>
+<td>2006.0</td>
+<td>437</td>
+<td>...</td>
+<td>405</td>
+<td>250</td>
+<td>64</td>
+<td>37</td>
+<td>130</td>
+<td>174</td>
+<td>1196</td>
+<td>364</td>
+<td>715</td>
+<td>0.509</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>1627783</td>
+<td>2022-23</td>
+<td>0</td>
+<td>1610612761</td>
+<td>TOR</td>
+<td>29.0</td>
+<td>71</td>
+<td>71</td>
+<td>2652.0</td>
+<td>630</td>
+<td>...</td>
+<td>556</td>
+<td>415</td>
+<td>65</td>
+<td>36</td>
+<td>169</td>
+<td>228</td>
+<td>1720</td>
+<td>537</td>
+<td>1026</td>
+<td>0.523</td>
+</tr>
+</tbody>
+</table>
+
+<p>3 rows × 30 columns</p>
+</div>
+</div>
+</div>
+<p>Comparison operators in Python include:</p>
+<ul>
+<li><code>&gt;</code> greater than</li>
+<li><code>&lt;</code> less than</li>
+<li><code>==</code> equal to</li>
+<li><code>!=</code> not equal to</li>
+<li><code>&gt;=</code> greater than or equal to</li>
+<li><code>&lt;=</code> less than or equal to</li>
+<li><code>&amp;</code> and</li>
+<li><code>|</code> or</li>
+</ul>
+</section>
+</section>
+<section id="talk-about-it" class="level2">
+<h2 class="anchored" data-anchor-id="talk-about-it">Talk About It</h2>
+<ul>
+<li>Why is filtering useful when working with a large dataset?</li>
+<li>What kinds of questions can you answer by filtering rows?</li>
+<li>How might combining multiple conditions (<code>&amp;</code>, <code>|</code>) help you refine your analysis further?</li>
+</ul>
+</section>
+<section id="lesson-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-notebook">Lesson Notebook</h2>
+<p>Now it’s your turn to practice: The notebook version of this lesson includes more filtering examples and practice activities.</p>
+<p>Open the lesson <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb">here</a>.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
