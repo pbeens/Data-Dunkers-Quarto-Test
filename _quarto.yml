@@ -2,8 +2,8 @@ project:
   type: website
   render:
     - "*.qmd"
-    - "!module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/000-PROMPT.md"
-    - "!module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/000-TEMPLATE.qmd"
+    - "!module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/000-PROMPT.md"
+    - "!module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/000-TEMPLATE.qmd"
 format:
   html:
     theme: default        # (or default, darkly, etc.)
