@@ -20,10 +20,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -68,6 +103,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -444,8 +482,16 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#when-to-use-statistics" id="toc-when-to-use-statistics" class="nav-link active" data-scroll-target="#when-to-use-statistics">When to Use Statistics</a></li>
+  <li><a href="#talk-about-it" id="toc-talk-about-it" class="nav-link" data-scroll-target="#talk-about-it">Talk About It</a></li>
+  <li><a href="#lesson-notebook" id="toc-lesson-notebook" class="nav-link" data-scroll-target="#lesson-notebook">Lesson Notebook</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -469,12 +515,218 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Get a quick read on the data: compute <strong>min/max/mean/median</strong>, use <code>.describe()</code> for a fast profile, and apply <strong><code>groupby(...).agg(...)</code></strong> to compare players or distance buckets.</p>
-<p>Corresponds with the lesson at: <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb">https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb</a>.</p>
-<hr>
-<p><strong>Lesson coming soon!</strong></p>
+<p>In this lesson, we’ll learn how to use Pandas to calculate some basic statistics that help summarize data quickly. Statistics like minimum, maximum, mean, and median can tell us a lot about a dataset at a glance.</p>
+<section id="when-to-use-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="when-to-use-statistics">When to Use Statistics</h2>
+<p>Statistics are useful whenever you want to describe a dataset in just a few numbers. Instead of looking through every row, you can use these tools to find patterns and compare values.</p>
+<section id="step-1-import-libraries-and-load-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-import-libraries-and-load-data">Step 1 — Import Libraries and Load Data</h3>
+<p>We’ll use Pandas to load Raptors team data from a CSV file into a DataFrame.</p>
+<div id="844f9f4f" class="cell" data-execution_count="1">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Input: Load Raptors 2023 season data</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://github.com/Data-Dunkers/data/raw/refs/heads/main/NBA/raptors-2023.csv"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Reduce the DataFrame to essential columns</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>columns <span class="op">=</span> [<span class="st">"Player"</span>, <span class="st">"Age"</span>, <span class="st">"G"</span>, <span class="st">"FG%"</span>, <span class="st">"PTS"</span>]</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>df_small <span class="op">=</span> df[columns]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>df_small.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div>
 
 
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Player</th>
+<th data-quarto-table-cell-role="th">Age</th>
+<th data-quarto-table-cell-role="th">G</th>
+<th data-quarto-table-cell-role="th">FG%</th>
+<th data-quarto-table-cell-role="th">PTS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Christian Koloko</td>
+<td>22.0</td>
+<td>58.0</td>
+<td>0.480</td>
+<td>3.1</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Chris Boucher</td>
+<td>30.0</td>
+<td>307.0</td>
+<td>0.486</td>
+<td>9.1</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Dalano Banton</td>
+<td>23.0</td>
+<td>95.0</td>
+<td>0.416</td>
+<td>3.7</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Fred VanVleet</td>
+<td>28.0</td>
+<td>417.0</td>
+<td>0.402</td>
+<td>14.6</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>Gary Trent Jr.</td>
+<td>24.0</td>
+<td>270.0</td>
+<td>0.421</td>
+<td>14.4</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-calculate-basic-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-calculate-basic-statistics">Step 2 — Calculate Basic Statistics</h3>
+<p>We can calculate the minimum, maximum, mean, and median of a column using built-in functions.</p>
+<div id="0fd0a099" class="cell" data-execution_count="2">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate statistics for the 'G' (Games Played) column</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Minimum ="</span>, df_small[<span class="st">"G"</span>].<span class="bu">min</span>())</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Maximum ="</span>, df_small[<span class="st">"G"</span>].<span class="bu">max</span>())</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Median ="</span>, <span class="bu">int</span>(df_small[<span class="st">"G"</span>].median()))</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean ="</span>, df_small[<span class="st">"G"</span>].mean().<span class="bu">round</span>(<span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Minimum = 9.0
+Maximum = 1139.0
+Median = 270
+Mean = 315.8</code></pre>
+</div>
+</div>
+<p>Notice how we used <code>round(1)</code> to round the mean to one decimal place, and <code>int()</code> to make the median a whole number.</p>
+</section>
+<section id="step-3-generate-statistics-for-all-columns" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-generate-statistics-for-all-columns">Step 3 — Generate Statistics for All Columns</h3>
+<p>If you want to see more, the <code>.describe()</code> function gives a full summary of statistics for all numeric columns.</p>
+<div id="8cf5f27e" class="cell" data-execution_count="3">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate summary statistics for all numeric columns</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df_small.describe().<span class="bu">round</span>(<span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Age</th>
+<th data-quarto-table-cell-role="th">G</th>
+<th data-quarto-table-cell-role="th">FG%</th>
+<th data-quarto-table-cell-role="th">PTS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">count</th>
+<td>17.00</td>
+<td>17.00</td>
+<td>17.00</td>
+<td>17.00</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">mean</th>
+<td>25.88</td>
+<td>315.82</td>
+<td>0.46</td>
+<td>8.86</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">std</th>
+<td>3.77</td>
+<td>291.08</td>
+<td>0.07</td>
+<td>5.05</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">min</th>
+<td>21.00</td>
+<td>9.00</td>
+<td>0.33</td>
+<td>1.80</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">25%</th>
+<td>23.00</td>
+<td>95.00</td>
+<td>0.42</td>
+<td>3.70</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">50%</th>
+<td>25.00</td>
+<td>270.00</td>
+<td>0.47</td>
+<td>9.10</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">75%</th>
+<td>28.00</td>
+<td>471.00</td>
+<td>0.49</td>
+<td>12.40</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">max</th>
+<td>34.00</td>
+<td>1139.00</td>
+<td>0.63</td>
+<td>17.00</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>This includes count, mean, standard deviation, minimum, quartiles, and maximum for each numeric column.</p>
+</section>
+</section>
+<section id="talk-about-it" class="level2">
+<h2 class="anchored" data-anchor-id="talk-about-it">Talk About It</h2>
+<ul>
+<li>Why might you want to calculate statistics instead of looking through raw data?</li>
+<li>How does rounding make the results easier to understand?</li>
+<li>When would a full <code>.describe()</code> summary be more useful than focusing on one column?</li>
+</ul>
+</section>
+<section id="lesson-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-notebook">Lesson Notebook</h2>
+<p>Now it’s your turn to practice: The notebook version of this lesson includes more examples and additional formatting techniques.</p>
+<p>Open the lesson <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb">here</a>.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
