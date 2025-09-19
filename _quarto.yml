@@ -93,7 +93,7 @@ website:
                   - module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02C-sorting.qmd
                   - module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.qmd
                   - module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02E-stats-toolbox.qmd
-                  - module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.qmd
+                  # - module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.qmd
               - section: "Output"
                 contents:
                   - module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.qmd

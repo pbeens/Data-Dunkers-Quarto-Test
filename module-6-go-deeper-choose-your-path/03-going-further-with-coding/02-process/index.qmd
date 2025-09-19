@@ -3,41 +3,55 @@ title: "Overview"
 format: html
 ---
 
-Work with your table step by step—start by picking columns, then filter and sort to focus your view, add calculated fields, and use quick statistics to take the pulse of the data. Finish with a minimal clean-up pass so visuals and summaries are solid.
+In this module, you’ll practice working with data step by step. Start by exploring and selecting columns, then use filtering and sorting to focus your view. Add new columns to calculate fresh insights, and finish with quick statistics to summarize and understand the bigger picture.
 
 ## [Columns](02A-columns.qmd)
 
-Select and re-order the fields you need; explore `df.columns` (and a tiny for-loop) to understand your table’s structure.  
+By the end of this lesson, students will be able to:
+
+* Load and view data from a CSV file using Pandas.
+* Access and manipulate specific columns in a DataFrame.
+* Apply Python loops to explore and understand DataFrame columns.
 
 *Corresponds with the lesson found at: <https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb>*
 
 ## [Filtering](02B-filtering.qmd)
 
-Focus the table using boolean masks and simple AND/OR combinations, then carry the filtered result into later steps.  
+By the end of this lesson, students will be able to:
+
+* Learn how to filter data to focus on what’s important.
+* Understand the process of refining data for better analysis.
+* Apply simple techniques to clean and prepare data for use.
+* Combine multiple conditions using logical operators like & (and) and | (or).
 
 *Corresponds with the lesson found at: <https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb>)
 
 ## [Sorting](02C-sorting.qmd)
 
-Order rows by one or multiple keys (ascending/descending) to reveal patterns and make comparisons clearer.  
+By the end of this lesson, students will be able to:
+
+* Sort data in a dataset based on specific columns.
+* Understand the difference between ascending and descending order.
+* Apply multiple sorting criteria to organize data more effectively.
 
 *Corresponds with the lesson found at: <https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb>*
 
 ## [New Columns](02D-new-columns.qmd)
 
-Add calculated metrics (like shooting % or buckets) with concise, vectorized code to power meaningful analysis. 
+By the end of this lesson, students will be able to:
+
+* Add new columns to a dataset using calculated values.
+* Apply mathematical operations to existing columns to create new data points.
+* Use rounding and formatting techniques to present data clearly and accurately.
 
 *Corresponds with the lesson found at: <https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb>
 
 ## [Stats Toolbox](02E-stats-toolbox.qmd)
 
-Use `.describe()`, quick aggregates, and `groupby(...).agg(...)` to compare players or distance buckets before you plot.  
+By the end of this lesson, students will be able to:
 
-*Corresponds with the lesson fo
-nd at: <https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb>
+* Calculate basic statistical measures such as minimum, maximum, mean, and median.
+* Manipulate and format statistical data for clear presentation.
+* Generate summary statistics for datasets using built-in functions like `describe()`.
 
-## [Cleaning Basics](02F-cleaning-basics.qmd)
-
-Do a minimal clean-up (headers/case, numeric coercion, drop empty rows) once you know what your analysis needs.  
-
-*Informed by the table/analysis lessons above.* 
+*Corresponds with the lesson found at: <https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb>

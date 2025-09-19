@@ -3,34 +3,66 @@ title: "Overview"
 format: html
 ---
 
-Choose how students will bring data into a pandas DataFrame. Pick the on-ramp that matches your setup (self-contained internal data, CSV, Excel, Google Sheets, or a simple table from the web).
+In this module, you’ll learn how to bring data into your notebook from different sources. Start with defining simple data directly in your code, then move on to importing files in common formats like CSV and Excel. From there, practice connecting to live sources such as Google Sheets and webpages. Each method gives you more flexibility in how you collect data to analyze and visualize later.
 
 ## [Using Internal Data](01A-internal-data.qmd)
 
-This lesson is for classes that want self-contained data **inside the notebook** or Python program—create small tables from lists or dictionaries with `pandas.DataFrame`, name the columns, and preview with `head()`.  
+By the end of this lesson, students will be able to:
+
+* Define and work with data directly inside a Jupyter Notebook or Python file.
+* Use the IPO (Input, Process, Output) model to structure simple programs.
+* Create basic plots from internal data using Plotly Express.
 
 *Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/data-from-internal.ipynb>. 
 
 ## [Data from CSV Files](01B-import-csv.qmd)
 
-Load a shared or local **CSV** using `pd.read_csv(...)`, then take a quick look at shape, column names, and a few rows to confirm what came in before moving on. 
+You’re right — I overstated that. I just checked the **01B-import-csv.qmd** lesson you uploaded. Students are:
+
+* Loading data from a CSV with Pandas.
+* Inspecting it using `.head()`, `.tail()`, and `.columns`.
+* Plotting it with Plotly Express.
+* Adjusting plot parameters like the title and axis labels.
+
+They are **not** renaming columns in this lesson.
+
+Here’s the corrected objectives list:
+
+By the end of this lesson, students will be able to:
+
+* Load and view data from a CSV file using Pandas.
+* Inspect datasets by viewing sample rows and column names.
+* Create simple plots from CSV data using Plotly Express.
+* Adjust plot settings such as titles and axis labels for clarity.
 
 *Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/data-from-csv.ipynb>. 
 
 ## [Data from Excel Files](01C-import-excel.qmd)
 
-Bring in **Excel** data with `pd.read_excel(...)`; choose a sheet if needed and preview a few rows—handy when teachers share XLSX templates.  
+By the end of this lesson, students will be able to:
+
+* Import data from an Excel file into a Pandas DataFrame.
+* Recognize the similarities and differences between working with CSV and Excel files.
+* Create simple plots from Excel data using Plotly Express.
 
 *Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb>. 
 
 ## [Data from Google Sheets](01D-import-google-sheets.qmd)
 
-Use a Google Sheet’s share/export link (CSV export is simplest) so pandas can read it like a regular CSV; verify headers and sample rows.  
+By the end of this lesson, students will be able to:
+
+* Access and import data from a Google Sheet into a Pandas DataFrame.
+* Recognize the similarities and differences between working with CSV files and Google Sheets.
+* Create simple plots from Google Sheet data using Plotly Express.
 
 *Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb>. 
 
 ## [Data from Webpages](01E-import-webpage.qmd)
 
-Use `pd.read_html(...)` to fetch a **simple HTML table** from a webpage into a DataFrame; if multiple tables are found, pick the right one and preview a few rows.  
+By the end of this lesson, students will be able to:
+
+* Extract data tables from webpages using Pandas.
+* Select the correct table when multiple tables are available.
+* Create simple plots from webpage data using Plotly Express.
 
 *Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/data-from-webpage.ipynb>.

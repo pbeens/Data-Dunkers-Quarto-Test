@@ -3,28 +3,45 @@ title: "Overview"
 format: html
 ---
 
-Turn your processed tables into clear visuals students can read and explain. Each page below focuses on a core chart type you’ll re-use across activities.
+In this module, you’ll learn how to turn raw numbers into clear visuals. Different graphs help you tell different stories: bar graphs for comparisons, line and scatter plots for changes and relationships, pie charts for proportions, and histograms for distributions. Together, these tools give you multiple ways to explore and explain your data.
 
 ## [Creating Bar Graphs](03A-bar-graphs.qmd)
 
-Compare values across categories (e.g., attempts by distance or makes by player) with simple, labeled bars for fast pattern-spotting.  
+By the end of this lesson, students will be able to:
+
+* Create bar graphs to compare values across categories.
+* Refine and present visual data effectively with titles, axis labels, and other customizations.
+* Use grouped or stacked bar graphs to highlight differences and relationships within the data.
 
 *Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/graphing-bar-graphs.ipynb>. 
 
 ## [Creating Line and Scatter Plots](03B-line-and-scatter.qmd)
 
-Show change or relationships: lines for trends over an ordered axis; scatter to explore how two variables move together.  
+By the end of this lesson, students will be able to:
+
+* Create line graphs to show how data changes over time or across sequences.
+* Create scatter plots to explore relationships between two variables.
+* Customize graphs with titles, labels, colors, and point sizes to improve clarity.
+* Add trendlines to scatter plots to help identify patterns and draw conclusions.
 
 *Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/graphing-scatter-plots.ipynb>. 
 
 ## [Creating Pie Charts](03C-pie-charts.qmd)
 
-Display proportions of a whole (used sparingly) to highlight simple “share of total” stories.  
+By the end of this lesson, students will be able to:
+
+* Use pie charts to represent how a whole is divided into parts.
+* Customize pie charts with labels, colors, and titles to improve readability.
+* Compare proportions across categories to better understand data distributions.
 
 *Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/graphing-pie-charts.ipynb>. 
 
 ## [Creating Histograms](03D-histograms.qmd)
 
-Reveal the distribution of a numeric variable (e.g., shot distance or points per game) to see clustering, spread, and outliers.  
+By the end of this lesson, students will be able to:
+
+* Create histograms to visualize the distribution of data.
+* Adjust the number of bins to change how data is grouped.
+* Use color and other visual options to compare distributions across categories.
 
 *Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/graphing-histograms.ipynb>.
