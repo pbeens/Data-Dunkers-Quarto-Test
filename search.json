@@ -129,7 +129,49 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03C-pie-charts.html",
     "title": "Creating Pie Charts",
     "section": "",
-    "text": "Display proportions of a whole (used sparingly) to highlight simple “share of total” stories.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-pie-charts.ipynb.\n\nLesson coming soon!",
+    "text": "In this lesson, we’ll learn how to create pie charts in Python using Plotly Express. Pie charts show how a whole is divided into parts — for example, how a player’s field goals are distributed across different seasons.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Creating Pie Charts"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03C-pie-charts.html#when-to-use-pie-charts",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03C-pie-charts.html#when-to-use-pie-charts",
+    "title": "Creating Pie Charts",
+    "section": "When to Use Pie Charts",
+    "text": "When to Use Pie Charts\nPie charts are useful when you want to show percentages or proportions that make up a total. They work best when you have only a few categories to compare, such as a handful of seasons or types of shots.\n\nStep 1 — Import Libraries and Load Data\nWe’ll use Pandas to load Pascal Siakam’s data from a CSV file. Then we’ll reduce it to just the columns we need: season and field goals made.\n\n\nCode\n# Setup\nimport pandas as pd\nimport plotly.express as px\n\n# Input: Load Pascal Siakam's data into a DataFrame\nurl = \"https://raw.githubusercontent.com/pbeens/Data-Dunkers/main/Data/Pascal_Siakam.csv\"\ndf = pd.read_csv(url)\n\n# Keep only seasons up to 2022–23\ndf = df[df[\"SEASON_ID\"] &lt;= \"2022-23\"]\n\n# Reduce to essential columns\ndf = df[[\"SEASON_ID\", \"FGM\"]]\n\n# Preview the first few rows\ndf.head()\n\n\n\n\n\n\n\n\n\nSEASON_ID\nFGM\n\n\n\n\n0\n2016-17\n103\n\n\n1\n2017-18\n253\n\n\n2\n2018-19\n519\n\n\n3\n2019-20\n500\n\n\n4\n2020-21\n437\n\n\n\n\n\n\n\n\n\nStep 2 — Create a Simple Pie Chart\nWhen creating a pie chart, we use values= and names= instead of x= and y=.\n\n\nCode\n# Pie chart of field goals made by season\npx.pie(df, \n    values=\"FGM\", \n    names=\"SEASON_ID\", \n    title=\"Siakam Field Goals by Season\")\n\n\n                            \n                                            \n\n\n\n\nStep 3 — Customizing Pie Charts\nBy default, pie charts only display percentages on each slice. You can use the textinfo option to also show the category names, or to customize what text appears.\n\n\nCode\n# Customized pie chart\npx.pie(df, values=\"FGM\", names=\"SEASON_ID\",\n    title=\"Siakam Field Goals by Season\").update_traces(textinfo=\"percent+label\")\n\n\n                            \n                                            \n\n\nDonut charts are a nice alternative that highlight proportions while giving room for extra annotation in the middle.\n\n\nCode\npx.pie(df, values=\"FGM\", names=\"SEASON_ID\",\n    title=\"Siakam Field Goals by Season\",\n    hole=0.2)\n\n\n                            \n                                            \n\n\nSometimes it’s clearer to sort slices by value rather than the dataset order.\n\n\nCode\npx.pie(\n    df.sort_values(\"FGM\", ascending=False),\n    values=\"FGM\", names=\"SEASON_ID\",\n    title=\"Siakam Field Goals by Season (Sorted)\")",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Creating Pie Charts"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03C-pie-charts.html#talk-about-it",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03C-pie-charts.html#talk-about-it",
+    "title": "Creating Pie Charts",
+    "section": "Talk About It",
+    "text": "Talk About It\n\nWhen is a pie chart more effective than a bar graph for showing proportions?\nWhat are some drawbacks of pie charts compared to other chart types?\nIf you had 20 seasons of data, would a pie chart still be a good choice? Why or why not?",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Creating Pie Charts"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03C-pie-charts.html#lesson-notebook",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03C-pie-charts.html#lesson-notebook",
+    "title": "Creating Pie Charts",
+    "section": "Lesson Notebook",
+    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes an additional exercise where you’ll create your own pie chart from the dataset.\nOpen the lesson here.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -143,7 +185,49 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03A-bar-graphs.html",
     "title": "Creating Bar Graphs",
     "section": "",
-    "text": "Compare values across categories (e.g., attempts by distance or makes by player) with simple, labeled bars for fast pattern-spotting.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-bar-graphs.ipynb.\n\nLesson coming soon!",
+    "text": "In this lesson, we’ll learn how to create bar graphs in Python using Plotly Express. Bar graphs are a simple but powerful way to compare values across categories, such as a player’s stats from one season to another.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Creating Bar Graphs"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03A-bar-graphs.html#when-to-use-bar-graphs",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03A-bar-graphs.html#when-to-use-bar-graphs",
+    "title": "Creating Bar Graphs",
+    "section": "When to Use Bar Graphs",
+    "text": "When to Use Bar Graphs\nBar graphs are useful when you want to compare quantities side by side. For example, we might compare Pascal Siakam’s field goals made in different seasons, or look at field goals made versus attempted.\n\nStep 1 — Import Libraries and Load Data\nWe’ll use Pandas to load Pascal Siakam’s data from a CSV file into a DataFrame.\n\n\nCode\n# Setup\nimport pandas as pd\n\n# Input: Load Pascal Siakam's data into a DataFrame\nurl = \"https://raw.githubusercontent.com/pbeens/Data-Dunkers/main/Data/Pascal_Siakam.csv\"\ndf = pd.read_csv(url)\n\n# Reduce the DataFrame to essential columns\ncolumns = [\"SEASON_ID\", \"FGM\", \"FGA\"]\ndf = df[columns]\n\n# Keep only seasons up to 2022–23\ndf = df[df[\"SEASON_ID\"] &lt;= \"2022-23\"]\n\n# Preview the first few rows\ndf.head()\n\n\n\n\n\n\n\n\n\nSEASON_ID\nFGM\nFGA\n\n\n\n\n0\n2016-17\n103\n205\n\n\n1\n2017-18\n253\n498\n\n\n2\n2018-19\n519\n945\n\n\n3\n2019-20\n500\n1104\n\n\n4\n2020-21\n437\n961\n\n\n\n\n\n\n\n\n\nStep 2 — Create a Simple Bar Graph\nWe’ll use the Plotly Express function px.bar() to create a basic bar graph of field goals made by season.\n\n\nCode\nimport plotly.express as px\n\n# Bar graph of field goals made by season\npx.bar(df, x=\"SEASON_ID\", y=\"FGM\", title=\"Siakam Field Goals by Season\")\n\n\n                            \n                                            \n\n\n\n\nStep 3 — Customize Axis Labels\nWe can improve readability by adding custom axis labels.\n\n\nCode\n# Add custom axis labels\npx.bar(\n    df, x=\"SEASON_ID\", y=\"FGM\",\n    title=\"Siakam Field Goals by Season\"\n).update_xaxes(title=\"Season\").update_yaxes(title=\"Field Goals Made\")\n\n\n                            \n                                            \n\n\n\n\nStep 4 — Horizontal Bar Graphs\nIf we prefer a horizontal bar graph, we can switch the orientation.\n\n\nCode\n# Horizontal bar graph\npx.bar(df, x=\"FGM\", y=\"SEASON_ID\", orientation=\"h\", title=\"Siakam Field Goals by Season\")\n\n\n                            \n                                            \n\n\n\n\nStep 5 — Compare Multiple Columns\nWe can compare multiple values, such as field goals made (FGM) and field goals attempted (FGA), by plotting them together.\n\n\nCode\n# Grouped bar graph of field goals made and attempted\npx.bar(\n    df, x=\"SEASON_ID\", y=[\"FGM\", \"FGA\"],\n    barmode=\"group\",\n    title=\"Siakam Field Goals Made vs Attempted by Season\"\n)",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Creating Bar Graphs"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03A-bar-graphs.html#talk-about-it",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03A-bar-graphs.html#talk-about-it",
+    "title": "Creating Bar Graphs",
+    "section": "Talk About It",
+    "text": "Talk About It\n\nWhy might a bar graph be more effective than a table for showing differences between seasons?\nWhen would a horizontal bar graph be more useful than a vertical one?\nWhat insights can you gain by comparing field goals made and attempted side by side?",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Creating Bar Graphs"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03A-bar-graphs.html#lesson-notebook",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03A-bar-graphs.html#lesson-notebook",
+    "title": "Creating Bar Graphs",
+    "section": "Lesson Notebook",
+    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes additional bar graph examples and practice activities.\nOpen the lesson here.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -1364,15 +1448,57 @@
   {
     "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03B-line-and-scatter.html",
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03B-line-and-scatter.html",
-    "title": "Creating Line and Scatter Plots",
+    "title": "Line Graphs and Scatter Plots",
     "section": "",
-    "text": "Show change or relationships: lines for trends over an ordered axis; scatter to explore how two variables move together.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-scatter-plots.ipynb.\n\nLesson coming soon!",
+    "text": "In this lesson, we’ll learn how to create line graphs and scatter plots with Plotly Express. Both help us explore relationships in data — line graphs show trends over time, while scatter plots compare two variables.",
     "crumbs": [
       "Home",
       "Module 6",
       "Going Further with Coding",
       "Output",
-      "Creating Line and Scatter Plots"
+      "Line Graphs and Scatter Plots"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03B-line-and-scatter.html#when-to-use-line-or-scatter-plots",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03B-line-and-scatter.html#when-to-use-line-or-scatter-plots",
+    "title": "Line Graphs and Scatter Plots",
+    "section": "When to Use Line or Scatter Plots",
+    "text": "When to Use Line or Scatter Plots\n\nUse a line graph when you want to show how something changes across time or ordered categories (like seasons).\n\nUse a scatter plot when you want to examine the relationship between two variables (like field goals attempted vs. field goals made).\n\n\nStep 1 — Import Libraries and Load Data\nWe’ll use Pandas to load Pascal Siakam’s data, then reduce it to just the columns we need for this lesson: season, field goals made, field goals attempted, assists, and points.\n\n\nCode\n# Setup\nimport pandas as pd\n\n# Input: Load Pascal Siakam's data into a DataFrame\nurl = \"https://raw.githubusercontent.com/pbeens/Data-Dunkers/main/Data/Pascal_Siakam.csv\"\ndf = pd.read_csv(url)\n\n# Keep only seasons up to 2022–23\ndf = df[df[\"SEASON_ID\"] &lt;= \"2022-23\"]\n\n# Reduce to essential columns\ndf = df[[\"SEASON_ID\", \"FGM\", \"FGA\", \"AST\", \"PTS\"]]\n\n# Preview the first few rows\ndf.head()\n\n\n\n\n\n\n\n\n\nSEASON_ID\nFGM\nFGA\nAST\nPTS\n\n\n\n\n0\n2016-17\n103\n205\n17\n229\n\n\n1\n2017-18\n253\n498\n159\n589\n\n\n2\n2018-19\n519\n945\n248\n1354\n\n\n3\n2019-20\n500\n1104\n207\n1371\n\n\n4\n2020-21\n437\n961\n250\n1196\n\n\n\n\n\n\n\n\n\nStep 2 — Line Graphs\nWe can create a line graph of field goals made by season.\n\n\nCode\nimport plotly.express as px\n\n# Line graph of field goals made by season\npx.line(df, x=\"SEASON_ID\", y=\"FGM\", title=\"Siakam Field Goals by Season\")\n\n\n                            \n                                            \n\n\n\n\nStep 3 — Scatter Plots\nScatter plots compare two numeric variables. Here we compare field goals attempted versus field goals made.\n\n\nCode\n# Scatter plot of field goals attempted vs made\npx.scatter(df, x=\"FGA\", y=\"FGM\", title=\"Siakam Field Goals vs Attempts\")\n\n\n                            \n                                            \n\n\n\n\nStep 4 — Adding More Information\nWe can color the points by season and scale them by assists (AST) to show more dimensions.\n\n\nCode\n# Scatter plot with color and size\npx.scatter(\n    df,\n    x=\"FGA\",\n    y=\"FGM\",\n    color=\"SEASON_ID\",\n    size=\"AST\",\n    title=\"Siakam Field Goals vs Attempts (Colored by Season, Sized by Assists)\"\n)\n\n\n                            \n                                            \n\n\n\n\nStep 5 — Adding a Trendline\nA trendline helps us see the overall relationship between variables.\n\n\nCode\n# Scatter plot with a trendline\npx.scatter(\n    df,\n    x=\"FGA\",\n    y=\"FGM\",\n    trendline=\"ols\",\n    title=\"Trendline: Field Goals Made vs Attempts\"\n)",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Line Graphs and Scatter Plots"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03B-line-and-scatter.html#talk-about-it",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03B-line-and-scatter.html#talk-about-it",
+    "title": "Line Graphs and Scatter Plots",
+    "section": "Talk About It",
+    "text": "Talk About It\n\nWhen is a line graph more useful than a scatter plot?\nWhat patterns do you notice in field goals made compared to attempts?\nHow does adding a trendline change the way you interpret the data?",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Line Graphs and Scatter Plots"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03B-line-and-scatter.html#lesson-notebook",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03B-line-and-scatter.html#lesson-notebook",
+    "title": "Line Graphs and Scatter Plots",
+    "section": "Lesson Notebook",
+    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes more examples and additional practice activities.\nOpen the lesson here.",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Line Graphs and Scatter Plots"
     ]
   },
   {

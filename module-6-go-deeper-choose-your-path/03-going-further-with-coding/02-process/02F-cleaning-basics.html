@@ -456,7 +456,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03B-line-and-scatter.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Creating Line and Scatter Plots</span></a>
+ <span class="menu-text">Line Graphs and Scatter Plots</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -522,7 +522,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="step-1-import-libraries-and-load-dirty-data" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-import-libraries-and-load-dirty-data">Step 1 — Import Libraries and Load Dirty Data</h3>
 <p>We’ll load an intentionally messy version of Pascal Siakam’s career stats. This dataset includes missing values, duplicates, inconsistent team names, and some unrealistic numbers.</p>
-<div id="e1987f53" class="cell" data-execution_count="1">
+<div id="39e4d5ae" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup</span></span>
@@ -637,7 +637,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="step-2-find-missing-values" class="level3">
 <h3 class="anchored" data-anchor-id="step-2-find-missing-values">Step 2 — Find Missing Values</h3>
 <p>Pandas can show us where data is missing using <code>.isnull().sum()</code>.</p>
-<div id="bab4e619" class="cell" data-execution_count="2">
+<div id="7ce9759f" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Count missing values in each column</span></span>
@@ -657,7 +657,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 <p>To fix missing values, we can drop them with <code>.dropna()</code> or fill them with something else. Here we’ll fill missing percentages with the column’s mean.</p>
-<div id="4e0f068f" class="cell" data-execution_count="3">
+<div id="03bc0a63" class="cell" data-execution_count="3">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fill missing values in FT_PCT with the average</span></span>
@@ -757,7 +757,7 @@ dtype: int64</code></pre>
 <section id="step-3-remove-duplicates" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-remove-duplicates">Step 3 — Remove Duplicates</h3>
 <p>Sometimes rows are accidentally repeated. We can remove duplicates with one line.</p>
-<div id="27d2b2f4" class="cell" data-execution_count="4">
+<div id="2d8f1933" class="cell" data-execution_count="4">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove duplicate rows</span></span>
@@ -768,7 +768,7 @@ dtype: int64</code></pre>
 <section id="step-4-fix-inconsistent-text" class="level3">
 <h3 class="anchored" data-anchor-id="step-4-fix-inconsistent-text">Step 4 — Fix Inconsistent Text</h3>
 <p>Team abbreviations in this dataset are inconsistent (<code>TOR</code>, <code>tor</code>, <code>Tor</code>). We can make them all uppercase.</p>
-<div id="7c3df875" class="cell" data-execution_count="5">
+<div id="82fe4f6a" class="cell" data-execution_count="5">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Standardize team abbreviations to uppercase</span></span>
@@ -779,7 +779,7 @@ dtype: int64</code></pre>
 <section id="step-5-handle-impossible-values" class="level3">
 <h3 class="anchored" data-anchor-id="step-5-handle-impossible-values">Step 5 — Handle Impossible Values</h3>
 <p>Negative minutes or unrealistic point totals can distort analysis. We can filter them out.</p>
-<div id="5878e82e" class="cell" data-execution_count="6">
+<div id="0abb1716" class="cell" data-execution_count="6">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only rows where minutes are non-negative</span></span>
@@ -793,7 +793,7 @@ dtype: int64</code></pre>
 <section id="step-6-fix-data-types" class="level3">
 <h3 class="anchored" data-anchor-id="step-6-fix-data-types">Step 6 — Fix Data Types</h3>
 <p>Sometimes numbers are stored as text. We can convert them back to numeric form.</p>
-<div id="e8799c3b" class="cell" data-execution_count="7">
+<div id="d13abef6" class="cell" data-execution_count="7">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert FGA to numeric, forcing errors to NaN</span></span>
