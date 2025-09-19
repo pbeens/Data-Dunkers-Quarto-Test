@@ -59,7 +59,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html",
     "title": "Overview",
     "section": "",
-    "text": "Turn your processed tables into clear visuals students can read and explain. Each page below focuses on a core chart type you’ll re-use across activities.",
+    "text": "In this module, you’ll learn how to turn raw numbers into clear visuals. Different graphs help you tell different stories: bar graphs for comparisons, line and scatter plots for changes and relationships, pie charts for proportions, and histograms for distributions. Together, these tools give you multiple ways to explore and explain your data.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -73,7 +73,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-bar-graphs",
     "title": "Overview",
     "section": "Creating Bar Graphs",
-    "text": "Creating Bar Graphs\nCompare values across categories (e.g., attempts by distance or makes by player) with simple, labeled bars for fast pattern-spotting.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-bar-graphs.ipynb.",
+    "text": "Creating Bar Graphs\nBy the end of this lesson, students will be able to:\n\nCreate bar graphs to compare values across categories.\nRefine and present visual data effectively with titles, axis labels, and other customizations.\nUse grouped or stacked bar graphs to highlight differences and relationships within the data.\n\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-bar-graphs.ipynb.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -87,7 +87,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-line-and-scatter-plots",
     "title": "Overview",
     "section": "Creating Line and Scatter Plots",
-    "text": "Creating Line and Scatter Plots\nShow change or relationships: lines for trends over an ordered axis; scatter to explore how two variables move together.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-scatter-plots.ipynb.",
+    "text": "Creating Line and Scatter Plots\nBy the end of this lesson, students will be able to:\n\nCreate line graphs to show how data changes over time or across sequences.\nCreate scatter plots to explore relationships between two variables.\nCustomize graphs with titles, labels, colors, and point sizes to improve clarity.\nAdd trendlines to scatter plots to help identify patterns and draw conclusions.\n\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-scatter-plots.ipynb.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -101,7 +101,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-pie-charts",
     "title": "Overview",
     "section": "Creating Pie Charts",
-    "text": "Creating Pie Charts\nDisplay proportions of a whole (used sparingly) to highlight simple “share of total” stories.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-pie-charts.ipynb.",
+    "text": "Creating Pie Charts\nBy the end of this lesson, students will be able to:\n\nUse pie charts to represent how a whole is divided into parts.\nCustomize pie charts with labels, colors, and titles to improve readability.\nCompare proportions across categories to better understand data distributions.\n\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-pie-charts.ipynb.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -115,7 +115,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/index.html#creating-histograms",
     "title": "Overview",
     "section": "Creating Histograms",
-    "text": "Creating Histograms\nReveal the distribution of a numeric variable (e.g., shot distance or points per game) to see clustering, spread, and outliers.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-histograms.ipynb.",
+    "text": "Creating Histograms\nBy the end of this lesson, students will be able to:\n\nCreate histograms to visualize the distribution of data.\nAdjust the number of bins to change how data is grouped.\nUse color and other visual options to compare distributions across categories.\n\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-histograms.ipynb.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -241,56 +241,28 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html",
     "title": "Cleaning the Data",
     "section": "",
-    "text": "In this lesson, we’ll learn how to clean messy data in a Pandas DataFrame. Real-world data often has problems like missing values, duplicates, inconsistent text, or impossible numbers. Cleaning is an important first step before analysis.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Process Data",
-      "Cleaning the Data"
-    ]
+    "text": "In this lesson, we’ll learn how to clean messy data in a Pandas DataFrame. Real-world data often has problems like missing values, duplicates, inconsistent text, or impossible numbers. Cleaning is an important first step before analysis."
   },
   {
     "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html#when-to-clean-data",
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html#when-to-clean-data",
     "title": "Cleaning the Data",
     "section": "When to Clean Data",
-    "text": "When to Clean Data\nClean data makes analysis more reliable. Even small problems — like a missing value or inconsistent capitalization — can lead to wrong results or errors in code. By checking and fixing data issues, we can trust our analysis more.\n\nStep 1 — Import Libraries and Load Dirty Data\nWe’ll load an intentionally messy version of Pascal Siakam’s career stats. This dataset includes missing values, duplicates, inconsistent team names, and some unrealistic numbers.\n\n\nCode\n# Setup\nimport pandas as pd\n\n# Input: Load the intentionally messy Pascal Siakam dataset\nurl = \"https://github.com/Data-Dunkers/data/raw/refs/heads/main/NBA/Pascal_Siakam_dirty.csv\"\ndf = pd.read_csv(url)\n\n# Preview the data\ndf\n\n\n\n\n\n\n\n\n\nSEASON_ID\nTEAM_ABBREVIATION\nGP\nGS\nMIN\nFGM\nFGA\nPTS\nFT_PCT\n\n\n\n\n0\n2016-17\nTOR\n55\n0\n-10.0\n103.0\n214\n268\n0.689\n\n\n1\n2017-18\ntor\n81\n5\n20.7\n253.0\nfive hundred\n640\n0.621\n\n\n2\n2018-19\nTor\n80\n79\n31.9\nNaN\n1024\n1160\n0.785\n\n\n3\n2019-20\nTOR\n61\n61\n35.2\n500.0\n1020\n999\n0.792\n\n\n4\n2020-21\nTOR\n56\n56\n34.8\n437.0\n865\n1050\nNaN\n\n\n5\n2019-20\nTOR\n61\n61\n35.2\n500.0\n1020\n1200\n0.792\n\n\n\n\n\n\n\n\n\nStep 2 — Find Missing Values\nPandas can show us where data is missing using .isnull().sum().\n\n\nCode\n# Count missing values in each column\ndf.isnull().sum()\n\n\nSEASON_ID            0\nTEAM_ABBREVIATION    0\nGP                   0\nGS                   0\nMIN                  0\nFGM                  1\nFGA                  0\nPTS                  0\nFT_PCT               1\ndtype: int64\n\n\nTo fix missing values, we can drop them with .dropna() or fill them with something else. Here we’ll fill missing percentages with the column’s mean.\n\n\nCode\n# Fill missing values in FT_PCT with the average\ndf[\"FT_PCT\"] = df[\"FT_PCT\"].fillna(df[\"FT_PCT\"].mean())\n\n# Drop rows with missing FGM\ndf = df.dropna(subset=[\"FGM\"])\ndf\n\n\n\n\n\n\n\n\n\nSEASON_ID\nTEAM_ABBREVIATION\nGP\nGS\nMIN\nFGM\nFGA\nPTS\nFT_PCT\n\n\n\n\n0\n2016-17\nTOR\n55\n0\n-10.0\n103.0\n214\n268\n0.6890\n\n\n1\n2017-18\ntor\n81\n5\n20.7\n253.0\nfive hundred\n640\n0.6210\n\n\n3\n2019-20\nTOR\n61\n61\n35.2\n500.0\n1020\n999\n0.7920\n\n\n4\n2020-21\nTOR\n56\n56\n34.8\n437.0\n865\n1050\n0.7358\n\n\n5\n2019-20\nTOR\n61\n61\n35.2\n500.0\n1020\n1200\n0.7920\n\n\n\n\n\n\n\n\n\nStep 3 — Remove Duplicates\nSometimes rows are accidentally repeated. We can remove duplicates with one line.\n\n\nCode\n# Remove duplicate rows\ndf = df.drop_duplicates()\n\n\n\n\nStep 4 — Fix Inconsistent Text\nTeam abbreviations in this dataset are inconsistent (TOR, tor, Tor). We can make them all uppercase.\n\n\nCode\n# Standardize team abbreviations to uppercase\ndf[\"TEAM_ABBREVIATION\"] = df[\"TEAM_ABBREVIATION\"].str.upper()\n\n\n\n\nStep 5 — Handle Impossible Values\nNegative minutes or unrealistic point totals can distort analysis. We can filter them out.\n\n\nCode\n# Keep only rows where minutes are non-negative\ndf = df[df[\"MIN\"] &gt;= 0]\n\n# Keep only rows where points are less than 200\ndf = df[df[\"PTS\"] &lt; 200]\n\n\n\n\nStep 6 — Fix Data Types\nSometimes numbers are stored as text. We can convert them back to numeric form.\n\n\nCode\n# Convert FGA to numeric, forcing errors to NaN\ndf[\"FGA\"] = pd.to_numeric(df[\"FGA\"], errors=\"coerce\")\n\n# Preview after conversion\ndf.head()\n\n\n\n\n\n\n\n\n\nSEASON_ID\nTEAM_ABBREVIATION\nGP\nGS\nMIN\nFGM\nFGA\nPTS\nFT_PCT",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Process Data",
-      "Cleaning the Data"
-    ]
+    "text": "When to Clean Data\nClean data makes analysis more reliable. Even small problems — like a missing value or inconsistent capitalization — can lead to wrong results or errors in code. By checking and fixing data issues, we can trust our analysis more.\n\nStep 1 — Import Libraries and Load Dirty Data\nWe’ll load an intentionally messy version of Pascal Siakam’s career stats. This dataset includes missing values, duplicates, inconsistent team names, and some unrealistic numbers.\n\n\nCode\n# Setup\nimport pandas as pd\n\n# Input: Load the intentionally messy Pascal Siakam dataset\nurl = \"https://github.com/Data-Dunkers/data/raw/refs/heads/main/NBA/Pascal_Siakam_dirty.csv\"\ndf = pd.read_csv(url)\n\n# Preview the data\ndf\n\n\n\n\n\n\n\n\n\nSEASON_ID\nTEAM_ABBREVIATION\nGP\nGS\nMIN\nFGM\nFGA\nPTS\nFT_PCT\n\n\n\n\n0\n2016-17\nTOR\n55\n0\n-10.0\n103.0\n214\n268\n0.689\n\n\n1\n2017-18\ntor\n81\n5\n20.7\n253.0\nfive hundred\n640\n0.621\n\n\n2\n2018-19\nTor\n80\n79\n31.9\nNaN\n1024\n1160\n0.785\n\n\n3\n2019-20\nTOR\n61\n61\n35.2\n500.0\n1020\n999\n0.792\n\n\n4\n2020-21\nTOR\n56\n56\n34.8\n437.0\n865\n1050\nNaN\n\n\n5\n2019-20\nTOR\n61\n61\n35.2\n500.0\n1020\n1200\n0.792\n\n\n\n\n\n\n\n\n\nStep 2 — Find Missing Values\nPandas can show us where data is missing using .isnull().sum().\n\n\nCode\n# Count missing values in each column\ndf.isnull().sum()\n\n\nSEASON_ID            0\nTEAM_ABBREVIATION    0\nGP                   0\nGS                   0\nMIN                  0\nFGM                  1\nFGA                  0\nPTS                  0\nFT_PCT               1\ndtype: int64\n\n\nTo fix missing values, we can drop them with .dropna() or fill them with something else. Here we’ll fill missing percentages with the column’s mean.\n\n\nCode\n# Fill missing values in FT_PCT with the average\ndf[\"FT_PCT\"] = df[\"FT_PCT\"].fillna(df[\"FT_PCT\"].mean())\n\n# Drop rows with missing FGM\ndf = df.dropna(subset=[\"FGM\"])\ndf\n\n\n\n\n\n\n\n\n\nSEASON_ID\nTEAM_ABBREVIATION\nGP\nGS\nMIN\nFGM\nFGA\nPTS\nFT_PCT\n\n\n\n\n0\n2016-17\nTOR\n55\n0\n-10.0\n103.0\n214\n268\n0.6890\n\n\n1\n2017-18\ntor\n81\n5\n20.7\n253.0\nfive hundred\n640\n0.6210\n\n\n3\n2019-20\nTOR\n61\n61\n35.2\n500.0\n1020\n999\n0.7920\n\n\n4\n2020-21\nTOR\n56\n56\n34.8\n437.0\n865\n1050\n0.7358\n\n\n5\n2019-20\nTOR\n61\n61\n35.2\n500.0\n1020\n1200\n0.7920\n\n\n\n\n\n\n\n\n\nStep 3 — Remove Duplicates\nSometimes rows are accidentally repeated. We can remove duplicates with one line.\n\n\nCode\n# Remove duplicate rows\ndf = df.drop_duplicates()\n\n\n\n\nStep 4 — Fix Inconsistent Text\nTeam abbreviations in this dataset are inconsistent (TOR, tor, Tor). We can make them all uppercase.\n\n\nCode\n# Standardize team abbreviations to uppercase\ndf[\"TEAM_ABBREVIATION\"] = df[\"TEAM_ABBREVIATION\"].str.upper()\n\n\n\n\nStep 5 — Handle Impossible Values\nNegative minutes or unrealistic point totals can distort analysis. We can filter them out.\n\n\nCode\n# Keep only rows where minutes are non-negative\ndf = df[df[\"MIN\"] &gt;= 0]\n\n# Keep only rows where points are less than 200\ndf = df[df[\"PTS\"] &lt; 200]\n\n\n\n\nStep 6 — Fix Data Types\nSometimes numbers are stored as text. We can convert them back to numeric form.\n\n\nCode\n# Convert FGA to numeric, forcing errors to NaN\ndf[\"FGA\"] = pd.to_numeric(df[\"FGA\"], errors=\"coerce\")\n\n# Preview after conversion\ndf.head()\n\n\n\n\n\n\n\n\n\nSEASON_ID\nTEAM_ABBREVIATION\nGP\nGS\nMIN\nFGM\nFGA\nPTS\nFT_PCT"
   },
   {
     "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html#talk-about-it",
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html#talk-about-it",
     "title": "Cleaning the Data",
     "section": "Talk About It",
-    "text": "Talk About It\n\nWhy is it important to clean data before doing analysis?\nWhich problems (missing values, duplicates, text inconsistencies, impossible values, or wrong types) do you think are most common in real datasets?\nHow could cleaning choices (dropping vs. filling) affect your final results?",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Process Data",
-      "Cleaning the Data"
-    ]
+    "text": "Talk About It\n\nWhy is it important to clean data before doing analysis?\nWhich problems (missing values, duplicates, text inconsistencies, impossible values, or wrong types) do you think are most common in real datasets?\nHow could cleaning choices (dropping vs. filling) affect your final results?"
   },
   {
     "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html#lesson-notebook",
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html#lesson-notebook",
     "title": "Cleaning the Data",
     "section": "Lesson Notebook",
-    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes the same cleaning demos plus additional practice tasks.\nOpen the lesson here.",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Process Data",
-      "Cleaning the Data"
-    ]
+    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes the same cleaning demos plus additional practice tasks.\nOpen the lesson here."
   },
   {
     "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.html",
@@ -409,7 +381,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html",
     "title": "Overview",
     "section": "",
-    "text": "Choose how students will bring data into a pandas DataFrame. Pick the on-ramp that matches your setup (self-contained internal data, CSV, Excel, Google Sheets, or a simple table from the web).",
+    "text": "In this module, you’ll learn how to bring data into your notebook from different sources. Start with defining simple data directly in your code, then move on to importing files in common formats like CSV and Excel. From there, practice connecting to live sources such as Google Sheets and webpages. Each method gives you more flexibility in how you collect data to analyze and visualize later.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -423,7 +395,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#using-internal-data",
     "title": "Overview",
     "section": "Using Internal Data",
-    "text": "Using Internal Data\nThis lesson is for classes that want self-contained data inside the notebook or Python program—create small tables from lists or dictionaries with pandas.DataFrame, name the columns, and preview with head().\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-internal.ipynb.",
+    "text": "Using Internal Data\nBy the end of this lesson, students will be able to:\n\nDefine and work with data directly inside a Jupyter Notebook or Python file.\nUse the IPO (Input, Process, Output) model to structure simple programs.\nCreate basic plots from internal data using Plotly Express.\n\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-internal.ipynb.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -437,7 +409,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-csv-files",
     "title": "Overview",
     "section": "Data from CSV Files",
-    "text": "Data from CSV Files\nLoad a shared or local CSV using pd.read_csv(...), then take a quick look at shape, column names, and a few rows to confirm what came in before moving on.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-csv.ipynb.",
+    "text": "Data from CSV Files\nYou’re right — I overstated that. I just checked the 01B-import-csv.qmd lesson you uploaded. Students are:\n\nLoading data from a CSV with Pandas.\nInspecting it using .head(), .tail(), and .columns.\nPlotting it with Plotly Express.\nAdjusting plot parameters like the title and axis labels.\n\nThey are not renaming columns in this lesson.\nHere’s the corrected objectives list:\nBy the end of this lesson, students will be able to:\n\nLoad and view data from a CSV file using Pandas.\nInspect datasets by viewing sample rows and column names.\nCreate simple plots from CSV data using Plotly Express.\nAdjust plot settings such as titles and axis labels for clarity.\n\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-csv.ipynb.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -451,7 +423,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-excel-files",
     "title": "Overview",
     "section": "Data from Excel Files",
-    "text": "Data from Excel Files\nBring in Excel data with pd.read_excel(...); choose a sheet if needed and preview a few rows—handy when teachers share XLSX templates.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb.",
+    "text": "Data from Excel Files\nBy the end of this lesson, students will be able to:\n\nImport data from an Excel file into a Pandas DataFrame.\nRecognize the similarities and differences between working with CSV and Excel files.\nCreate simple plots from Excel data using Plotly Express.\n\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -465,7 +437,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-google-sheets",
     "title": "Overview",
     "section": "Data from Google Sheets",
-    "text": "Data from Google Sheets\nUse a Google Sheet’s share/export link (CSV export is simplest) so pandas can read it like a regular CSV; verify headers and sample rows.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb.",
+    "text": "Data from Google Sheets\nBy the end of this lesson, students will be able to:\n\nAccess and import data from a Google Sheet into a Pandas DataFrame.\nRecognize the similarities and differences between working with CSV files and Google Sheets.\nCreate simple plots from Google Sheet data using Plotly Express.\n\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -479,7 +451,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/index.html#data-from-webpages",
     "title": "Overview",
     "section": "Data from Webpages",
-    "text": "Data from Webpages\nUse pd.read_html(...) to fetch a simple HTML table from a webpage into a DataFrame; if multiple tables are found, pick the right one and preview a few rows.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-webpage.ipynb.",
+    "text": "Data from Webpages\nBy the end of this lesson, students will be able to:\n\nExtract data tables from webpages using Pandas.\nSelect the correct table when multiple tables are available.\nCreate simple plots from webpage data using Plotly Express.\n\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-from-webpage.ipynb.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -1352,7 +1324,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html",
     "title": "Overview",
     "section": "",
-    "text": "Work with your table step by step—start by picking columns, then filter and sort to focus your view, add calculated fields, and use quick statistics to take the pulse of the data. Finish with a minimal clean-up pass so visuals and summaries are solid.",
+    "text": "In this module, you’ll practice working with data step by step. Start by exploring and selecting columns, then use filtering and sorting to focus your view. Add new columns to calculate fresh insights, and finish with quick statistics to summarize and understand the bigger picture.",
     "crumbs": [
       "Home",
       "Module 6",
@@ -1366,7 +1338,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html#columns",
     "title": "Overview",
     "section": "Columns",
-    "text": "Columns\nSelect and re-order the fields you need; explore df.columns (and a tiny for-loop) to understand your table’s structure.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb",
+    "text": "Columns\nBy the end of this lesson, students will be able to:\n\nLoad and view data from a CSV file using Pandas.\nAccess and manipulate specific columns in a DataFrame.\nApply Python loops to explore and understand DataFrame columns.\n\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb",
     "crumbs": [
       "Home",
       "Module 6",
@@ -1380,7 +1352,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html#filtering",
     "title": "Overview",
     "section": "Filtering",
-    "text": "Filtering\nFocus the table using boolean masks and simple AND/OR combinations, then carry the filtered result into later steps.\n*Corresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb)",
+    "text": "Filtering\nBy the end of this lesson, students will be able to:\n\nLearn how to filter data to focus on what’s important.\nUnderstand the process of refining data for better analysis.\nApply simple techniques to clean and prepare data for use.\nCombine multiple conditions using logical operators like & (and) and | (or).\n\n*Corresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb)",
     "crumbs": [
       "Home",
       "Module 6",
@@ -1394,7 +1366,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html#sorting",
     "title": "Overview",
     "section": "Sorting",
-    "text": "Sorting\nOrder rows by one or multiple keys (ascending/descending) to reveal patterns and make comparisons clearer.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb",
+    "text": "Sorting\nBy the end of this lesson, students will be able to:\n\nSort data in a dataset based on specific columns.\nUnderstand the difference between ascending and descending order.\nApply multiple sorting criteria to organize data more effectively.\n\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb",
     "crumbs": [
       "Home",
       "Module 6",
@@ -1408,7 +1380,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html#new-columns",
     "title": "Overview",
     "section": "New Columns",
-    "text": "New Columns\nAdd calculated metrics (like shooting % or buckets) with concise, vectorized code to power meaningful analysis.\n*Corresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb",
+    "text": "New Columns\nBy the end of this lesson, students will be able to:\n\nAdd new columns to a dataset using calculated values.\nApply mathematical operations to existing columns to create new data points.\nUse rounding and formatting techniques to present data clearly and accurately.\n\n*Corresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb",
     "crumbs": [
       "Home",
       "Module 6",
@@ -1422,21 +1394,7 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html#stats-toolbox",
     "title": "Overview",
     "section": "Stats Toolbox",
-    "text": "Stats Toolbox\nUse .describe(), quick aggregates, and groupby(...).agg(...) to compare players or distance buckets before you plot.\n*Corresponds with the lesson fo nd at: https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb",
-    "crumbs": [
-      "Home",
-      "Module 6",
-      "Going Further with Coding",
-      "Process Data",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html#cleaning-basics",
-    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/index.html#cleaning-basics",
-    "title": "Overview",
-    "section": "Cleaning Basics",
-    "text": "Cleaning Basics\nDo a minimal clean-up (headers/case, numeric coercion, drop empty rows) once you know what your analysis needs.\nInformed by the table/analysis lessons above.",
+    "text": "Stats Toolbox\nBy the end of this lesson, students will be able to:\n\nCalculate basic statistical measures such as minimum, maximum, mean, and median.\nManipulate and format statistical data for clear presentation.\nGenerate summary statistics for datasets using built-in functions like describe().\n\n*Corresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb",
     "crumbs": [
       "Home",
       "Module 6",
@@ -1506,7 +1464,49 @@
     "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03D-histograms.html",
     "title": "Creating Histograms",
     "section": "",
-    "text": "Reveal the distribution of a numeric variable (e.g., shot distance or points per game) to see clustering, spread, and outliers.\nCorresponds with the lesson found at: https://github.com/Data-Dunkers/lessons/blob/main/graphing-histograms.ipynb.\n\nLesson coming soon!",
+    "text": "In this lesson, we’ll learn how to create histograms with Plotly Express. Histograms help us visualize the distribution of a variable by grouping values into ranges (called bins).",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Creating Histograms"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03D-histograms.html#when-to-use-histograms",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03D-histograms.html#when-to-use-histograms",
+    "title": "Creating Histograms",
+    "section": "When to Use Histograms",
+    "text": "When to Use Histograms\nHistograms are useful when you want to see how data is spread out — for example, which shooting percentages are most common among players. They’re especially helpful for identifying clusters, gaps, or outliers in the data.\n\nStep 1 — Import Libraries and Load Data\nWe’ll use Pandas to load the 2023 Raptors dataset, then keep only the columns we need: player, age, and field goal percentage.\n\n\nCode\n# Setup\nimport pandas as pd\nimport plotly.express as px\n\n# Input: Load the 2023 Raptors dataset\nurl = \"https://raw.githubusercontent.com/Data-Dunkers/data/main/NBA/raptors-2023.csv\"\ndf = pd.read_csv(url)\n\n# Reduce to essential columns\ndf = df[[\"Player\", \"Age\", \"FG%\"]]\n\n# Preview the first few rows\ndf.head()\n\n\n\n\n\n\n\n\n\nPlayer\nAge\nFG%\n\n\n\n\n0\nChristian Koloko\n22.0\n0.480\n\n\n1\nChris Boucher\n30.0\n0.486\n\n\n2\nDalano Banton\n23.0\n0.416\n\n\n3\nFred VanVleet\n28.0\n0.402\n\n\n4\nGary Trent Jr.\n24.0\n0.421\n\n\n\n\n\n\n\n\n\nStep 2 — Create a Simple Histogram\nA histogram shows how values are distributed across bins. Here we’ll look at field goal percentage (FG%).\n\n\nCode\npx.histogram(df, x=\"FG%\", title=\"Raptors Field Goal Percentage\")\n\n\n                            \n                                            \n\n\n\n\nStep 3 — Adjust the Number of Bins\nWe can change the number of bins to get a clearer picture of the distribution.\n\n\nCode\npx.histogram(df, x=\"FG%\", nbins=15, title=\"Raptors Field Goal Percentage (15 Bins)\")\n\n\n                            \n                                            \n\n\n\n\nStep 4 — Add Another Variable with Color\nWe can add more detail by coloring the bars according to another column, such as Age.\n\n\nCode\npx.histogram(df, x=\"FG%\", color=\"Age\", title=\"Raptors Field Goal Percentage by Age\")",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Creating Histograms"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03D-histograms.html#talk-about-it",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03D-histograms.html#talk-about-it",
+    "title": "Creating Histograms",
+    "section": "Talk About It",
+    "text": "Talk About It\n\nHow does changing the number of bins affect the way you see the data distribution?\nWhat insights can you get from looking at a histogram that you might not notice in a table of numbers?\nWhy might adding color (for example, by age) make the histogram more informative?",
+    "crumbs": [
+      "Home",
+      "Module 6",
+      "Going Further with Coding",
+      "Output",
+      "Creating Histograms"
+    ]
+  },
+  {
+    "objectID": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03D-histograms.html#lesson-notebook",
+    "href": "module-6-go-deeper-choose-your-path/03-going-further-with-coding/03-output/03D-histograms.html#lesson-notebook",
+    "title": "Creating Histograms",
+    "section": "Lesson Notebook",
+    "text": "Lesson Notebook\nNow it’s your turn to practice: The notebook version of this lesson includes additional histogram examples and activities.\nOpen the lesson here.",
     "crumbs": [
       "Home",
       "Module 6",

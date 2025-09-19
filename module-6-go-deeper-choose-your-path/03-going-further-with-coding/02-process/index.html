@@ -386,12 +386,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Summarizing with Statistics</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cleaning the Data</span></a>
-  </div>
-</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -454,7 +448,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sorting" id="toc-sorting" class="nav-link" data-scroll-target="#sorting">Sorting</a></li>
   <li><a href="#new-columns" id="toc-new-columns" class="nav-link" data-scroll-target="#new-columns">New Columns</a></li>
   <li><a href="#stats-toolbox" id="toc-stats-toolbox" class="nav-link" data-scroll-target="#stats-toolbox">Stats Toolbox</a></li>
-  <li><a href="#cleaning-basics" id="toc-cleaning-basics" class="nav-link" data-scroll-target="#cleaning-basics">Cleaning Basics</a></li>
   </ul>
 </nav>
     </div>
@@ -480,36 +473,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Work with your table step by step—start by picking columns, then filter and sort to focus your view, add calculated fields, and use quick statistics to take the pulse of the data. Finish with a minimal clean-up pass so visuals and summaries are solid.</p>
+<p>In this module, you’ll practice working with data step by step. Start by exploring and selecting columns, then use filtering and sorting to focus your view. Add new columns to calculate fresh insights, and finish with quick statistics to summarize and understand the bigger picture.</p>
 <section id="columns" class="level2">
 <h2 class="anchored" data-anchor-id="columns"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02A-columns.html">Columns</a></h2>
-<p>Select and re-order the fields you need; explore <code>df.columns</code> (and a tiny for-loop) to understand your table’s structure.</p>
+<p>By the end of this lesson, students will be able to:</p>
+<ul>
+<li>Load and view data from a CSV file using Pandas.</li>
+<li>Access and manipulate specific columns in a DataFrame.</li>
+<li>Apply Python loops to explore and understand DataFrame columns.</li>
+</ul>
 <p><em>Corresponds with the lesson found at: <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb" class="uri">https://github.com/Data-Dunkers/lessons/blob/main/data-columns.ipynb</a></em></p>
 </section>
 <section id="filtering" class="level2">
 <h2 class="anchored" data-anchor-id="filtering"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02B-filtering.html">Filtering</a></h2>
-<p>Focus the table using boolean masks and simple AND/OR combinations, then carry the filtered result into later steps.</p>
+<p>By the end of this lesson, students will be able to:</p>
+<ul>
+<li>Learn how to filter data to focus on what’s important.</li>
+<li>Understand the process of refining data for better analysis.</li>
+<li>Apply simple techniques to clean and prepare data for use.</li>
+<li>Combine multiple conditions using logical operators like &amp; (and) and | (or).</li>
+</ul>
 <p>*Corresponds with the lesson found at: <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb" class="uri">https://github.com/Data-Dunkers/lessons/blob/main/data-filtering.ipynb</a>)</p>
 </section>
 <section id="sorting" class="level2">
 <h2 class="anchored" data-anchor-id="sorting"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02C-sorting.html">Sorting</a></h2>
-<p>Order rows by one or multiple keys (ascending/descending) to reveal patterns and make comparisons clearer.</p>
+<p>By the end of this lesson, students will be able to:</p>
+<ul>
+<li>Sort data in a dataset based on specific columns.</li>
+<li>Understand the difference between ascending and descending order.</li>
+<li>Apply multiple sorting criteria to organize data more effectively.</li>
+</ul>
 <p><em>Corresponds with the lesson found at: <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb" class="uri">https://github.com/Data-Dunkers/lessons/blob/main/data-sorting.ipynb</a></em></p>
 </section>
 <section id="new-columns" class="level2">
 <h2 class="anchored" data-anchor-id="new-columns"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02D-new-columns.html">New Columns</a></h2>
-<p>Add calculated metrics (like shooting % or buckets) with concise, vectorized code to power meaningful analysis.</p>
+<p>By the end of this lesson, students will be able to:</p>
+<ul>
+<li>Add new columns to a dataset using calculated values.</li>
+<li>Apply mathematical operations to existing columns to create new data points.</li>
+<li>Use rounding and formatting techniques to present data clearly and accurately.</li>
+</ul>
 <p>*Corresponds with the lesson found at: <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb" class="uri">https://github.com/Data-Dunkers/lessons/blob/main/data-new-columns.ipynb</a></p>
 </section>
 <section id="stats-toolbox" class="level2">
 <h2 class="anchored" data-anchor-id="stats-toolbox"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02E-stats-toolbox.html">Stats Toolbox</a></h2>
-<p>Use <code>.describe()</code>, quick aggregates, and <code>groupby(...).agg(...)</code> to compare players or distance buckets before you plot.</p>
-<p>*Corresponds with the lesson fo nd at: <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb" class="uri">https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb</a></p>
-</section>
-<section id="cleaning-basics" class="level2">
-<h2 class="anchored" data-anchor-id="cleaning-basics"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html">Cleaning Basics</a></h2>
-<p>Do a minimal clean-up (headers/case, numeric coercion, drop empty rows) once you know what your analysis needs.</p>
-<p><em>Informed by the table/analysis lessons above.</em></p>
+<p>By the end of this lesson, students will be able to:</p>
+<ul>
+<li>Calculate basic statistical measures such as minimum, maximum, mean, and median.</li>
+<li>Manipulate and format statistical data for clear presentation.</li>
+<li>Generate summary statistics for datasets using built-in functions like <code>describe()</code>.</li>
+</ul>
+<p>*Corresponds with the lesson found at: <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb" class="uri">https://github.com/Data-Dunkers/lessons/blob/main/data-statistics.ipynb</a></p>
 
 
 </section>

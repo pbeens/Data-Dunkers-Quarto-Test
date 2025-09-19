@@ -386,12 +386,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Summarizing with Statistics</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/02-process/02F-cleaning-basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cleaning the Data</span></a>
-  </div>
-</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -479,30 +473,65 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Choose how students will bring data into a pandas DataFrame. Pick the on-ramp that matches your setup (self-contained internal data, CSV, Excel, Google Sheets, or a simple table from the web).</p>
+<p>In this module, you’ll learn how to bring data into your notebook from different sources. Start with defining simple data directly in your code, then move on to importing files in common formats like CSV and Excel. From there, practice connecting to live sources such as Google Sheets and webpages. Each method gives you more flexibility in how you collect data to analyze and visualize later.</p>
 <section id="using-internal-data" class="level2">
 <h2 class="anchored" data-anchor-id="using-internal-data"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01A-internal-data.html">Using Internal Data</a></h2>
-<p>This lesson is for classes that want self-contained data <strong>inside the notebook</strong> or Python program—create small tables from lists or dictionaries with <code>pandas.DataFrame</code>, name the columns, and preview with <code>head()</code>.</p>
+<p>By the end of this lesson, students will be able to:</p>
+<ul>
+<li>Define and work with data directly inside a Jupyter Notebook or Python file.</li>
+<li>Use the IPO (Input, Process, Output) model to structure simple programs.</li>
+<li>Create basic plots from internal data using Plotly Express.</li>
+</ul>
 <p><em>Corresponds with the lesson found at:</em> <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-from-internal.ipynb" class="uri">https://github.com/Data-Dunkers/lessons/blob/main/data-from-internal.ipynb</a>.</p>
 </section>
 <section id="data-from-csv-files" class="level2">
 <h2 class="anchored" data-anchor-id="data-from-csv-files"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01B-import-csv.html">Data from CSV Files</a></h2>
-<p>Load a shared or local <strong>CSV</strong> using <code>pd.read_csv(...)</code>, then take a quick look at shape, column names, and a few rows to confirm what came in before moving on.</p>
+<p>You’re right — I overstated that. I just checked the <strong>01B-import-csv.qmd</strong> lesson you uploaded. Students are:</p>
+<ul>
+<li>Loading data from a CSV with Pandas.</li>
+<li>Inspecting it using <code>.head()</code>, <code>.tail()</code>, and <code>.columns</code>.</li>
+<li>Plotting it with Plotly Express.</li>
+<li>Adjusting plot parameters like the title and axis labels.</li>
+</ul>
+<p>They are <strong>not</strong> renaming columns in this lesson.</p>
+<p>Here’s the corrected objectives list:</p>
+<p>By the end of this lesson, students will be able to:</p>
+<ul>
+<li>Load and view data from a CSV file using Pandas.</li>
+<li>Inspect datasets by viewing sample rows and column names.</li>
+<li>Create simple plots from CSV data using Plotly Express.</li>
+<li>Adjust plot settings such as titles and axis labels for clarity.</li>
+</ul>
 <p><em>Corresponds with the lesson found at:</em> <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-from-csv.ipynb" class="uri">https://github.com/Data-Dunkers/lessons/blob/main/data-from-csv.ipynb</a>.</p>
 </section>
 <section id="data-from-excel-files" class="level2">
 <h2 class="anchored" data-anchor-id="data-from-excel-files"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01C-import-excel.html">Data from Excel Files</a></h2>
-<p>Bring in <strong>Excel</strong> data with <code>pd.read_excel(...)</code>; choose a sheet if needed and preview a few rows—handy when teachers share XLSX templates.</p>
+<p>By the end of this lesson, students will be able to:</p>
+<ul>
+<li>Import data from an Excel file into a Pandas DataFrame.</li>
+<li>Recognize the similarities and differences between working with CSV and Excel files.</li>
+<li>Create simple plots from Excel data using Plotly Express.</li>
+</ul>
 <p><em>Corresponds with the lesson found at:</em> <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb" class="uri">https://github.com/Data-Dunkers/lessons/blob/main/data-from-excel.ipynb</a>.</p>
 </section>
 <section id="data-from-google-sheets" class="level2">
 <h2 class="anchored" data-anchor-id="data-from-google-sheets"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01D-import-google-sheets.html">Data from Google Sheets</a></h2>
-<p>Use a Google Sheet’s share/export link (CSV export is simplest) so pandas can read it like a regular CSV; verify headers and sample rows.</p>
+<p>By the end of this lesson, students will be able to:</p>
+<ul>
+<li>Access and import data from a Google Sheet into a Pandas DataFrame.</li>
+<li>Recognize the similarities and differences between working with CSV files and Google Sheets.</li>
+<li>Create simple plots from Google Sheet data using Plotly Express.</li>
+</ul>
 <p><em>Corresponds with the lesson found at:</em> <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb" class="uri">https://github.com/Data-Dunkers/lessons/blob/main/data-from-google-sheet.ipynb</a>.</p>
 </section>
 <section id="data-from-webpages" class="level2">
 <h2 class="anchored" data-anchor-id="data-from-webpages"><a href="../../../module-6-go-deeper-choose-your-path/03-going-further-with-coding/01-input/01E-import-webpage.html">Data from Webpages</a></h2>
-<p>Use <code>pd.read_html(...)</code> to fetch a <strong>simple HTML table</strong> from a webpage into a DataFrame; if multiple tables are found, pick the right one and preview a few rows.</p>
+<p>By the end of this lesson, students will be able to:</p>
+<ul>
+<li>Extract data tables from webpages using Pandas.</li>
+<li>Select the correct table when multiple tables are available.</li>
+<li>Create simple plots from webpage data using Plotly Express.</li>
+</ul>
 <p><em>Corresponds with the lesson found at:</em> <a href="https://github.com/Data-Dunkers/lessons/blob/main/data-from-webpage.ipynb" class="uri">https://github.com/Data-Dunkers/lessons/blob/main/data-from-webpage.ipynb</a>.</p>
 
 
