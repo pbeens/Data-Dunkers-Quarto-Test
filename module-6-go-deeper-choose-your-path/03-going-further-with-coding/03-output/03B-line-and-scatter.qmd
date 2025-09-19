@@ -1,13 +1,99 @@
 ---
-title: "Creating Line and Scatter Plots"
-format: html
+title: "Line Graphs and Scatter Plots"
+format:
+  html:
+    code-fold: show
+jupyter: python3
 ---
 
-Show change or relationships: lines for trends over an ordered axis; scatter to explore how two variables move together.  
+In this lesson, we’ll learn how to create line graphs and scatter plots with Plotly Express. Both help us explore relationships in data — line graphs show trends over time, while scatter plots compare two variables.
 
-*Corresponds with the lesson found at:* <https://github.com/Data-Dunkers/lessons/blob/main/graphing-scatter-plots.ipynb>. 
+## When to Use Line or Scatter Plots
 
+* Use a **line graph** when you want to show how something changes across time or ordered categories (like seasons).  
+* Use a **scatter plot** when you want to examine the relationship between two variables (like field goals attempted vs. field goals made).  
 
----
+### Step 1 — Import Libraries and Load Data
 
-**Lesson coming soon!**
+We’ll use Pandas to load Pascal Siakam’s data, then reduce it to just the columns we need for this lesson: season, field goals made, field goals attempted, assists, and points.
+
+```{python}
+# Setup
+import pandas as pd
+
+# Input: Load Pascal Siakam's data into a DataFrame
+url = "https://raw.githubusercontent.com/pbeens/Data-Dunkers/main/Data/Pascal_Siakam.csv"
+df = pd.read_csv(url)
+
+# Keep only seasons up to 2022–23
+df = df[df["SEASON_ID"] <= "2022-23"]
+
+# Reduce to essential columns
+df = df[["SEASON_ID", "FGM", "FGA", "AST", "PTS"]]
+
+# Preview the first few rows
+df.head()
+```
+
+### Step 2 — Line Graphs
+
+We can create a line graph of field goals made by season.
+
+```{python}
+import plotly.express as px
+
+# Line graph of field goals made by season
+px.line(df, x="SEASON_ID", y="FGM", title="Siakam Field Goals by Season")
+```
+
+### Step 3 — Scatter Plots
+
+Scatter plots compare two numeric variables. Here we compare field goals attempted versus field goals made.
+
+```{python}
+# Scatter plot of field goals attempted vs made
+px.scatter(df, x="FGA", y="FGM", title="Siakam Field Goals vs Attempts")
+```
+
+### Step 4 — Adding More Information
+
+We can color the points by season and scale them by assists (`AST`) to show more dimensions.
+
+```{python}
+# Scatter plot with color and size
+px.scatter(
+    df,
+    x="FGA",
+    y="FGM",
+    color="SEASON_ID",
+    size="AST",
+    title="Siakam Field Goals vs Attempts (Colored by Season, Sized by Assists)"
+)
+```
+
+### Step 5 — Adding a Trendline
+
+A trendline helps us see the overall relationship between variables.
+
+```{python}
+# Scatter plot with a trendline
+px.scatter(
+    df,
+    x="FGA",
+    y="FGM",
+    trendline="ols",
+    title="Trendline: Field Goals Made vs Attempts"
+)
+```
+
+## Talk About It
+
+* When is a line graph more useful than a scatter plot?
+* What patterns do you notice in field goals made compared to attempts?
+* How does adding a trendline change the way you interpret the data?
+
+## Lesson Notebook
+
+Now it’s your turn to practice: The notebook version of this lesson includes more examples and additional practice activities.
+
+Open the lesson [here](https://github.com/Data-Dunkers/lessons/blob/main/graphing-scatter-plots.ipynb).
